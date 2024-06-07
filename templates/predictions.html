@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="mt-4">
+    <h2>Real-Time Predictions</h2>
+    <form method="GET" action="{{ url_for('show_predictions') }}">
+        <div class="form-group">
+            <label for="threat_level">Threat Level</label>
+            <select id="threat_level" name="threat_level" class="form-control">
+                <option value="">All</option>
+                <option value="1">Threat</option>
+                <option value="0">No Threat</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="start_time">Start Time</label>
+            <input type="datetime-local" id="start_time" name="start_time" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="end_time">End Time</label>
+            <input type="datetime-local" id="end_time" name="end_time" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Filter</button>
+    </form>
+    <hr>
+    <h4>Set Interval for Checking CSV File</h4>
+    <form method="POST" action="{{ url_for('set_interval') }}">
+        <div class="form-group">
+            <label for="interval">Interval (seconds)</label>
+            <input type="number" id="interval" name="interval" class="form-control" value="{{ interval }}" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Set Interval</button>
+    </form>
+    <hr>
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th>Source IP</th>
+                <th>Destination IP</th>
+                <th>Source Port</th>
+                <th>Destination Port</th>
+                <th>Protocol</th>
+                <th>Signature</th>
+                <th>Prediction</th>
+                <th>Probability</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for prediction in predictions %}
+            <tr>
+                <td>{{ prediction.src_ip }}</td>
+                <td>{{ prediction.dst_ip }}</td>
+                <td>{{ prediction.src_port }}</td>
+                <td>{{ prediction.dst_port }}</td>
+                <td>{{ prediction.protocol }}</td>
+                <td>{{ prediction.signature }}</td>
+                <td>
+                    {% if prediction.prediction == 1 %}
+                    <span class="badge badge-danger">Threat</span>
+                    {% else %}
+                    <span class="badge badge-success">No Threat</span>
+                    {% endif %}
+                </td>
+                <td>{{ prediction.prediction_proba }}</td>
+                <td>{{ prediction.timestamp }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script>
+    setInterval(function() {
+        window.location.reload();
+    }, {{ interval }} * 1000);
+</script>
+{% endblock %}
