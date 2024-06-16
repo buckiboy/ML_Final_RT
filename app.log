@@ -2457,3 +2457,119 @@ Recommended actions:
 2024-06-16 12:37:43,324 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:37:53 BST)" executed successfully
 2024-06-16 12:37:43,749 INFO Scheduler has been shut down
 2024-06-16 12:37:44,167 INFO Scheduler has been shut down
+2024-06-16 12:48:11,331 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-06-16 12:48:11,331 INFO Added job "monitor_csv_file" to job store "default"
+2024-06-16 12:48:11,331 INFO Scheduler started
+2024-06-16 12:48:11,336 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.50:5000
+2024-06-16 12:48:11,337 INFO [33mPress CTRL+C to quit[0m
+2024-06-16 12:48:11,337 INFO  * Restarting with stat
+2024-06-16 12:48:12,367 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-06-16 12:48:12,367 INFO Added job "monitor_csv_file" to job store "default"
+2024-06-16 12:48:12,367 INFO Scheduler started
+2024-06-16 12:48:12,380 WARNING  * Debugger is active!
+2024-06-16 12:48:12,381 INFO  * Debugger PIN: 750-936-581
+2024-06-16 12:48:15,169 INFO 127.0.0.1 - - [16/Jun/2024 12:48:15] "[32mGET /prediction HTTP/1.1[0m" 302 -
+2024-06-16 12:48:15,192 INFO 127.0.0.1 - - [16/Jun/2024 12:48:15] "GET /login?next=/prediction HTTP/1.1" 200 -
+2024-06-16 12:48:16,613 INFO 127.0.0.1 - - [16/Jun/2024 12:48:16] "GET /register HTTP/1.1" 200 -
+2024-06-16 12:48:17,712 INFO 127.0.0.1 - - [16/Jun/2024 12:48:17] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-06-16 12:48:17,716 INFO 127.0.0.1 - - [16/Jun/2024 12:48:17] "GET /login HTTP/1.1" 200 -
+2024-06-16 12:48:18,633 INFO 127.0.0.1 - - [16/Jun/2024 12:48:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-06-16 12:48:19,288 INFO 127.0.0.1 - - [16/Jun/2024 12:48:19] "GET / HTTP/1.1" 200 -
+2024-06-16 12:48:19,326 INFO 127.0.0.1 - - [16/Jun/2024 12:48:19] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-16 12:48:21,293 INFO 127.0.0.1 - - [16/Jun/2024 12:48:21] "GET /prediction HTTP/1.1" 200 -
+2024-06-16 12:48:21,333 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:48:21 BST)" (scheduled at 2024-06-16 12:48:21.331141+01:00)
+2024-06-16 12:48:21,525 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:48:31 BST)" executed successfully
+2024-06-16 12:48:22,369 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:48:22 BST)" (scheduled at 2024-06-16 12:48:22.367190+01:00)
+2024-06-16 12:48:22,405 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:48:32 BST)" executed successfully
+2024-06-16 12:48:31,331 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:48:41 BST)" (scheduled at 2024-06-16 12:48:31.331141+01:00)
+2024-06-16 12:48:31,352 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:48:41 BST)" executed successfully
+2024-06-16 12:48:32,374 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:48:42 BST)" (scheduled at 2024-06-16 12:48:32.367190+01:00)
+2024-06-16 12:48:32,397 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:48:42 BST)" executed successfully
+2024-06-16 12:48:32,937 INFO 127.0.0.1 - - [16/Jun/2024 12:48:32] "POST /prediction HTTP/1.1" 200 -
+2024-06-16 12:48:32,942 INFO LLM request data: {'src_ip': '192.168.1.12', 'dst_ip': '192.168.1.50', 'src_port': '3242', 'dst_port': '22', 'protocol': 'TCP', 'signature': 'NA', 'sample_weight': '1.0', 'weight_src_ip': '1.0', 'weight_dst_ip': '1.0', 'weight_src_port': '1.0', 'weight_dst_port': '1.0', 'weight_protocol': '1.0', 'weight_signature': '1.0', 'prediction': 0, 'prediction_proba': [0.82, 0.18], 'decision_path_dense': [[1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0]]}
+2024-06-16 12:48:32,942 INFO 127.0.0.1 - - [16/Jun/2024 12:48:32] "POST /log_llm_request HTTP/1.1" 200 -
+2024-06-16 12:48:32,943 INFO Received data for recommendation: {'src_ip': '192.168.1.12', 'dst_ip': '192.168.1.50', 'src_port': '3242', 'dst_port': '22', 'protocol': 'TCP', 'signature': 'NA', 'sample_weight': '1.0', 'weight_src_ip': '1.0', 'weight_dst_ip': '1.0', 'weight_src_port': '1.0', 'weight_dst_port': '1.0', 'weight_protocol': '1.0', 'weight_signature': '1.0', 'prediction': 0, 'prediction_proba': [0.82, 0.18], 'decision_path_dense': [[1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0]]}
+2024-06-16 12:48:41,333 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:48:51 BST)" (scheduled at 2024-06-16 12:48:41.331141+01:00)
+2024-06-16 12:48:41,371 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:48:51 BST)" executed successfully
+2024-06-16 12:48:42,367 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:48:52 BST)" (scheduled at 2024-06-16 12:48:42.367190+01:00)
+2024-06-16 12:48:42,404 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:48:52 BST)" executed successfully
+2024-06-16 12:48:51,333 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:01 BST)" (scheduled at 2024-06-16 12:48:51.331141+01:00)
+2024-06-16 12:48:51,363 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:01 BST)" executed successfully
+2024-06-16 12:48:52,368 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:02 BST)" (scheduled at 2024-06-16 12:48:52.367190+01:00)
+2024-06-16 12:48:52,399 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:02 BST)" executed successfully
+2024-06-16 12:49:01,331 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:11 BST)" (scheduled at 2024-06-16 12:49:01.331141+01:00)
+2024-06-16 12:49:01,398 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:11 BST)" executed successfully
+2024-06-16 12:49:02,370 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:12 BST)" (scheduled at 2024-06-16 12:49:02.367190+01:00)
+2024-06-16 12:49:02,400 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:12 BST)" executed successfully
+2024-06-16 12:49:11,331 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:21 BST)" (scheduled at 2024-06-16 12:49:11.331141+01:00)
+2024-06-16 12:49:11,367 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:21 BST)" executed successfully
+2024-06-16 12:49:12,377 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:22 BST)" (scheduled at 2024-06-16 12:49:12.367190+01:00)
+2024-06-16 12:49:12,413 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:22 BST)" executed successfully
+2024-06-16 12:49:21,331 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:31 BST)" (scheduled at 2024-06-16 12:49:21.331141+01:00)
+2024-06-16 12:49:21,357 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:31 BST)" executed successfully
+2024-06-16 12:49:22,368 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:32 BST)" (scheduled at 2024-06-16 12:49:22.367190+01:00)
+2024-06-16 12:49:22,392 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:32 BST)" executed successfully
+2024-06-16 12:49:31,331 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:41 BST)" (scheduled at 2024-06-16 12:49:31.331141+01:00)
+2024-06-16 12:49:31,379 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:41 BST)" executed successfully
+2024-06-16 12:49:32,367 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:42 BST)" (scheduled at 2024-06-16 12:49:32.367190+01:00)
+2024-06-16 12:49:32,397 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:42 BST)" executed successfully
+2024-06-16 12:49:41,341 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:51 BST)" (scheduled at 2024-06-16 12:49:41.331141+01:00)
+2024-06-16 12:49:41,363 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:51 BST)" executed successfully
+2024-06-16 12:49:42,369 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:52 BST)" (scheduled at 2024-06-16 12:49:42.367190+01:00)
+2024-06-16 12:49:42,402 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:49:52 BST)" executed successfully
+2024-06-16 12:49:51,331 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:01 BST)" (scheduled at 2024-06-16 12:49:51.331141+01:00)
+2024-06-16 12:49:51,360 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:01 BST)" executed successfully
+2024-06-16 12:49:52,373 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:02 BST)" (scheduled at 2024-06-16 12:49:52.367190+01:00)
+2024-06-16 12:49:52,393 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:02 BST)" executed successfully
+2024-06-16 12:50:01,341 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:11 BST)" (scheduled at 2024-06-16 12:50:01.331141+01:00)
+2024-06-16 12:50:01,380 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:11 BST)" executed successfully
+2024-06-16 12:50:02,367 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:12 BST)" (scheduled at 2024-06-16 12:50:02.367190+01:00)
+2024-06-16 12:50:02,388 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:12 BST)" executed successfully
+2024-06-16 12:50:11,337 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:21 BST)" (scheduled at 2024-06-16 12:50:11.331141+01:00)
+2024-06-16 12:50:11,391 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:21 BST)" executed successfully
+2024-06-16 12:50:12,068 INFO Received recommendations from LLM:  Based on the information provided, it appears that IP address 192.168.1.12 is connecting to insecure ports (Telnet and potentially an unsecured web server) from your network. This could be a potential security risk.
+
+Recommended action:
+- Block connections from this IP address on the Intrusion Prevention System (IPS) for Telnet port 23 and any other insecure ports, if possible.
+- For SSH connection to 192.168.1.50 on port 22, ensure that it is secure by using strong passwords or public key authentication. If the service is not essential, consider disabling it temporarily until the source of these connections can be identified and addressed.
+- For any web server accessible from this IP address (port 80), ensure that you are using a secure protocol such as HTTPS with TLS certificate installed to encrypt data transmission. Consider reviewing your security policies for web servers, especially if they have not been updated recently.
+2024-06-16 12:50:12,068 INFO 127.0.0.1 - - [16/Jun/2024 12:50:12] "POST /get_recommendations HTTP/1.1" 200 -
+2024-06-16 12:50:12,383 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:22 BST)" (scheduled at 2024-06-16 12:50:12.367190+01:00)
+2024-06-16 12:50:12,401 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:22 BST)" executed successfully
+2024-06-16 12:50:21,331 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:31 BST)" (scheduled at 2024-06-16 12:50:21.331141+01:00)
+2024-06-16 12:50:21,352 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:31 BST)" executed successfully
+2024-06-16 12:50:22,377 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:32 BST)" (scheduled at 2024-06-16 12:50:22.367190+01:00)
+2024-06-16 12:50:22,442 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:32 BST)" executed successfully
+2024-06-16 12:50:31,334 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:41 BST)" (scheduled at 2024-06-16 12:50:31.331141+01:00)
+2024-06-16 12:50:31,352 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:41 BST)" executed successfully
+2024-06-16 12:50:32,372 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:42 BST)" (scheduled at 2024-06-16 12:50:32.367190+01:00)
+2024-06-16 12:50:32,392 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:42 BST)" executed successfully
+2024-06-16 12:50:41,335 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:51 BST)" (scheduled at 2024-06-16 12:50:41.331141+01:00)
+2024-06-16 12:50:41,353 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:51 BST)" executed successfully
+2024-06-16 12:50:42,367 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:52 BST)" (scheduled at 2024-06-16 12:50:42.367190+01:00)
+2024-06-16 12:50:42,394 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:50:52 BST)" executed successfully
+2024-06-16 12:50:51,331 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:51:01 BST)" (scheduled at 2024-06-16 12:50:51.331141+01:00)
+2024-06-16 12:50:51,354 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:51:01 BST)" executed successfully
+2024-06-16 12:50:52,378 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:51:02 BST)" (scheduled at 2024-06-16 12:50:52.367190+01:00)
+2024-06-16 12:50:52,400 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 12:51:02 BST)" executed successfully
+2024-06-16 12:50:54,513 INFO Scheduler has been shut down
+2024-06-16 12:50:54,763 INFO Scheduler has been shut down
+2024-06-16 12:57:07,476 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-06-16 12:57:07,485 INFO Added job "monitor_csv_file" to job store "default"
+2024-06-16 12:57:07,485 INFO Scheduler started
+2024-06-16 12:57:07,489 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.50:5000
+2024-06-16 12:57:07,489 INFO [33mPress CTRL+C to quit[0m
+2024-06-16 12:57:07,490 INFO  * Restarting with stat
+2024-06-16 12:57:08,699 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-06-16 12:57:08,699 INFO Added job "monitor_csv_file" to job store "default"
+2024-06-16 12:57:08,699 INFO Scheduler started
+2024-06-16 12:57:08,905 WARNING  * Debugger is active!
+2024-06-16 12:57:08,905 INFO  * Debugger PIN: 601-622-125
+2024-06-16 12:57:09,988 INFO Scheduler has been shut down
+2024-06-16 12:57:10,239 INFO Scheduler has been shut down

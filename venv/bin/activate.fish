@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/milan/Documents/new/ml-threat-detection-app/venv"
+set -gx VIRTUAL_ENV "/home/osboxes/Documents/dissertation/ML_Final_RT/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
