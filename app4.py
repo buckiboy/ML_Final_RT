@@ -307,6 +307,15 @@ def prediction_form():
             logging.error(f'Error in prediction: {e}')
             return jsonify({'error': f'Error in prediction: {e}'})
     return render_template('prediction_form.html')
+@app.route('/log_llm_request', methods=['POST'])
+def log_llm_request():
+    try:
+        data = request.json
+        logging.info(f'LLM request data: {data}')
+        return jsonify({"status": "success"})
+    except Exception as e:
+        logging.error(f'Error logging LLM request: {e}')
+        return jsonify({"status": "error", "message": str(e)}), 500
 
 @app.route('/save_prediction', methods=['POST'])
 @login_required
