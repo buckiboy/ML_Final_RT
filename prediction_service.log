@@ -1,1 +1,21 @@
 
+2024-06-16 10:04:39,228 INFO Starting prediction_service application...
+2024-06-16 10:04:39,231 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.50:5001
+2024-06-16 10:04:39,231 INFO [33mPress CTRL+C to quit[0m
+2024-06-16 10:04:39,237 INFO  * Restarting with watchdog (inotify)
+2024-06-16 10:04:39,393 INFO Starting prediction_service application...
+2024-06-16 10:04:39,395 WARNING  * Debugger is active!
+2024-06-16 10:04:39,395 INFO  * Debugger PIN: 623-705-187
+2024-06-16 10:14:39,574 INFO Starting prediction_service application...
+2024-06-16 10:14:39,577 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.50:5001
+2024-06-16 10:14:39,578 INFO [33mPress CTRL+C to quit[0m
+2024-06-16 10:14:39,583 INFO  * Restarting with watchdog (inotify)
+2024-06-16 10:14:39,728 INFO Starting prediction_service application...
+2024-06-16 10:14:39,730 WARNING  * Debugger is active!
+2024-06-16 10:14:39,730 INFO  * Debugger PIN: 623-705-187

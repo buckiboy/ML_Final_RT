@@ -1,0 +1,390 @@
+2024-06-16 10:15:19,057 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-06-16 10:15:19,057 INFO Added job "monitor_csv_file" to job store "default"
+2024-06-16 10:15:19,057 INFO Scheduler started
+2024-06-16 10:15:19,062 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.50:5000
+2024-06-16 10:15:19,062 INFO [33mPress CTRL+C to quit[0m
+2024-06-16 10:15:19,065 INFO  * Restarting with watchdog (inotify)
+2024-06-16 10:15:20,076 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-06-16 10:15:20,076 INFO Added job "monitor_csv_file" to job store "default"
+2024-06-16 10:15:20,076 INFO Scheduler started
+2024-06-16 10:15:20,080 WARNING  * Debugger is active!
+2024-06-16 10:15:20,080 INFO  * Debugger PIN: 238-563-831
+2024-06-16 10:15:22,914 INFO 127.0.0.1 - - [16/Jun/2024 10:15:22] "[32mGET /prediction HTTP/1.1[0m" 302 -
+2024-06-16 10:15:22,941 INFO 127.0.0.1 - - [16/Jun/2024 10:15:22] "GET /login?next=/prediction HTTP/1.1" 200 -
+2024-06-16 10:15:24,619 INFO 127.0.0.1 - - [16/Jun/2024 10:15:24] "GET /register HTTP/1.1" 200 -
+2024-06-16 10:15:25,878 INFO 127.0.0.1 - - [16/Jun/2024 10:15:25] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-06-16 10:15:25,890 INFO 127.0.0.1 - - [16/Jun/2024 10:15:25] "GET /login HTTP/1.1" 200 -
+2024-06-16 10:15:26,761 INFO 127.0.0.1 - - [16/Jun/2024 10:15:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-06-16 10:15:26,846 INFO 127.0.0.1 - - [16/Jun/2024 10:15:26] "GET / HTTP/1.1" 200 -
+2024-06-16 10:15:26,870 INFO 127.0.0.1 - - [16/Jun/2024 10:15:26] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-16 10:15:28,529 INFO 127.0.0.1 - - [16/Jun/2024 10:15:28] "GET /prediction HTTP/1.1" 200 -
+2024-06-16 10:15:29,057 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:15:29 BST)" (scheduled at 2024-06-16 10:15:29.057320+01:00)
+2024-06-16 10:15:29,083 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:15:39 BST)" executed successfully
+2024-06-16 10:15:30,077 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:15:30 BST)" (scheduled at 2024-06-16 10:15:30.076318+01:00)
+2024-06-16 10:15:30,114 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:15:40 BST)" executed successfully
+2024-06-16 10:15:39,059 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:15:49 BST)" (scheduled at 2024-06-16 10:15:39.057320+01:00)
+2024-06-16 10:15:39,084 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:15:49 BST)" executed successfully
+2024-06-16 10:15:40,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:15:50 BST)" (scheduled at 2024-06-16 10:15:40.076318+01:00)
+2024-06-16 10:15:40,102 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:15:50 BST)" executed successfully
+2024-06-16 10:15:40,446 INFO 127.0.0.1 - - [16/Jun/2024 10:15:40] "POST /prediction HTTP/1.1" 200 -
+2024-06-16 10:15:40,467 INFO 127.0.0.1 - - [16/Jun/2024 10:15:40] "[33mPOST /log_llm_request HTTP/1.1[0m" 404 -
+2024-06-16 10:15:40,473 INFO Received data for recommendation: {'src_ip': '192.168.1.12', 'dst_ip': '192.168.1.50', 'src_port': '23123', 'dst_port': '23', 'protocol': 'TCP', 'signature': 'NA', 'sample_weight': '1.0', 'weight_src_ip': '1.0', 'weight_dst_ip': '1.0', 'weight_src_port': '1.0', 'weight_dst_port': '1.0', 'weight_protocol': '1.0', 'weight_signature': '1.0', 'prediction': 0, 'prediction_proba': [0.79, 0.21], 'decision_path_dense': [[1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0]]}
+2024-06-16 10:15:49,057 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:15:59 BST)" (scheduled at 2024-06-16 10:15:49.057320+01:00)
+2024-06-16 10:15:49,079 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:15:59 BST)" executed successfully
+2024-06-16 10:15:50,091 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:00 BST)" (scheduled at 2024-06-16 10:15:50.076318+01:00)
+2024-06-16 10:15:50,134 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:00 BST)" executed successfully
+2024-06-16 10:15:59,057 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:09 BST)" (scheduled at 2024-06-16 10:15:59.057320+01:00)
+2024-06-16 10:15:59,082 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:09 BST)" executed successfully
+2024-06-16 10:16:00,125 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:10 BST)" (scheduled at 2024-06-16 10:16:00.076318+01:00)
+2024-06-16 10:16:00,148 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:10 BST)" executed successfully
+2024-06-16 10:16:09,060 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:19 BST)" (scheduled at 2024-06-16 10:16:09.057320+01:00)
+2024-06-16 10:16:09,094 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:19 BST)" executed successfully
+2024-06-16 10:16:10,081 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:20 BST)" (scheduled at 2024-06-16 10:16:10.076318+01:00)
+2024-06-16 10:16:10,107 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:20 BST)" executed successfully
+2024-06-16 10:16:19,058 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:29 BST)" (scheduled at 2024-06-16 10:16:19.057320+01:00)
+2024-06-16 10:16:19,091 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:29 BST)" executed successfully
+2024-06-16 10:16:20,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:30 BST)" (scheduled at 2024-06-16 10:16:20.076318+01:00)
+2024-06-16 10:16:20,099 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:30 BST)" executed successfully
+2024-06-16 10:16:29,059 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:39 BST)" (scheduled at 2024-06-16 10:16:29.057320+01:00)
+2024-06-16 10:16:29,080 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:39 BST)" executed successfully
+2024-06-16 10:16:30,077 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:40 BST)" (scheduled at 2024-06-16 10:16:30.076318+01:00)
+2024-06-16 10:16:30,106 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:40 BST)" executed successfully
+2024-06-16 10:16:39,081 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:49 BST)" (scheduled at 2024-06-16 10:16:39.057320+01:00)
+2024-06-16 10:16:39,106 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:49 BST)" executed successfully
+2024-06-16 10:16:40,080 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:50 BST)" (scheduled at 2024-06-16 10:16:40.076318+01:00)
+2024-06-16 10:16:40,101 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:50 BST)" executed successfully
+2024-06-16 10:16:49,059 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:59 BST)" (scheduled at 2024-06-16 10:16:49.057320+01:00)
+2024-06-16 10:16:49,086 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:16:59 BST)" executed successfully
+2024-06-16 10:16:49,845 INFO Received recommendations from LLM:  Based on the information provided, it appears that IP address 192.168.1.12 is repeatedly connecting to insecure ports (23 and 80) from various source ports. This could potentially indicate a malicious activity. Therefore, I would recommend blocking this IP address on your Intrusion Prevention System (IPS). Additionally, since the connection to port 23 suggests Telnet usage which is known for being insecure, it's advisable to consider replacing or securing any Telnet services running on your network. For the open HTTP traffic on port 80, I would suggest upgrading to a secure protocol such as HTTPS by installing and configuring TLS certificates. This will help encrypt data transmission between client and server, thereby enhancing security.
+2024-06-16 10:16:49,846 INFO 127.0.0.1 - - [16/Jun/2024 10:16:49] "POST /get_recommendations HTTP/1.1" 200 -
+2024-06-16 10:16:50,092 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:00 BST)" (scheduled at 2024-06-16 10:16:50.076318+01:00)
+2024-06-16 10:16:50,116 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:00 BST)" executed successfully
+2024-06-16 10:16:59,059 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:09 BST)" (scheduled at 2024-06-16 10:16:59.057320+01:00)
+2024-06-16 10:16:59,083 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:09 BST)" executed successfully
+2024-06-16 10:17:00,081 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:10 BST)" (scheduled at 2024-06-16 10:17:00.076318+01:00)
+2024-06-16 10:17:00,122 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:10 BST)" executed successfully
+2024-06-16 10:17:09,059 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:19 BST)" (scheduled at 2024-06-16 10:17:09.057320+01:00)
+2024-06-16 10:17:09,081 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:19 BST)" executed successfully
+2024-06-16 10:17:10,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:20 BST)" (scheduled at 2024-06-16 10:17:10.076318+01:00)
+2024-06-16 10:17:10,111 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:20 BST)" executed successfully
+2024-06-16 10:17:19,061 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:29 BST)" (scheduled at 2024-06-16 10:17:19.057320+01:00)
+2024-06-16 10:17:19,080 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:29 BST)" executed successfully
+2024-06-16 10:17:20,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:30 BST)" (scheduled at 2024-06-16 10:17:20.076318+01:00)
+2024-06-16 10:17:20,111 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:30 BST)" executed successfully
+2024-06-16 10:17:29,069 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:39 BST)" (scheduled at 2024-06-16 10:17:29.057320+01:00)
+2024-06-16 10:17:29,089 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:39 BST)" executed successfully
+2024-06-16 10:17:30,098 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:40 BST)" (scheduled at 2024-06-16 10:17:30.076318+01:00)
+2024-06-16 10:17:30,121 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:40 BST)" executed successfully
+2024-06-16 10:17:39,057 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:49 BST)" (scheduled at 2024-06-16 10:17:39.057320+01:00)
+2024-06-16 10:17:39,082 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:49 BST)" executed successfully
+2024-06-16 10:17:40,169 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:50 BST)" (scheduled at 2024-06-16 10:17:40.076318+01:00)
+2024-06-16 10:17:40,195 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:50 BST)" executed successfully
+2024-06-16 10:17:49,077 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:59 BST)" (scheduled at 2024-06-16 10:17:49.057320+01:00)
+2024-06-16 10:17:49,097 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:17:59 BST)" executed successfully
+2024-06-16 10:17:50,087 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:00 BST)" (scheduled at 2024-06-16 10:17:50.076318+01:00)
+2024-06-16 10:17:50,113 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:00 BST)" executed successfully
+2024-06-16 10:17:59,057 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:09 BST)" (scheduled at 2024-06-16 10:17:59.057320+01:00)
+2024-06-16 10:17:59,081 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:09 BST)" executed successfully
+2024-06-16 10:18:00,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:10 BST)" (scheduled at 2024-06-16 10:18:00.076318+01:00)
+2024-06-16 10:18:00,097 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:10 BST)" executed successfully
+2024-06-16 10:18:09,058 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:19 BST)" (scheduled at 2024-06-16 10:18:09.057320+01:00)
+2024-06-16 10:18:09,079 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:19 BST)" executed successfully
+2024-06-16 10:18:10,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:20 BST)" (scheduled at 2024-06-16 10:18:10.076318+01:00)
+2024-06-16 10:18:10,104 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:20 BST)" executed successfully
+2024-06-16 10:18:17,453 INFO 127.0.0.1 - - [16/Jun/2024 10:18:17] "GET /prediction HTTP/1.1" 200 -
+2024-06-16 10:18:19,057 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:29 BST)" (scheduled at 2024-06-16 10:18:19.057320+01:00)
+2024-06-16 10:18:19,077 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:29 BST)" executed successfully
+2024-06-16 10:18:20,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:30 BST)" (scheduled at 2024-06-16 10:18:20.076318+01:00)
+2024-06-16 10:18:20,096 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:30 BST)" executed successfully
+2024-06-16 10:18:20,820 INFO 127.0.0.1 - - [16/Jun/2024 10:18:20] "POST /prediction HTTP/1.1" 200 -
+2024-06-16 10:18:20,827 INFO 127.0.0.1 - - [16/Jun/2024 10:18:20] "[33mPOST /log_llm_request HTTP/1.1[0m" 404 -
+2024-06-16 10:18:20,829 INFO Received data for recommendation: {'src_ip': '192.168.1.12', 'dst_ip': '192.168.1.50', 'src_port': '23123', 'dst_port': '23', 'protocol': 'TCP', 'signature': 'NA', 'sample_weight': '1.0', 'weight_src_ip': '1.0', 'weight_dst_ip': '1.0', 'weight_src_port': '1.0', 'weight_dst_port': '1.0', 'weight_protocol': '1.0', 'weight_signature': '1.0', 'prediction': 0, 'prediction_proba': [0.79, 0.21], 'decision_path_dense': [[1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0]]}
+2024-06-16 10:18:29,057 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:39 BST)" (scheduled at 2024-06-16 10:18:29.057320+01:00)
+2024-06-16 10:18:29,115 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:39 BST)" executed successfully
+2024-06-16 10:18:30,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:40 BST)" (scheduled at 2024-06-16 10:18:30.076318+01:00)
+2024-06-16 10:18:30,097 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:40 BST)" executed successfully
+2024-06-16 10:18:39,060 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:49 BST)" (scheduled at 2024-06-16 10:18:39.057320+01:00)
+2024-06-16 10:18:39,084 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:49 BST)" executed successfully
+2024-06-16 10:18:40,080 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:50 BST)" (scheduled at 2024-06-16 10:18:40.076318+01:00)
+2024-06-16 10:18:40,118 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:50 BST)" executed successfully
+2024-06-16 10:18:49,073 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:59 BST)" (scheduled at 2024-06-16 10:18:49.057320+01:00)
+2024-06-16 10:18:49,096 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:18:59 BST)" executed successfully
+2024-06-16 10:18:50,077 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:00 BST)" (scheduled at 2024-06-16 10:18:50.076318+01:00)
+2024-06-16 10:18:50,102 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:00 BST)" executed successfully
+2024-06-16 10:18:59,090 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:09 BST)" (scheduled at 2024-06-16 10:18:59.057320+01:00)
+2024-06-16 10:18:59,151 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:09 BST)" executed successfully
+2024-06-16 10:19:00,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:10 BST)" (scheduled at 2024-06-16 10:19:00.076318+01:00)
+2024-06-16 10:19:00,096 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:10 BST)" executed successfully
+2024-06-16 10:19:09,100 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:19 BST)" (scheduled at 2024-06-16 10:19:09.057320+01:00)
+2024-06-16 10:19:09,123 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:19 BST)" executed successfully
+2024-06-16 10:19:10,078 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:20 BST)" (scheduled at 2024-06-16 10:19:10.076318+01:00)
+2024-06-16 10:19:10,098 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:20 BST)" executed successfully
+2024-06-16 10:19:19,057 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:29 BST)" (scheduled at 2024-06-16 10:19:19.057320+01:00)
+2024-06-16 10:19:19,078 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:29 BST)" executed successfully
+2024-06-16 10:19:20,086 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:30 BST)" (scheduled at 2024-06-16 10:19:20.076318+01:00)
+2024-06-16 10:19:20,106 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:30 BST)" executed successfully
+2024-06-16 10:19:29,064 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:39 BST)" (scheduled at 2024-06-16 10:19:29.057320+01:00)
+2024-06-16 10:19:29,089 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:39 BST)" executed successfully
+2024-06-16 10:19:30,083 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:40 BST)" (scheduled at 2024-06-16 10:19:30.076318+01:00)
+2024-06-16 10:19:30,111 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:40 BST)" executed successfully
+2024-06-16 10:19:39,081 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:49 BST)" (scheduled at 2024-06-16 10:19:39.057320+01:00)
+2024-06-16 10:19:39,108 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:49 BST)" executed successfully
+2024-06-16 10:19:40,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:50 BST)" (scheduled at 2024-06-16 10:19:40.076318+01:00)
+2024-06-16 10:19:40,099 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:50 BST)" executed successfully
+2024-06-16 10:19:41,995 INFO Received recommendations from LLM:  Based on the information provided, it appears that IP address 192.168.1.12 is repeatedly connecting to insecure ports (23 and 80) from various source ports. This could potentially indicate a malicious activity as Telnet service at port 23 and unsecured HTTP connections at port 80 are known for being vulnerable to attacks.
+
+Recommended actions:
+1. Block IP address 192.168.1.12 on the Intrusion Prevention System (IPS) as it may pose a potential threat.
+2. Upgrade or secure your Telnet service by replacing it with SSH where possible, and if not, ensure that you have implemented strong authentication mechanisms such as password policies and access controls.
+3. Implement HTTPS on the web server at IP address 192.168.1.50 to encrypt data transmission between client and server, thus enhancing security. This can be achieved by installing a TLS certificate for your website.
+2024-06-16 10:19:41,995 INFO 127.0.0.1 - - [16/Jun/2024 10:19:41] "POST /get_recommendations HTTP/1.1" 200 -
+2024-06-16 10:19:49,057 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:59 BST)" (scheduled at 2024-06-16 10:19:49.057320+01:00)
+2024-06-16 10:19:49,078 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:19:59 BST)" executed successfully
+2024-06-16 10:19:50,078 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:00 BST)" (scheduled at 2024-06-16 10:19:50.076318+01:00)
+2024-06-16 10:19:50,114 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:00 BST)" executed successfully
+2024-06-16 10:19:59,061 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:09 BST)" (scheduled at 2024-06-16 10:19:59.057320+01:00)
+2024-06-16 10:19:59,082 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:09 BST)" executed successfully
+2024-06-16 10:20:00,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:10 BST)" (scheduled at 2024-06-16 10:20:00.076318+01:00)
+2024-06-16 10:20:00,096 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:10 BST)" executed successfully
+2024-06-16 10:20:09,097 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:19 BST)" (scheduled at 2024-06-16 10:20:09.057320+01:00)
+2024-06-16 10:20:09,117 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:19 BST)" executed successfully
+2024-06-16 10:20:10,079 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:20 BST)" (scheduled at 2024-06-16 10:20:10.076318+01:00)
+2024-06-16 10:20:10,100 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:20 BST)" executed successfully
+2024-06-16 10:20:19,081 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:29 BST)" (scheduled at 2024-06-16 10:20:19.057320+01:00)
+2024-06-16 10:20:19,101 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:29 BST)" executed successfully
+2024-06-16 10:20:20,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:30 BST)" (scheduled at 2024-06-16 10:20:20.076318+01:00)
+2024-06-16 10:20:20,097 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:30 BST)" executed successfully
+2024-06-16 10:20:29,065 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:39 BST)" (scheduled at 2024-06-16 10:20:29.057320+01:00)
+2024-06-16 10:20:29,087 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:39 BST)" executed successfully
+2024-06-16 10:20:30,092 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:40 BST)" (scheduled at 2024-06-16 10:20:30.076318+01:00)
+2024-06-16 10:20:30,118 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:40 BST)" executed successfully
+2024-06-16 10:20:39,069 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:49 BST)" (scheduled at 2024-06-16 10:20:39.057320+01:00)
+2024-06-16 10:20:39,089 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:49 BST)" executed successfully
+2024-06-16 10:20:40,087 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:50 BST)" (scheduled at 2024-06-16 10:20:40.076318+01:00)
+2024-06-16 10:20:40,109 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:50 BST)" executed successfully
+2024-06-16 10:20:49,061 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:59 BST)" (scheduled at 2024-06-16 10:20:49.057320+01:00)
+2024-06-16 10:20:49,083 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:20:59 BST)" executed successfully
+2024-06-16 10:20:50,077 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:00 BST)" (scheduled at 2024-06-16 10:20:50.076318+01:00)
+2024-06-16 10:20:50,097 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:00 BST)" executed successfully
+2024-06-16 10:20:59,074 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:09 BST)" (scheduled at 2024-06-16 10:20:59.057320+01:00)
+2024-06-16 10:20:59,122 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:09 BST)" executed successfully
+2024-06-16 10:21:00,090 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:10 BST)" (scheduled at 2024-06-16 10:21:00.076318+01:00)
+2024-06-16 10:21:00,128 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:10 BST)" executed successfully
+2024-06-16 10:21:09,064 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:19 BST)" (scheduled at 2024-06-16 10:21:09.057320+01:00)
+2024-06-16 10:21:09,083 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:19 BST)" executed successfully
+2024-06-16 10:21:10,117 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:20 BST)" (scheduled at 2024-06-16 10:21:10.076318+01:00)
+2024-06-16 10:21:10,146 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:20 BST)" executed successfully
+2024-06-16 10:21:19,059 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:29 BST)" (scheduled at 2024-06-16 10:21:19.057320+01:00)
+2024-06-16 10:21:19,093 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:29 BST)" executed successfully
+2024-06-16 10:21:20,078 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:30 BST)" (scheduled at 2024-06-16 10:21:20.076318+01:00)
+2024-06-16 10:21:20,118 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:30 BST)" executed successfully
+2024-06-16 10:21:29,067 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:39 BST)" (scheduled at 2024-06-16 10:21:29.057320+01:00)
+2024-06-16 10:21:29,087 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:39 BST)" executed successfully
+2024-06-16 10:21:30,094 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:40 BST)" (scheduled at 2024-06-16 10:21:30.076318+01:00)
+2024-06-16 10:21:30,119 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:40 BST)" executed successfully
+2024-06-16 10:21:39,084 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:49 BST)" (scheduled at 2024-06-16 10:21:39.057320+01:00)
+2024-06-16 10:21:39,104 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:49 BST)" executed successfully
+2024-06-16 10:21:40,097 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:50 BST)" (scheduled at 2024-06-16 10:21:40.076318+01:00)
+2024-06-16 10:21:40,130 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:50 BST)" executed successfully
+2024-06-16 10:21:49,057 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:59 BST)" (scheduled at 2024-06-16 10:21:49.057320+01:00)
+2024-06-16 10:21:49,079 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:21:59 BST)" executed successfully
+2024-06-16 10:21:50,077 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:00 BST)" (scheduled at 2024-06-16 10:21:50.076318+01:00)
+2024-06-16 10:21:50,111 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:00 BST)" executed successfully
+2024-06-16 10:21:59,059 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:09 BST)" (scheduled at 2024-06-16 10:21:59.057320+01:00)
+2024-06-16 10:21:59,079 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:09 BST)" executed successfully
+2024-06-16 10:22:00,077 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:10 BST)" (scheduled at 2024-06-16 10:22:00.076318+01:00)
+2024-06-16 10:22:00,107 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:10 BST)" executed successfully
+2024-06-16 10:22:09,057 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:19 BST)" (scheduled at 2024-06-16 10:22:09.057320+01:00)
+2024-06-16 10:22:09,078 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:19 BST)" executed successfully
+2024-06-16 10:22:10,121 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:20 BST)" (scheduled at 2024-06-16 10:22:10.076318+01:00)
+2024-06-16 10:22:10,150 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:20 BST)" executed successfully
+2024-06-16 10:22:19,058 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:29 BST)" (scheduled at 2024-06-16 10:22:19.057320+01:00)
+2024-06-16 10:22:19,085 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:29 BST)" executed successfully
+2024-06-16 10:22:20,087 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:30 BST)" (scheduled at 2024-06-16 10:22:20.076318+01:00)
+2024-06-16 10:22:20,106 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:30 BST)" executed successfully
+2024-06-16 10:22:29,057 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:39 BST)" (scheduled at 2024-06-16 10:22:29.057320+01:00)
+2024-06-16 10:22:29,082 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:39 BST)" executed successfully
+2024-06-16 10:22:30,096 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:40 BST)" (scheduled at 2024-06-16 10:22:30.076318+01:00)
+2024-06-16 10:22:30,138 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:40 BST)" executed successfully
+2024-06-16 10:22:39,070 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:49 BST)" (scheduled at 2024-06-16 10:22:39.057320+01:00)
+2024-06-16 10:22:39,102 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:49 BST)" executed successfully
+2024-06-16 10:22:40,081 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:50 BST)" (scheduled at 2024-06-16 10:22:40.076318+01:00)
+2024-06-16 10:22:40,103 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:50 BST)" executed successfully
+2024-06-16 10:22:49,057 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:59 BST)" (scheduled at 2024-06-16 10:22:49.057320+01:00)
+2024-06-16 10:22:49,079 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:22:59 BST)" executed successfully
+2024-06-16 10:22:50,082 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:00 BST)" (scheduled at 2024-06-16 10:22:50.076318+01:00)
+2024-06-16 10:22:50,102 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:00 BST)" executed successfully
+2024-06-16 10:22:59,061 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:09 BST)" (scheduled at 2024-06-16 10:22:59.057320+01:00)
+2024-06-16 10:22:59,079 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:09 BST)" executed successfully
+2024-06-16 10:23:00,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:10 BST)" (scheduled at 2024-06-16 10:23:00.076318+01:00)
+2024-06-16 10:23:00,096 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:10 BST)" executed successfully
+2024-06-16 10:23:09,059 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:19 BST)" (scheduled at 2024-06-16 10:23:09.057320+01:00)
+2024-06-16 10:23:09,092 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:19 BST)" executed successfully
+2024-06-16 10:23:10,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:20 BST)" (scheduled at 2024-06-16 10:23:10.076318+01:00)
+2024-06-16 10:23:10,107 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:20 BST)" executed successfully
+2024-06-16 10:23:14,010 INFO 127.0.0.1 - - [16/Jun/2024 10:23:14] "GET /prediction HTTP/1.1" 200 -
+2024-06-16 10:23:18,000 INFO 127.0.0.1 - - [16/Jun/2024 10:23:18] "POST /prediction HTTP/1.1" 200 -
+2024-06-16 10:23:18,009 INFO 127.0.0.1 - - [16/Jun/2024 10:23:18] "[33mPOST /log_llm_request HTTP/1.1[0m" 404 -
+2024-06-16 10:23:18,017 INFO Received data for recommendation: {'src_ip': '192.168.1.12', 'dst_ip': '192.168.1.50', 'src_port': '23123', 'dst_port': '23', 'protocol': 'TCP', 'signature': 'NA', 'sample_weight': '1.0', 'weight_src_ip': '1.0', 'weight_dst_ip': '1.0', 'weight_src_port': '1.0', 'weight_dst_port': '1.0', 'weight_protocol': '1.0', 'weight_signature': '1.0', 'prediction': 0, 'prediction_proba': [0.79, 0.21], 'decision_path_dense': [[1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0]]}
+2024-06-16 10:23:19,057 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:29 BST)" (scheduled at 2024-06-16 10:23:19.057320+01:00)
+2024-06-16 10:23:19,077 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:29 BST)" executed successfully
+2024-06-16 10:23:20,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:30 BST)" (scheduled at 2024-06-16 10:23:20.076318+01:00)
+2024-06-16 10:23:20,100 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:30 BST)" executed successfully
+2024-06-16 10:23:29,065 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:39 BST)" (scheduled at 2024-06-16 10:23:29.057320+01:00)
+2024-06-16 10:23:29,090 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:39 BST)" executed successfully
+2024-06-16 10:23:30,078 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:40 BST)" (scheduled at 2024-06-16 10:23:30.076318+01:00)
+2024-06-16 10:23:30,121 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:40 BST)" executed successfully
+2024-06-16 10:23:39,061 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:49 BST)" (scheduled at 2024-06-16 10:23:39.057320+01:00)
+2024-06-16 10:23:39,088 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:49 BST)" executed successfully
+2024-06-16 10:23:40,084 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:50 BST)" (scheduled at 2024-06-16 10:23:40.076318+01:00)
+2024-06-16 10:23:40,142 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:50 BST)" executed successfully
+2024-06-16 10:23:49,062 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:59 BST)" (scheduled at 2024-06-16 10:23:49.057320+01:00)
+2024-06-16 10:23:49,097 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:23:59 BST)" executed successfully
+2024-06-16 10:23:50,080 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:00 BST)" (scheduled at 2024-06-16 10:23:50.076318+01:00)
+2024-06-16 10:23:50,192 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:00 BST)" executed successfully
+2024-06-16 10:23:59,058 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:09 BST)" (scheduled at 2024-06-16 10:23:59.057320+01:00)
+2024-06-16 10:23:59,077 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:09 BST)" executed successfully
+2024-06-16 10:24:00,082 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:10 BST)" (scheduled at 2024-06-16 10:24:00.076318+01:00)
+2024-06-16 10:24:00,108 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:10 BST)" executed successfully
+2024-06-16 10:24:09,061 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:19 BST)" (scheduled at 2024-06-16 10:24:09.057320+01:00)
+2024-06-16 10:24:09,082 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:19 BST)" executed successfully
+2024-06-16 10:24:10,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:20 BST)" (scheduled at 2024-06-16 10:24:10.076318+01:00)
+2024-06-16 10:24:10,101 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:20 BST)" executed successfully
+2024-06-16 10:24:19,079 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:29 BST)" (scheduled at 2024-06-16 10:24:19.057320+01:00)
+2024-06-16 10:24:19,104 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:29 BST)" executed successfully
+2024-06-16 10:24:20,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:30 BST)" (scheduled at 2024-06-16 10:24:20.076318+01:00)
+2024-06-16 10:24:20,100 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:30 BST)" executed successfully
+2024-06-16 10:24:29,063 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:39 BST)" (scheduled at 2024-06-16 10:24:29.057320+01:00)
+2024-06-16 10:24:29,088 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:39 BST)" executed successfully
+2024-06-16 10:24:30,085 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:40 BST)" (scheduled at 2024-06-16 10:24:30.076318+01:00)
+2024-06-16 10:24:30,124 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:40 BST)" executed successfully
+2024-06-16 10:24:39,057 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:49 BST)" (scheduled at 2024-06-16 10:24:39.057320+01:00)
+2024-06-16 10:24:39,079 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:49 BST)" executed successfully
+2024-06-16 10:24:40,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:50 BST)" (scheduled at 2024-06-16 10:24:40.076318+01:00)
+2024-06-16 10:24:40,098 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:50 BST)" executed successfully
+2024-06-16 10:24:46,565 INFO Received recommendations from LLM:  Based on the information provided, it appears that IP address 192.168.1.12 is repeatedly connecting to insecure ports (23 and 80) from various source ports. This could potentially indicate a malicious activity as Telnet service at port 23 and unsecured HTTP connections at port 80 are known for being vulnerable to attacks.
+
+Recommended actions:
+1. Block IP address 192.168.1.12 on the Intrusion Prevention System (IPS) as it may pose a potential threat.
+2. Upgrade or secure the Telnet service at port 23 by replacing it with SSH, which is more secure and encrypted.
+3. Implement HTTPS for web server at port 80 to ensure data transmission security. This can be achieved by installing TLS certificate on your web server.
+2024-06-16 10:24:46,565 INFO 127.0.0.1 - - [16/Jun/2024 10:24:46] "POST /get_recommendations HTTP/1.1" 200 -
+2024-06-16 10:24:49,063 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:59 BST)" (scheduled at 2024-06-16 10:24:49.057320+01:00)
+2024-06-16 10:24:49,086 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:24:59 BST)" executed successfully
+2024-06-16 10:24:50,087 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:00 BST)" (scheduled at 2024-06-16 10:24:50.076318+01:00)
+2024-06-16 10:24:50,110 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:00 BST)" executed successfully
+2024-06-16 10:24:59,070 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:09 BST)" (scheduled at 2024-06-16 10:24:59.057320+01:00)
+2024-06-16 10:24:59,090 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:09 BST)" executed successfully
+2024-06-16 10:25:00,077 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:10 BST)" (scheduled at 2024-06-16 10:25:00.076318+01:00)
+2024-06-16 10:25:00,102 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:10 BST)" executed successfully
+2024-06-16 10:25:09,075 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:19 BST)" (scheduled at 2024-06-16 10:25:09.057320+01:00)
+2024-06-16 10:25:09,097 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:19 BST)" executed successfully
+2024-06-16 10:25:10,086 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:20 BST)" (scheduled at 2024-06-16 10:25:10.076318+01:00)
+2024-06-16 10:25:10,109 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:20 BST)" executed successfully
+2024-06-16 10:25:19,058 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:29 BST)" (scheduled at 2024-06-16 10:25:19.057320+01:00)
+2024-06-16 10:25:19,095 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:29 BST)" executed successfully
+2024-06-16 10:25:20,081 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:30 BST)" (scheduled at 2024-06-16 10:25:20.076318+01:00)
+2024-06-16 10:25:20,105 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:30 BST)" executed successfully
+2024-06-16 10:25:29,059 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:39 BST)" (scheduled at 2024-06-16 10:25:29.057320+01:00)
+2024-06-16 10:25:29,082 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:39 BST)" executed successfully
+2024-06-16 10:25:30,121 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:40 BST)" (scheduled at 2024-06-16 10:25:30.076318+01:00)
+2024-06-16 10:25:30,143 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:40 BST)" executed successfully
+2024-06-16 10:25:39,060 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:49 BST)" (scheduled at 2024-06-16 10:25:39.057320+01:00)
+2024-06-16 10:25:39,082 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:49 BST)" executed successfully
+2024-06-16 10:25:40,081 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:50 BST)" (scheduled at 2024-06-16 10:25:40.076318+01:00)
+2024-06-16 10:25:40,110 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:50 BST)" executed successfully
+2024-06-16 10:25:49,068 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:59 BST)" (scheduled at 2024-06-16 10:25:49.057320+01:00)
+2024-06-16 10:25:49,089 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:25:59 BST)" executed successfully
+2024-06-16 10:25:50,083 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:00 BST)" (scheduled at 2024-06-16 10:25:50.076318+01:00)
+2024-06-16 10:25:50,109 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:00 BST)" executed successfully
+2024-06-16 10:25:59,059 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:09 BST)" (scheduled at 2024-06-16 10:25:59.057320+01:00)
+2024-06-16 10:25:59,080 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:09 BST)" executed successfully
+2024-06-16 10:26:00,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:10 BST)" (scheduled at 2024-06-16 10:26:00.076318+01:00)
+2024-06-16 10:26:00,105 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:10 BST)" executed successfully
+2024-06-16 10:26:09,058 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:19 BST)" (scheduled at 2024-06-16 10:26:09.057320+01:00)
+2024-06-16 10:26:09,079 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:19 BST)" executed successfully
+2024-06-16 10:26:10,077 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:20 BST)" (scheduled at 2024-06-16 10:26:10.076318+01:00)
+2024-06-16 10:26:10,104 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:20 BST)" executed successfully
+2024-06-16 10:26:19,065 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:29 BST)" (scheduled at 2024-06-16 10:26:19.057320+01:00)
+2024-06-16 10:26:19,085 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:29 BST)" executed successfully
+2024-06-16 10:26:20,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:30 BST)" (scheduled at 2024-06-16 10:26:20.076318+01:00)
+2024-06-16 10:26:20,097 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:30 BST)" executed successfully
+2024-06-16 10:26:29,059 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:39 BST)" (scheduled at 2024-06-16 10:26:29.057320+01:00)
+2024-06-16 10:26:29,079 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:39 BST)" executed successfully
+2024-06-16 10:26:30,084 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:40 BST)" (scheduled at 2024-06-16 10:26:30.076318+01:00)
+2024-06-16 10:26:30,107 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:40 BST)" executed successfully
+2024-06-16 10:26:39,077 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:49 BST)" (scheduled at 2024-06-16 10:26:39.057320+01:00)
+2024-06-16 10:26:39,098 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:49 BST)" executed successfully
+2024-06-16 10:26:40,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:50 BST)" (scheduled at 2024-06-16 10:26:40.076318+01:00)
+2024-06-16 10:26:40,099 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:50 BST)" executed successfully
+2024-06-16 10:26:49,062 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:59 BST)" (scheduled at 2024-06-16 10:26:49.057320+01:00)
+2024-06-16 10:26:49,092 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:26:59 BST)" executed successfully
+2024-06-16 10:26:50,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:00 BST)" (scheduled at 2024-06-16 10:26:50.076318+01:00)
+2024-06-16 10:26:50,101 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:00 BST)" executed successfully
+2024-06-16 10:26:52,334 INFO 127.0.0.1 - - [16/Jun/2024 10:26:52] "GET /prediction HTTP/1.1" 200 -
+2024-06-16 10:26:54,131 INFO 127.0.0.1 - - [16/Jun/2024 10:26:54] "POST /prediction HTTP/1.1" 200 -
+2024-06-16 10:26:54,226 INFO 127.0.0.1 - - [16/Jun/2024 10:26:54] "[33mPOST /log_llm_request HTTP/1.1[0m" 404 -
+2024-06-16 10:26:54,228 INFO Received data for recommendation: {'src_ip': '192.168.1.12', 'dst_ip': '192.168.1.50', 'src_port': '23123', 'dst_port': '23', 'protocol': 'TCP', 'signature': 'NA', 'sample_weight': '1.0', 'weight_src_ip': '1.0', 'weight_dst_ip': '1.0', 'weight_src_port': '1.0', 'weight_dst_port': '1.0', 'weight_protocol': '1.0', 'weight_signature': '1.0', 'prediction': 0, 'prediction_proba': [0.79, 0.21], 'decision_path_dense': [[1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0]]}
+2024-06-16 10:26:59,059 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:09 BST)" (scheduled at 2024-06-16 10:26:59.057320+01:00)
+2024-06-16 10:26:59,127 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:09 BST)" executed successfully
+2024-06-16 10:27:00,080 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:10 BST)" (scheduled at 2024-06-16 10:27:00.076318+01:00)
+2024-06-16 10:27:00,115 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:10 BST)" executed successfully
+2024-06-16 10:27:09,064 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:19 BST)" (scheduled at 2024-06-16 10:27:09.057320+01:00)
+2024-06-16 10:27:09,096 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:19 BST)" executed successfully
+2024-06-16 10:27:10,079 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:20 BST)" (scheduled at 2024-06-16 10:27:10.076318+01:00)
+2024-06-16 10:27:10,108 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:20 BST)" executed successfully
+2024-06-16 10:27:19,068 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:29 BST)" (scheduled at 2024-06-16 10:27:19.057320+01:00)
+2024-06-16 10:27:19,095 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:29 BST)" executed successfully
+2024-06-16 10:27:20,077 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:30 BST)" (scheduled at 2024-06-16 10:27:20.076318+01:00)
+2024-06-16 10:27:20,100 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:30 BST)" executed successfully
+2024-06-16 10:27:29,061 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:39 BST)" (scheduled at 2024-06-16 10:27:29.057320+01:00)
+2024-06-16 10:27:29,088 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:39 BST)" executed successfully
+2024-06-16 10:27:30,080 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:40 BST)" (scheduled at 2024-06-16 10:27:30.076318+01:00)
+2024-06-16 10:27:30,110 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:40 BST)" executed successfully
+2024-06-16 10:27:39,062 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:49 BST)" (scheduled at 2024-06-16 10:27:39.057320+01:00)
+2024-06-16 10:27:39,100 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:49 BST)" executed successfully
+2024-06-16 10:27:40,078 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:50 BST)" (scheduled at 2024-06-16 10:27:40.076318+01:00)
+2024-06-16 10:27:40,105 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:50 BST)" executed successfully
+2024-06-16 10:27:49,065 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:59 BST)" (scheduled at 2024-06-16 10:27:49.057320+01:00)
+2024-06-16 10:27:49,092 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:27:59 BST)" executed successfully
+2024-06-16 10:27:50,089 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:00 BST)" (scheduled at 2024-06-16 10:27:50.076318+01:00)
+2024-06-16 10:27:50,114 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:00 BST)" executed successfully
+2024-06-16 10:27:59,059 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:09 BST)" (scheduled at 2024-06-16 10:27:59.057320+01:00)
+2024-06-16 10:27:59,080 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:09 BST)" executed successfully
+2024-06-16 10:28:00,077 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:10 BST)" (scheduled at 2024-06-16 10:28:00.076318+01:00)
+2024-06-16 10:28:00,106 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:10 BST)" executed successfully
+2024-06-16 10:28:09,059 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:19 BST)" (scheduled at 2024-06-16 10:28:09.057320+01:00)
+2024-06-16 10:28:09,084 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:19 BST)" executed successfully
+2024-06-16 10:28:10,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:20 BST)" (scheduled at 2024-06-16 10:28:10.076318+01:00)
+2024-06-16 10:28:10,099 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:20 BST)" executed successfully
+2024-06-16 10:28:19,083 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:29 BST)" (scheduled at 2024-06-16 10:28:19.057320+01:00)
+2024-06-16 10:28:19,103 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:29 BST)" executed successfully
+2024-06-16 10:28:20,076 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:30 BST)" (scheduled at 2024-06-16 10:28:20.076318+01:00)
+2024-06-16 10:28:20,101 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:30 BST)" executed successfully
+2024-06-16 10:28:29,065 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:39 BST)" (scheduled at 2024-06-16 10:28:29.057320+01:00)
+2024-06-16 10:28:29,088 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:39 BST)" executed successfully
+2024-06-16 10:28:30,077 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:40 BST)" (scheduled at 2024-06-16 10:28:30.076318+01:00)
+2024-06-16 10:28:30,109 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:40 BST)" executed successfully
+2024-06-16 10:28:34,749 INFO Received recommendations from LLM:  Based on the information provided, it appears that IP address 192.168.1.12 is repeatedly connecting to insecure ports (23 and 80) from various source ports. This could potentially indicate a malicious activity such as scanning for vulnerabilities or attempting unauthorized access.
+
+For the specific event with src_ip: 192.168.1.12, dst_ip: 192.168.1.50, src_port: 23123, dst_port: 23, it is recommended to block this IP address on the Intrusion Prevention System (IPS) as it could be a potential threat due to connecting to an insecure Telnet service.
+
+Additionally, for any connections to port 80 from this IP address, it would be advisable to upgrade the web server to use HTTPS and install TLS certificates to secure data transmission. This is because transmissions over plain HTTP are not encrypted, making them vulnerable to interception and manipulation by unauthorized parties.
+2024-06-16 10:28:34,749 INFO 127.0.0.1 - - [16/Jun/2024 10:28:34] "POST /get_recommendations HTTP/1.1" 200 -
+2024-06-16 10:28:39,061 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:49 BST)" (scheduled at 2024-06-16 10:28:39.057320+01:00)
+2024-06-16 10:28:39,088 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:49 BST)" executed successfully
+2024-06-16 10:28:40,089 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:50 BST)" (scheduled at 2024-06-16 10:28:40.076318+01:00)
+2024-06-16 10:28:40,115 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:50 BST)" executed successfully
+2024-06-16 10:28:49,057 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:59 BST)" (scheduled at 2024-06-16 10:28:49.057320+01:00)
+2024-06-16 10:28:49,087 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:28:59 BST)" executed successfully
+2024-06-16 10:28:50,083 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:29:00 BST)" (scheduled at 2024-06-16 10:28:50.076318+01:00)
+2024-06-16 10:28:50,105 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:29:00 BST)" executed successfully
+2024-06-16 10:28:59,090 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:29:09 BST)" (scheduled at 2024-06-16 10:28:59.057320+01:00)
+2024-06-16 10:28:59,113 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:29:09 BST)" executed successfully
+2024-06-16 10:29:00,085 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:29:10 BST)" (scheduled at 2024-06-16 10:29:00.076318+01:00)
+2024-06-16 10:29:00,114 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-16 10:29:10 BST)" executed successfully
+2024-06-16 10:29:03,856 INFO Scheduler has been shut down
+2024-06-16 10:29:04,097 INFO Scheduler has been shut down

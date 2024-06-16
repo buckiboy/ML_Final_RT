@@ -85,7 +85,7 @@
         </div>
         <div id="recommendations-section" class="mt-4">
             <h4>Recommendations:</h4>
-            <div id="recommendations" class="border p-3" style="white-space: pre-wrap;">Waiting for LLM results... <span id="elapsed-time"></span></div>
+            <div id="recommendations" class="border p-3 pulsating-background" style="white-space: pre-wrap;">Waiting for LLM results... <span id="elapsed-time"></span></div>
         </div>
         <form method="POST" action="{{ url_for('save_prediction') }}">
             <input type="hidden" name="src_ip" id="src_ip_hidden">
@@ -186,7 +186,9 @@ document.getElementById('prediction_form').addEventListener('submit', function(e
         document.getElementById('signature_hidden').value = jsonData.signature;
         document.getElementById('label_hidden').value = jsonData.prediction;
 
-        document.getElementById('recommendations').textContent = 'Waiting for LLM results...';
+        const recommendationsElement = document.getElementById('recommendations');
+        recommendationsElement.innerHTML = 'Waiting for LLM results... <span id="elapsed-time"></span>';
+        recommendationsElement.classList.add('pulsating-background');
         
         // Start the timer
         let startTime = Date.now();
@@ -218,11 +220,13 @@ document.getElementById('prediction_form').addEventListener('submit', function(e
         .then(response => response.json())
         .then(recommendationData => {
             clearInterval(timerInterval);
-            document.getElementById('recommendations').textContent = recommendationData.recommendations;
+            recommendationsElement.textContent = recommendationData.recommendations;
+            recommendationsElement.classList.remove('pulsating-background');
         })
         .catch(error => {
             clearInterval(timerInterval);
-            document.getElementById('recommendations').textContent = 'Error retrieving recommendations.';
+            recommendationsElement.textContent = 'Error retrieving recommendations.';
+            recommendationsElement.classList.remove('pulsating-background');
             console.error('Error:', error);
         });
     })

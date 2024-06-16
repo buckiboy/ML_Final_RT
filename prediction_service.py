@@ -9,7 +9,7 @@ app.secret_key = 'anothersecretkey'
 # Configure logging
 logging.basicConfig(filename='prediction_service.log', level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
 
-@@app.route('/get_recommendations', methods=['POST'])
+@app.route('/get_recommendations', methods=['POST'])
 def get_recommendations():
     data = request.json
     logging.info(f'Received data for recommendation: {data}')
