@@ -31,47 +31,61 @@
         <button type="submit" class="btn btn-primary">Set Interval</button>
     </form>
     <hr>
-    <table class="table table-striped mt-4">
-        <thead>
-            <tr>
-                <th>Source IP</th>
-                <th>Destination IP</th>
-                <th>Source Port</th>
-                <th>Destination Port</th>
-                <th>Protocol</th>
-                <th>Signature</th>
-                <th>Prediction</th>
-                <th>Probability</th>
-                <th>Timestamp</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for prediction in predictions %}
-            <tr>
-                <td>{{ prediction.src_ip }}</td>
-                <td>{{ prediction.dst_ip }}</td>
-                <td>{{ prediction.src_port }}</td>
-                <td>{{ prediction.dst_port }}</td>
-                <td>{{ prediction.protocol }}</td>
-                <td>{{ prediction.signature }}</td>
-                <td>
-                    {% if prediction.prediction == 1 %}
-                    <span class="badge badge-danger">Threat</span>
-                    {% else %}
-                    <span class="badge badge-success">No Threat</span>
-                    {% endif %}
-                </td>
-                <td>{{ prediction.prediction_proba }}</td>
-                <td>{{ prediction.timestamp }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <div id="predictions-container">
+        <table class="table table-striped mt-4">
+            <thead>
+                <tr>
+                    <th>Source IP</th>
+                    <th>Destination IP</th>
+                    <th>Source Port</th>
+                    <th>Destination Port</th>
+                    <th>Protocol</th>
+                    <th>Signature</th>
+                    <th>Prediction</th>
+                    <th>Probability</th>
+                    <th>Actions</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody id="predictions-body">
+                <!-- Predictions will be populated here -->
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <script>
-    setInterval(function() {
-        window.location.reload();
-    }, {{ interval }} * 1000);
+    function fetchPredictions() {
+        fetch('{{ url_for("show_predictions") }}')
+            .then(response => response.json())
+            .then(data => {
+                const predictionsBody = document.getElementById('predictions-body');
+                predictionsBody.innerHTML = '';
+                data.predictions.forEach(prediction => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${prediction.src_ip}</td>
+                        <td>${prediction.dst_ip}</td>
+                        <td>${prediction.src_port}</td>
+                        <td>${prediction.dst_port}</td>
+                        <td>${prediction.protocol}</td>
+                        <td>${prediction.signature}</td>
+                        <td>
+                            ${prediction.prediction == 1 
+                                ? '<span class="badge badge-danger">Threat</span>' 
+                                : '<span class="badge badge-success">No Threat</span>'}
+                        </td>
+                        <td>${prediction.prediction_proba}</td>
+                        <td>${prediction.actions ? prediction.actions.join('<br>') : 'No actions'}</td>
+                        <td>${prediction.timestamp}</td>
+                    `;
+                    predictionsBody.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching predictions:', error));
+    }
+
+    // Fetch predictions every interval seconds
+    setInterval(fetchPredictions, {{ interval }} * 1000);
 </script>
 {% endblock %}

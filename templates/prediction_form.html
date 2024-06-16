@@ -2,7 +2,7 @@
 {% block content %}
 <div class="mt-4">
     <h2>Predict Single Event</h2>
-    <form method="POST">
+    <form id="prediction_form" method="POST">
         <div class="form-group">
             <label for="src_ip">Source IP</label>
             <input type="text" name="src_ip" class="form-control" required>
@@ -63,65 +63,173 @@
         <button type="submit" class="btn btn-primary">Predict</button>
     </form>
 
-    {% if prediction is not none %}
-    <div class="mt-4">
+    <div id="results" class="mt-4" style="display: none;">
         <h3>Prediction: 
-            {% if prediction == 1 %}
-            <span class="badge badge-danger">Threat</span>
-            {% else %}
-            <span class="badge badge-success">No Threat</span>
-            {% endif %}
+            <span id="prediction-badge" class="badge"></span>
         </h3>
-        <h4>Details:</h4>
-        <ul class="list-group">
-            <li class="list-group-item">Source IP: {{ src_ip }}</li>
-            <li class="list-group-item">Destination IP: {{ dst_ip }}</li>
-            <li class="list-group-item">Source Port: {{ src_port }}</li>
-            <li class="list-group-item">Destination Port: {{ dst_port }}</li>
-            <li class="list-group-item">Protocol: {{ protocol }}</li>
-            <li class="list-group-item">Signature: {{ signature }}</li>
-        </ul>
-        <h4>Applied Feature Weights:</h4>
-        <ul class="list-group">
-            <li class="list-group-item">Weight for Source IP: {{ weight_src_ip }}</li>
-            <li class="list-group-item">Weight for Destination IP: {{ weight_dst_ip }}</li>
-            <li class="list-group-item">Weight for Source Port: {{ weight_src_port }}</li>
-            <li class="list-group-item">Weight for Destination Port: {{ weight_dst_port }}</li>
-            <li class="list-group-item">Weight for Protocol: {{ weight_protocol }}</li>
-            <li class="list-group-item">Weight for Signature: {{ weight_signature }}</li>
-        </ul>
+        <div>
+            <h4>Details: <button class="btn btn-sm btn-link" onclick="toggleVisibility('details-list')">Toggle</button></h4>
+            <ul class="list-group collapse show" id="details-list"></ul>
+        </div>
+        <div>
+            <h4>Applied Feature Weights: <button class="btn btn-sm btn-link" onclick="toggleVisibility('weights-list')">Toggle</button></h4>
+            <ul class="list-group collapse show" id="weights-list"></ul>
+        </div>
+        <div id="probability-section" class="mt-4" style="display: none;">
+            <h4>Probability: <button class="btn btn-sm btn-link" onclick="toggleVisibility('probability-list')">Toggle</button></h4>
+            <ul class="list-group collapse show" id="probability-list"></ul>
+        </div>
+        <div id="decision-path-section" class="mt-4" style="display: none;">
+            <h4>Decision Path: <button class="btn btn-sm btn-link" onclick="toggleVisibility('decision-path-list')">Toggle</button></h4>
+            <ul class="list-group collapse show" id="decision-path-list" style="word-wrap: break-word;"></ul>
+        </div>
+        <div id="recommendations-section" class="mt-4">
+            <h4>Recommendations:</h4>
+            <div id="recommendations" class="border p-3" style="white-space: pre-wrap;">Waiting for LLM results... <span id="elapsed-time"></span></div>
+        </div>
+        <form method="POST" action="{{ url_for('save_prediction') }}">
+            <input type="hidden" name="src_ip" id="src_ip_hidden">
+            <input type="hidden" name="dst_ip" id="dst_ip_hidden">
+            <input type="hidden" name="src_port" id="src_port_hidden">
+            <input type="hidden" name="dst_port" id="dst_port_hidden">
+            <input type="hidden" name="protocol" id="protocol_hidden">
+            <input type="hidden" name="signature" id="signature_hidden">
+            <input type="hidden" name="label" id="label_hidden">
+            <button type="submit" class="btn btn-success">Add to Training Data</button>
+        </form>
     </div>
-    {% if prediction_proba is not none %}
-    <div class="mt-4">
-        <h4>Probability:</h4>
-        <ul class="list-group">
-            <li class="list-group-item">Non-Threat: {{ prediction_proba[0] }}</li>
-            <li class="list-group-item">Threat: {{ prediction_proba[1] }}</li>
-        </ul>
-    </div>
-    {% endif %}
-    {% if decision_path_dense is not none %}
-    <div class="mt-4">
-        <h4>Decision Path:</h4>
-        <ul class="list-group">
-            {% for row in decision_path_dense %}
-                {% for val in row.tolist() %}
-                    <li class="list-group-item">Value: {{ val }}</li>
-                {% endfor %}
-            {% endfor %}
-        </ul>
-    </div>
-    {% endif %}
-    <form method="POST" action="{{ url_for('save_prediction') }}">
-        <input type="hidden" name="src_ip" value="{{ src_ip }}">
-        <input type="hidden" name="dst_ip" value="{{ dst_ip }}">
-        <input type="hidden" name="src_port" value="{{ src_port }}">
-        <input type="hidden" name="dst_port" value="{{ dst_port }}">
-        <input type="hidden" name="protocol" value="{{ protocol }}">
-        <input type="hidden" name="signature" value="{{ signature }}">
-        <input type="hidden" name="label" value="{{ prediction }}">
-        <button type="submit" class="btn btn-success">Add to Training Data</button>
-    </form>
-    {% endif %}
 </div>
+
+<script>
+function toggleVisibility(elementId) {
+    const element = document.getElementById(elementId);
+    if (element.classList.contains('show')) {
+        element.classList.remove('show');
+        element.classList.add('collapse');
+    } else {
+        element.classList.remove('collapse');
+        element.classList.add('show');
+    }
+}
+
+document.getElementById('prediction_form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    let formData = new FormData(this);
+    let jsonData = {};
+    formData.forEach((value, key) => jsonData[key] = value);
+
+    // Send request to prediction endpoint
+    fetch('/prediction', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(jsonData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            alert(data.error);
+            return;
+        }
+
+        // Add prediction data to jsonData
+        jsonData.prediction = data.prediction;
+        jsonData.prediction_proba = data.prediction_proba;
+        jsonData.decision_path_dense = data.decision_path_dense;
+
+        // Display machine learning results immediately
+        document.getElementById('results').style.display = 'block';
+        document.getElementById('prediction-badge').textContent = jsonData.prediction == 1 ? 'Threat' : 'No Threat';
+        document.getElementById('prediction-badge').className = jsonData.prediction == 1 ? 'badge badge-danger' : 'badge badge-success';
+
+        document.getElementById('details-list').innerHTML = `
+            <li class="list-group-item">Source IP: ${jsonData.src_ip}</li>
+            <li class="list-group-item">Destination IP: ${jsonData.dst_ip}</li>
+            <li class="list-group-item">Source Port: ${jsonData.src_port}</li>
+            <li class="list-group-item">Destination Port: ${jsonData.dst_port}</li>
+            <li class="list-group-item">Protocol: ${jsonData.protocol}</li>
+            <li class="list-group-item">Signature: ${jsonData.signature}</li>
+        `;
+
+        document.getElementById('weights-list').innerHTML = `
+            <li class="list-group-item">Weight for Source IP: ${jsonData.weight_src_ip}</li>
+            <li class="list-group-item">Weight for Destination IP: ${jsonData.weight_dst_ip}</li>
+            <li class="list-group-item">Weight for Source Port: ${jsonData.weight_src_port}</li>
+            <li class="list-group-item">Weight for Destination Port: ${jsonData.weight_dst_port}</li>
+            <li class="list-group-item">Weight for Protocol: ${jsonData.weight_protocol}</li>
+            <li class="list-group-item">Weight for Signature: ${jsonData.weight_signature}</li>
+        `;
+
+        if (jsonData.prediction_proba) {
+            document.getElementById('probability-section').style.display = 'block';
+            document.getElementById('probability-list').innerHTML = `
+                <li class="list-group-item">Non-Threat: ${jsonData.prediction_proba[0]}</li>
+                <li class="list-group-item">Threat: ${jsonData.prediction_proba[1]}</li>
+            `;
+        }
+
+        if (jsonData.decision_path_dense) {
+            document.getElementById('decision-path-section').style.display = 'block';
+            document.getElementById('decision-path-list').innerHTML = jsonData.decision_path_dense.map(row => 
+                `<li class="list-group-item">Value: ${row}</li>`
+            ).join('');
+        }
+
+        // Set hidden form values for saving prediction
+        document.getElementById('src_ip_hidden').value = jsonData.src_ip;
+        document.getElementById('dst_ip_hidden').value = jsonData.dst_ip;
+        document.getElementById('src_port_hidden').value = jsonData.src_port;
+        document.getElementById('dst_port_hidden').value = jsonData.dst_port;
+        document.getElementById('protocol_hidden').value = jsonData.protocol;
+        document.getElementById('signature_hidden').value = jsonData.signature;
+        document.getElementById('label_hidden').value = jsonData.prediction;
+
+        document.getElementById('recommendations').textContent = 'Waiting for LLM results...';
+        
+        // Start the timer
+        let startTime = Date.now();
+        let timerInterval = setInterval(() => {
+            let elapsedTime = ((Date.now() - startTime) / 1000).toFixed(1);
+            document.getElementById('elapsed-time').textContent = `(${elapsedTime}s elapsed)`;
+        }, 100);
+
+        // Log the LLM request data on the server
+        fetch('/log_llm_request', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(jsonData)
+        })
+        .catch(error => {
+            console.error('Error logging request:', error);
+        });
+
+        // Fetch LLM recommendations
+        fetch('/get_recommendations', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(jsonData)
+        })
+        .then(response => response.json())
+        .then(recommendationData => {
+            clearInterval(timerInterval);
+            document.getElementById('recommendations').textContent = recommendationData.recommendations;
+        })
+        .catch(error => {
+            clearInterval(timerInterval);
+            document.getElementById('recommendations').textContent = 'Error retrieving recommendations.';
+            console.error('Error:', error);
+        });
+    })
+    .catch(error => {
+        alert('Error processing prediction.');
+        console.error('Error:', error);
+    });
+});
+</script>
 {% endblock %}

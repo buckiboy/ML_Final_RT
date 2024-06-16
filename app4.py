@@ -1,24 +1,23 @@
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
+from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 import os
 import pandas as pd
 import joblib
 import logging
-from flask import Flask, render_template, request, redirect, url_for, flash
-from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+import requests
 from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix  # Ensure this is the correct import
+from sklearn.metrics import confusion_matrix
 import ipaddress
 import matplotlib
 matplotlib.use('Agg')  # Use a non-interactive backend
-
 import matplotlib.pyplot as plt
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 import atexit
-
-
+import requests
 # Initialize Flask app
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
@@ -49,7 +48,6 @@ default_user_id = "1"
 default_user_username = "default_user"
 default_user_password = generate_password_hash("default_password")
 users[default_user_id] = User(default_user_id, default_user_username, default_user_password)
-
 
 # Placeholder for storing predictions
 predictions = []
@@ -171,8 +169,6 @@ def debug_data():
         flash('Error loading debug data.', 'danger')
         return redirect(url_for('index'))
 
-
-
 # Function to create a pie chart of threat breakdown
 def create_pie_chart():
     if os.path.exists('trained_data.csv'):
@@ -235,29 +231,26 @@ def index():
         total_events = len(data)
     return render_template('index.html', total_events=total_events)
 
-
 @app.route('/prediction', methods=['GET', 'POST'])
 @login_required
 def prediction_form():
-    feature_importances = None  # Initialize feature_importances
-    feature_names = None  # Initialize feature_names
-    
     if request.method == 'POST':
-        src_ip = request.form['src_ip']
-        dst_ip = request.form['dst_ip']
-        src_port = int(request.form['src_port'])
-        dst_port = int(request.form['dst_port'])
-        protocol = request.form['protocol']
-        signature = request.form['signature']
-        sample_weight = float(request.form['sample_weight'])
+        data = request.json
+        src_ip = data['src_ip']
+        dst_ip = data['dst_ip']
+        src_port = int(data['src_port'])
+        dst_port = int(data['dst_port'])
+        protocol = data['protocol']
+        signature = data['signature']
+        sample_weight = float(data['sample_weight'])
         
         # Get feature weights
-        weight_src_ip = float(request.form['weight_src_ip'])
-        weight_dst_ip = float(request.form['weight_dst_ip'])
-        weight_src_port = float(request.form['weight_src_port'])
-        weight_dst_port = float(request.form['weight_dst_port'])
-        weight_protocol = float(request.form['weight_protocol'])
-        weight_signature = float(request.form['weight_signature'])
+        weight_src_ip = float(data['weight_src_ip'])
+        weight_dst_ip = float(data['weight_dst_ip'])
+        weight_src_port = float(data['weight_src_port'])
+        weight_dst_port = float(data['weight_dst_port'])
+        weight_protocol = float(data['weight_protocol'])
+        weight_signature = float(data['weight_signature'])
         
         try:
             # Create a DataFrame for the input data
@@ -292,27 +285,28 @@ def prediction_form():
             # Get feature importances
             feature_importances = model.feature_importances_
             feature_names = df.columns.tolist()
-            
-            return render_template('prediction_form.html', prediction=prediction[0], 
-                                   prediction_proba=prediction_proba[0], 
-                                   decision_path_dense=decision_path_dense, 
-                                   src_ip=src_ip, dst_ip=dst_ip, src_port=src_port, dst_port=dst_port, protocol=protocol, signature=signature,
-                                   feature_importances=feature_importances, feature_names=feature_names,
-                                   weight_src_ip=weight_src_ip, weight_dst_ip=weight_dst_ip, 
-                                   weight_src_port=weight_src_port, weight_dst_port=weight_dst_port,
-                                   weight_protocol=weight_protocol, weight_signature=weight_signature)
+
+            return jsonify({
+                'prediction': int(prediction[0]),
+                'prediction_proba': prediction_proba[0].tolist(),
+                'decision_path_dense': decision_path_dense.tolist(),
+                'src_ip': src_ip,
+                'dst_ip': dst_ip,
+                'src_port': src_port,
+                'dst_port': dst_port,
+                'protocol': protocol,
+                'signature': signature,
+                'weight_src_ip': weight_src_ip,
+                'weight_dst_ip': weight_dst_ip,
+                'weight_src_port': weight_src_port,
+                'weight_dst_port': weight_dst_port,
+                'weight_protocol': weight_protocol,
+                'weight_signature': weight_signature
+            })
         except ValueError as e:
             logging.error(f'Error in prediction: {e}')
-            flash(f'Error in prediction: {e}', 'danger')
-            return render_template('prediction_form.html', prediction=None, 
-                                   prediction_proba=None, 
-                                   decision_path_dense=None, 
-                                   feature_importances=feature_importances, feature_names=feature_names)
-    return render_template('prediction_form.html', prediction=None, 
-                           prediction_proba=None, 
-                           decision_path_dense=None,
-                           feature_importances=feature_importances, feature_names=feature_names)
-
+            return jsonify({'error': f'Error in prediction: {e}'})
+    return render_template('prediction_form.html')
 
 @app.route('/save_prediction', methods=['POST'])
 @login_required
@@ -618,6 +612,67 @@ def set_interval():
     flash(f'Interval updated to {interval} seconds.', 'success')
     return redirect(url_for('show_predictions'))
 
+@app.route('/get_recommendations', methods=['POST'])
+def get_recommendations():
+    data = request.json
+    logging.info(f'Received data for recommendation: {data}')
+    
+    prediction = data
 
+    gpt_payload = {
+        "messages": [{
+            "content": (
+                f"src_ip: {prediction['src_ip']}, "
+                f"dst_ip: {prediction['dst_ip']}, "
+                f"src_port: {prediction['src_port']}, "
+                f"dst_port: {prediction['dst_port']}, "
+                f"protocol: {prediction['protocol']}, "
+                "provide recommended action or advice"
+            )
+        }],
+        "use_context": True,
+        "context_filter": None,
+        "include_sources": False,
+        "stream": False
+    }
+
+    try:
+        response = requests.post("http://192.168.1.12:8001/v1/chat/completions", json=gpt_payload)
+        response.raise_for_status()
+        gpt_recommendations = response.json()['choices'][0]['message']['content']
+        logging.info(f'Received recommendations from LLM: {gpt_recommendations}')
+    except requests.exceptions.RequestException as e:
+        logging.error(f'Error retrieving recommendations: {e}')
+        return jsonify({"error": str(e), "recommendations": "Could not retrieve recommendations due to an error."}), 500
+
+    return jsonify({"recommendations": gpt_recommendations})
+
+@app.route('/view_llm_request', methods=['POST'])
+def view_llm_request():
+    data = request.json
+    logging.info(f'Viewing LLM request data: {data}')
+    
+    prediction = data
+
+    gpt_payload = {
+        "messages": [{
+            "content": (
+                f"src_ip: {prediction['src_ip']}, "
+                f"dst_ip: {prediction['dst_ip']}, "
+                f"src_port: {prediction['src_port']}, "
+                f"dst_port: {prediction['dst_port']}, "
+                f"protocol: {prediction['protocol']}, "
+                f"signature: {prediction['signature']}, "
+                f"prediction: {prediction['prediction']}, "
+                f"prediction_proba: {prediction['prediction_proba']}"
+            )
+        }],
+        "use_context": True,
+        "context_filter": None,
+        "include_sources": False,
+        "stream": False
+    }
+
+    return render_template('view_llm_request.html', payload=gpt_payload)
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)

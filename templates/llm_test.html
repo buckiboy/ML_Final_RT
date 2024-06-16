@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Test LLM API</h2>
+    <form id="llm-test-form" method="POST">
+        <div class="form-group">
+            <label for="prediction">Prediction</label>
+            <input type="text" name="prediction" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="prediction_proba">Prediction Probability</label>
+            <input type="text" name="prediction_proba" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="details">Details</label>
+            <textarea name="details" class="form-control" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send to LLM</button>
+    </form>
+
+    <div id="raw-data" class="mt-4" style="display: none;">
+        <h4>Raw Data Sent to LLM:</h4>
+        <pre id="payload"></pre>
+    </div>
+
+    {% if payload %}
+    <div class="mt-4">
+        <h4>Payload Sent to LLM:</h4>
+        <pre>{{ payload | tojson(indent=2) }}</pre>
+    </div>
+    {% endif %}
+
+    {% if response %}
+    <div class="mt-4">
+        <h4>Response from LLM:</h4>
+        <pre>{{ response }}</pre>
+    </div>
+    {% elif error %}
+    <div class="mt-4">
+        <h4>Error:</h4>
+        <pre>{{ error }}</pre>
+    </div>
+    {% endif %}
+</div>
+
+<script>
+document.getElementById('llm-test-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    let formData = new FormData(this);
+    let jsonData = {};
+    formData.forEach((value, key) => jsonData[key] = value);
+
+    fetch('/view_llm_request', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(jsonData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('raw-data').style.display = 'block';
+        document.getElementById('payload').textContent = JSON.stringify(data.gpt_payload, null, 2);
+    })
+    .catch(error => {
+        alert('Error processing request.');
+        console.error('Error:', error);
+    });
+
+    fetch('/llm_test', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(jsonData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            alert(data.error);
+            return;
+        }
+
+        document.getElementById('results').style.display = 'block';
+        document.getElementById('prediction-badge').textContent = data.prediction === 1 ? 'Threat' : 'No Threat';
+        document.getElementById('prediction-badge').className = data.prediction === 1 ? 'badge badge-danger' : 'badge badge-success';
+
+        document.getElementById('details-list').innerHTML = `
+            <li class="list-group-item">Source IP: ${data.src_ip}</li>
+            <li class="list-group-item">Destination IP: ${data.dst_ip}</li>
+            <li class="list-group-item">Source Port: ${data.src_port}</li>
+            <li class="list-group-item">Destination Port: ${data.dst_port}</li>
+            <li class="list-group-item">Protocol: ${data.protocol}</li>
+            <li class="list-group-item">Signature: ${data.signature}</li>
+        `;
+
+        document.getElementById('weights-list').innerHTML = `
+            <li class="list-group-item">Weight for Source IP: ${data.weight_src_ip}</li>
+            <li class="list-group-item">Weight for Destination IP: ${data.weight_dst_ip}</li>
+            <li class="list-group-item">Weight for Source Port: ${data.weight_src_port}</li>
+            <li class="list-group-item">Weight for Destination Port: ${data.weight_dst_port}</li>
+            <li class="list-group-item">Weight for Protocol: ${data.weight_protocol}</li>
+            <li class="list-group-item">Weight for Signature: ${data.weight_signature}</li>
+        `;
+
+        if (data.prediction_proba) {
+            document.getElementById('probability-section').style.display = 'block';
+            document.getElementById('probability-list').innerHTML = `
+                <li class="list-group-item">Non-Threat: ${data.prediction_proba[0]}</li>
+                <li class="list-group-item">Threat: ${data.prediction_proba[1]}</li>
+            `;
+        }
+
+        if (data.decision_path_dense) {
+            document.getElementById('decision-path-section').style.display = 'block';
+            document.getElementById('decision-path-list').innerHTML = data.decision_path_dense.map(row => 
+                `<li class="list-group-item">Value: ${row}</li>`
+            ).join('');
+        }
+
+        // Set hidden form values for saving prediction
+        document.getElementById('src_ip_hidden').value = data.src_ip;
+        document.getElementById('dst_ip_hidden').value = data.dst_ip;
+        document.getElementById('src_port_hidden').value = data.src_port;
+        document.getElementById('dst_port_hidden').value = data.dst_port;
+        document.getElementById('protocol_hidden').value = data.protocol;
+        document.getElementById('signature_hidden').value = data.signature;
+        document.getElementById('label_hidden').value = data.prediction;
+
+        // Request recommendations from LLM
+        fetch('http://localhost:5001/get_recommendations', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                prediction: data.prediction,
+                prediction_proba: data.prediction_proba,
+                details: {
+                    src_ip: data.src_ip,
+                    dst_ip: data.dst_ip,
+                    src_port: data.src_port,
+                    dst_port: data.dst_port,
+                    protocol: data.protocol,
+                    signature: data.signature
+                }
+            })
+        })
+        .then(response => response.json())
+        .then(recommendationData => {
+            document.getElementById('recommendations').textContent = recommendationData.recommendations;
+        })
+        .catch(error => {
+            document.getElementById('recommendations').textContent = 'Error retrieving recommendations.';
+            console.error('Error:', error);
+        });
+    })
+    .catch(error => {
+        alert('Error processing prediction.');
+        console.error('Error:', error);
+    });
+});
+</script>
+</body>
+</html>
