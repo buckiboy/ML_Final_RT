@@ -18,6 +18,8 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 import atexit
 import requests
+
+
 # Initialize Flask app
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
@@ -33,11 +35,17 @@ users = {
     "1": UserMixin()
 }
 
+from hashlib import sha256
+
 class User(UserMixin):
     def __init__(self, id, username, password):
         self.id = id
         self.username = username
-        self.password = password
+        self.password = password  # Assume password is already hashed
+
+    def check_password(self, password):
+        return check_password_hash(self.password, password)  # Use werkzeug
+
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -46,7 +54,7 @@ def load_user(user_id):
 # Add default user
 default_user_id = "1"
 default_user_username = "default_user"
-default_user_password = generate_password_hash("default_password")
+default_user_password = generate_password_hash("default_password", method='pbkdf2:sha256', salt_length=16)
 users[default_user_id] = User(default_user_id, default_user_username, default_user_password)
 
 # Placeholder for storing predictions
@@ -192,13 +200,16 @@ if not os.path.exists('rf_model.pkl'):
 else:
     model = joblib.load('rf_model.pkl')
 
+from werkzeug.security import generate_password_hash, check_password_hash
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         username = request.form['username']
-        password = generate_password_hash(request.form['password'])
+        password = request.form['password']
+        hashed_password = generate_password_hash(password, method='pbkdf2:sha256', salt_length=16)  # Use werkzeug
         user_id = str(len(users) + 1)
-        users[user_id] = User(user_id, username, password)
+        users[user_id] = User(user_id, username, hashed_password)  # Store user with hashed password
         flash('Registration successful! Please log in.', 'success')
         return redirect(url_for('login'))
     return render_template('register.html')
@@ -209,7 +220,7 @@ def login():
         username = request.form['username']
         password = request.form['password']
         user = next((u for u in users.values() if u.username == username), None)
-        if user and check_password_hash(user.password, password):
+        if user and user.check_password(password):  # Check password using check_password method
             login_user(user)
             return redirect(url_for('index'))
         flash('Invalid username or password', 'danger')
