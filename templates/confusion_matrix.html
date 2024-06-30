@@ -14,13 +14,14 @@
             <tbody>
                 <tr>
                     <td>Actual No Threat</td>
-                    <td>{{ data.iloc[0, 0] }}</td>
-                    <td>{{ data.iloc[0, 1] }}</td>
+                    <!-- Accessing the data dictionary passed from the backend to display the confusion matrix values -->
+                    <td>{{ data['Predicted No Threat']['Actual No Threat'] }}</td>
+                    <td>{{ data['Predicted Threat']['Actual No Threat'] }}</td>
                 </tr>
                 <tr>
                     <td>Actual Threat</td>
-                    <td>{{ data.iloc[1, 0] }}</td>
-                    <td>{{ data.iloc[1, 1] }}</td>
+                    <td>{{ data['Predicted No Threat']['Actual Threat'] }}</td>
+                    <td>{{ data['Predicted Threat']['Actual Threat'] }}</td>
                 </tr>
             </tbody>
         </table>
