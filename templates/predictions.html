@@ -31,47 +31,90 @@
         <button type="submit" class="btn btn-primary">Set Interval</button>
     </form>
     <hr>
-    <table class="table table-striped mt-4">
-        <thead>
-            <tr>
-                <th>Source IP</th>
-                <th>Destination IP</th>
-                <th>Source Port</th>
-                <th>Destination Port</th>
-                <th>Protocol</th>
-                <th>Signature</th>
-                <th>Prediction</th>
-                <th>Probability</th>
-                <th>Timestamp</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for prediction in predictions %}
-            <tr>
-                <td>{{ prediction.src_ip }}</td>
-                <td>{{ prediction.dst_ip }}</td>
-                <td>{{ prediction.src_port }}</td>
-                <td>{{ prediction.dst_port }}</td>
-                <td>{{ prediction.protocol }}</td>
-                <td>{{ prediction.signature }}</td>
-                <td>
-                    {% if prediction.prediction == 1 %}
-                    <span class="badge badge-danger">Threat</span>
-                    {% else %}
-                    <span class="badge badge-success">No Threat</span>
-                    {% endif %}
-                </td>
-                <td>{{ prediction.prediction_proba }}</td>
-                <td>{{ prediction.timestamp }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <a href="{{ url_for('start_monitoring') }}" class="btn btn-success">Start Monitoring</a>
+    <a href="{{ url_for('stop_monitoring') }}" class="btn btn-danger">Stop Monitoring</a>
+    <hr>
+    <div id="loading-message" style="display:none; text-align: center; background-color: #d4edda; padding: 10px; border-radius: 5px;">
+        <p>Analyzing data, please wait...</p>
+    </div>
+    <div id="predictions-container">
+        <table class="table table-striped mt-4">
+            <thead>
+                <tr>
+                    <th>Source IP</th>
+                    <th>Destination IP</th>
+                    <th>Source Port</th>
+                    <th>Destination Port</th>
+                    <th>Protocol</th>
+                    <th>Signature</th>
+                    <th>Prediction</th>
+                    <th>Probability</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for prediction in predictions %}
+                <tr>
+                    <td>{{ prediction.src_ip }}</td>
+                    <td>{{ prediction.dst_ip }}</td>
+                    <td>{{ prediction.src_port }}</td>
+                    <td>{{ prediction.dst_port }}</td>
+                    <td>{{ prediction.protocol }}</td>
+                    <td>{{ prediction.signature }}</td>
+                    <td>
+                        {% if prediction.prediction == 1 %}
+                        <span class="badge badge-danger">Threat</span>
+                        {% else %}
+                        <span class="badge badge-success">No Threat</span>
+                        {% endif %}
+                    </td>
+                    <td>{{ prediction.prediction_proba }}</td>
+                    <td>{{ prediction.timestamp }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <script>
+    let monitoringActive = {{ monitoring_active|tojson }}; // Pass monitoring status from backend
+
+    function showLoadingMessage() {
+        document.getElementById('loading-message').style.display = 'block';
+        document.getElementById('predictions-container').style.display = 'none';
+    }
+
+    function hideLoadingMessage() {
+        document.getElementById('loading-message').style.display = 'none';
+        document.getElementById('predictions-container').style.display = 'block';
+    }
+
+    // Show loading message when the page starts reloading
+    window.addEventListener('beforeunload', function(event) {
+        if (monitoringActive) {
+            showLoadingMessage();
+        }
+    });
+
+    // Hide loading message once the content is fully loaded
+    window.addEventListener('load', hideLoadingMessage);
+
+    // Set interval for reloading the page only if monitoring is active
     setInterval(function() {
-        window.location.reload();
+        if (monitoringActive) {
+            showLoadingMessage();
+            window.location.reload();
+        }
     }, {{ interval }} * 1000);
+
+    // Update monitoringActive variable when start/stop monitoring is clicked
+    document.querySelector('.btn-success').addEventListener('click', function() {
+        monitoringActive = true;
+    });
+
+    document.querySelector('.btn-danger').addEventListener('click', function() {
+        monitoringActive = false;
+    });
 </script>
 {% endblock %}
