@@ -1,23 +1,23 @@
 Feature,Importance
-src_ip,0.0
-dst_ip,0.15351275671348305
-src_port,0.12358299726119054
-dst_port,0.3123650086606129
-protocol_TCP,0.05150572559437072
-protocol_UDP,0.051382801864598
+src_ip,0.0048228438797355815
+dst_ip,0.07567347230040834
+src_port,0.20355555011197093
+dst_port,0.3902073596181289
+protocol_TCP,0.022111924311647286
+protocol_UDP,0.02162184357911952
 protocol_nan,0.0
-signature_Brute Force Attempt,0.001437062727991436
-signature_DNS Amplification,0.005838042801979062
-signature_INDICATOR-SCAN UPnP service discover attempt,0.06757830695669932
-signature_Normal Traffic,0.02046079185379338
-signature_POLICY-OTHER Microsoft Windows Terminal server request attempt,0.00048022993859271195
+signature_Brute Force Attempt,0.006704562212640217
+signature_DNS Amplification,0.00785379476926299
+signature_INDICATOR-SCAN UPnP service discover attempt,0.03263057969598864
+signature_Normal Traffic,0.12321245090163958
+signature_POLICY-OTHER Microsoft Windows Terminal server request attempt,0.003697330060100958
 signature_PROTOCOL-SNMP AgentX/tcp request,0.0
-signature_PROTOCOL-SNMP request udp,0.027910384799725314
-signature_PROTOCOL-SNMP trap tcp,0.00045508807183765467
-signature_RDP Attack,0.0009095353691715928
-signature_SERVER-MAIL Multiple IMAP servers APPEND command buffer overflow attempt,0.0008446939389458308
-signature_SERVER-OTHER CCProxy telnet ping buffer overflow attempt,0.005305892822496358
+signature_PROTOCOL-SNMP request udp,0.048866742600058105
+signature_PROTOCOL-SNMP trap tcp,0.0018358206725145858
+signature_RDP Attack,0.0021948886364681628
+signature_SERVER-MAIL Multiple IMAP servers APPEND command buffer overflow attempt,0.0019117423579440534
+signature_SERVER-OTHER CCProxy telnet ping buffer overflow attempt,0.005993078249314949
 signature_SERVER-OTHER Novell eDirectory LDAP server buffer overflow attempt,0.0
-signature_Telnet Connection,0.0
-signature_Telnet connection,0.0037438220175301197
-signature_nan,0.17268685860698205
+signature_Telnet Connection,0.00186197185396876
+signature_Telnet connection,0.0
+signature_nan,0.04524404418908853

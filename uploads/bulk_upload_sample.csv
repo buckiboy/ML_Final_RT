@@ -1,0 +1,7 @@
+src_ip,dst_ip,src_port,dst_port,protocol,signature,prediction
+192.168.1.1,192.168.1.2,443,80,TCP,Known Threat,1
+192.168.1.3,192.168.1.4,12345,21,TCP,Suspicious Activity,0
+192.168.1.5,192.168.1.6,22,8080,TCP,Brute Force Attempt,1
+192.168.1.7,192.168.1.8,443,443,UDP,Normal Traffic,0
+192.168.1.9,192.168.1.10,80,80,TCP,Normal Traffic,0
+192.168.1.11,192.168.1.12,53,53,UDP,DNS Amplification,1

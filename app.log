@@ -2683,3 +2683,427 @@ Recommended action:
 2024-06-30 09:27:24,858 INFO Removed job monitor_csv_file
 2024-06-30 09:27:24,860 INFO 127.0.0.1 - - [30/Jun/2024 09:27:24] "[32mGET /stop_monitoring HTTP/1.1[0m" 302 -
 2024-06-30 09:27:24,869 INFO 127.0.0.1 - - [30/Jun/2024 09:27:24] "GET /predictions HTTP/1.1" 200 -
+2024-06-30 09:31:01,696 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.25:5000
+2024-06-30 09:31:01,696 INFO [33mPress CTRL+C to quit[0m
+2024-06-30 09:31:01,697 INFO  * Restarting with stat
+2024-06-30 09:31:03,858 WARNING  * Debugger is active!
+2024-06-30 09:31:03,868 INFO  * Debugger PIN: 199-790-843
+2024-06-30 09:31:25,891 INFO 127.0.0.1 - - [30/Jun/2024 09:31:25] "[32mGET /removed_data HTTP/1.1[0m" 302 -
+2024-06-30 09:31:26,009 INFO 127.0.0.1 - - [30/Jun/2024 09:31:26] "GET / HTTP/1.1" 200 -
+2024-06-30 09:31:26,043 INFO 127.0.0.1 - - [30/Jun/2024 09:31:26] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:32:38,833 INFO  * Detected change in '/Users/mbakos/Downloads/uni/rt2/ML_Final_RT/app4.py', reloading
+2024-06-30 09:32:38,965 INFO  * Restarting with stat
+2024-06-30 09:32:41,673 WARNING  * Debugger is active!
+2024-06-30 09:32:41,687 INFO  * Debugger PIN: 199-790-843
+2024-06-30 09:32:45,874 INFO 127.0.0.1 - - [30/Jun/2024 09:32:45] "GET / HTTP/1.1" 200 -
+2024-06-30 09:32:45,889 INFO 127.0.0.1 - - [30/Jun/2024 09:32:45] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:32:45,929 INFO 127.0.0.1 - - [30/Jun/2024 09:32:45] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 09:32:47,284 INFO 127.0.0.1 - - [30/Jun/2024 09:32:47] "[32mGET /removed_data HTTP/1.1[0m" 302 -
+2024-06-30 09:32:47,342 INFO 127.0.0.1 - - [30/Jun/2024 09:32:47] "GET / HTTP/1.1" 200 -
+2024-06-30 09:32:47,361 INFO 127.0.0.1 - - [30/Jun/2024 09:32:47] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:32:57,958 INFO 127.0.0.1 - - [30/Jun/2024 09:32:57] "[32mGET /removed_data HTTP/1.1[0m" 302 -
+2024-06-30 09:32:58,002 INFO 127.0.0.1 - - [30/Jun/2024 09:32:58] "GET / HTTP/1.1" 200 -
+2024-06-30 09:32:58,014 INFO 127.0.0.1 - - [30/Jun/2024 09:32:58] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:33:01,199 INFO 127.0.0.1 - - [30/Jun/2024 09:33:01] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 09:33:02,359 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 09:33:02,359 INFO 127.0.0.1 - - [30/Jun/2024 09:33:02] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 09:33:02,406 INFO 127.0.0.1 - - [30/Jun/2024 09:33:02] "GET / HTTP/1.1" 200 -
+2024-06-30 09:33:02,423 INFO 127.0.0.1 - - [30/Jun/2024 09:33:02] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:33:05,703 INFO 127.0.0.1 - - [30/Jun/2024 09:33:05] "[32mGET /removed_data HTTP/1.1[0m" 302 -
+2024-06-30 09:33:05,761 INFO 127.0.0.1 - - [30/Jun/2024 09:33:05] "GET / HTTP/1.1" 200 -
+2024-06-30 09:33:05,778 INFO 127.0.0.1 - - [30/Jun/2024 09:33:05] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:33:26,427 INFO 127.0.0.1 - - [30/Jun/2024 09:33:26] "GET / HTTP/1.1" 200 -
+2024-06-30 09:33:26,443 INFO 127.0.0.1 - - [30/Jun/2024 09:33:26] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:33:26,479 INFO 127.0.0.1 - - [30/Jun/2024 09:33:26] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 09:33:27,972 INFO 127.0.0.1 - - [30/Jun/2024 09:33:27] "[32mGET /removed_data HTTP/1.1[0m" 302 -
+2024-06-30 09:33:28,029 INFO 127.0.0.1 - - [30/Jun/2024 09:33:28] "GET / HTTP/1.1" 200 -
+2024-06-30 09:33:28,044 INFO 127.0.0.1 - - [30/Jun/2024 09:33:28] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:37:14,954 INFO 127.0.0.1 - - [30/Jun/2024 09:37:14] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 09:41:43,996 INFO  * Detected change in '/Users/mbakos/Downloads/uni/rt2/ML_Final_RT/app4.py', reloading
+2024-06-30 09:41:44,131 INFO  * Restarting with stat
+2024-06-30 09:41:56,948 WARNING  * Debugger is active!
+2024-06-30 09:41:56,963 INFO  * Debugger PIN: 199-790-843
+2024-06-30 09:42:28,593 INFO 127.0.0.1 - - [30/Jun/2024 09:42:28] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 09:42:28,702 INFO 127.0.0.1 - - [30/Jun/2024 09:42:28] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 09:42:31,177 INFO 127.0.0.1 - - [30/Jun/2024 09:42:31] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 09:42:32,175 ERROR Error in check_and_remove_duplicates function: No columns to parse from file
+2024-06-30 09:42:32,372 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 09:42:32,372 INFO 127.0.0.1 - - [30/Jun/2024 09:42:32] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 09:42:32,479 INFO 127.0.0.1 - - [30/Jun/2024 09:42:32] "GET / HTTP/1.1" 200 -
+2024-06-30 09:42:32,501 INFO 127.0.0.1 - - [30/Jun/2024 09:42:32] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:42:34,773 INFO 127.0.0.1 - - [30/Jun/2024 09:42:34] "[32mGET /removed_data HTTP/1.1[0m" 302 -
+2024-06-30 09:42:34,856 INFO 127.0.0.1 - - [30/Jun/2024 09:42:34] "GET / HTTP/1.1" 200 -
+2024-06-30 09:42:34,877 INFO 127.0.0.1 - - [30/Jun/2024 09:42:34] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:42:40,127 INFO 127.0.0.1 - - [30/Jun/2024 09:42:40] "[32mGET /removed_data HTTP/1.1[0m" 302 -
+2024-06-30 09:42:40,212 INFO 127.0.0.1 - - [30/Jun/2024 09:42:40] "GET / HTTP/1.1" 200 -
+2024-06-30 09:42:40,241 INFO 127.0.0.1 - - [30/Jun/2024 09:42:40] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:42:41,226 INFO 127.0.0.1 - - [30/Jun/2024 09:42:41] "[32mGET /removed_data HTTP/1.1[0m" 302 -
+2024-06-30 09:42:41,309 INFO 127.0.0.1 - - [30/Jun/2024 09:42:41] "GET / HTTP/1.1" 200 -
+2024-06-30 09:42:41,330 INFO 127.0.0.1 - - [30/Jun/2024 09:42:41] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:42:44,887 INFO 127.0.0.1 - - [30/Jun/2024 09:42:44] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 09:42:53,894 INFO 127.0.0.1 - - [30/Jun/2024 09:42:53] "GET /add_data HTTP/1.1" 200 -
+2024-06-30 09:43:01,524 INFO 127.0.0.1 - - [30/Jun/2024 09:43:01] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 09:43:43,305 INFO Added new data to training set:         src_ip       dst_ip  src_port  dst_port protocol       signature
+0  192.168.1.1  192.168.1.2        80      8080      TCP  Normal Traffic
+2024-06-30 09:43:43,319 ERROR Error in check_and_remove_duplicates function: No columns to parse from file
+2024-06-30 09:43:43,461 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 09:43:43,461 INFO 127.0.0.1 - - [30/Jun/2024 09:43:43] "[32mPOST /add_data HTTP/1.1[0m" 302 -
+2024-06-30 09:43:43,464 INFO 127.0.0.1 - - [30/Jun/2024 09:43:43] "GET /add_data HTTP/1.1" 200 -
+2024-06-30 09:43:47,293 INFO 127.0.0.1 - - [30/Jun/2024 09:43:47] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 09:43:47,353 INFO 127.0.0.1 - - [30/Jun/2024 09:43:47] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 09:43:54,339 INFO 127.0.0.1 - - [30/Jun/2024 09:43:54] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 09:43:57,211 ERROR Error in check_and_remove_duplicates function: No columns to parse from file
+2024-06-30 09:43:57,402 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 09:43:57,402 INFO 127.0.0.1 - - [30/Jun/2024 09:43:57] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 09:43:57,450 INFO 127.0.0.1 - - [30/Jun/2024 09:43:57] "GET / HTTP/1.1" 200 -
+2024-06-30 09:43:57,498 INFO 127.0.0.1 - - [30/Jun/2024 09:43:57] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:43:59,716 INFO 127.0.0.1 - - [30/Jun/2024 09:43:59] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 09:44:06,418 INFO 127.0.0.1 - - [30/Jun/2024 09:44:06] "[32mGET /removed_data HTTP/1.1[0m" 302 -
+2024-06-30 09:44:06,458 INFO 127.0.0.1 - - [30/Jun/2024 09:44:06] "GET / HTTP/1.1" 200 -
+2024-06-30 09:44:06,487 INFO 127.0.0.1 - - [30/Jun/2024 09:44:06] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:44:11,271 INFO 127.0.0.1 - - [30/Jun/2024 09:44:11] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 09:47:07,747 INFO  * Detected change in '/Users/mbakos/Downloads/uni/rt2/ML_Final_RT/app4.py', reloading
+2024-06-30 09:47:07,886 INFO  * Restarting with stat
+2024-06-30 09:47:10,258 WARNING  * Debugger is active!
+2024-06-30 09:47:10,271 INFO  * Debugger PIN: 199-790-843
+2024-06-30 09:47:12,881 INFO 127.0.0.1 - - [30/Jun/2024 09:47:12] "GET /add_data HTTP/1.1" 200 -
+2024-06-30 09:47:12,951 INFO 127.0.0.1 - - [30/Jun/2024 09:47:12] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 09:47:14,829 INFO 127.0.0.1 - - [30/Jun/2024 09:47:14] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 09:47:16,023 ERROR Error in check_and_remove_duplicates function: No columns to parse from file
+2024-06-30 09:47:16,199 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 09:47:16,199 INFO 127.0.0.1 - - [30/Jun/2024 09:47:16] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 09:47:16,265 INFO 127.0.0.1 - - [30/Jun/2024 09:47:16] "GET / HTTP/1.1" 200 -
+2024-06-30 09:47:16,291 INFO 127.0.0.1 - - [30/Jun/2024 09:47:16] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:47:21,399 INFO 127.0.0.1 - - [30/Jun/2024 09:47:21] "[32mGET /removed_data HTTP/1.1[0m" 302 -
+2024-06-30 09:47:21,476 INFO 127.0.0.1 - - [30/Jun/2024 09:47:21] "GET / HTTP/1.1" 200 -
+2024-06-30 09:47:21,494 INFO 127.0.0.1 - - [30/Jun/2024 09:47:21] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:47:23,986 INFO 127.0.0.1 - - [30/Jun/2024 09:47:23] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 09:47:25,617 ERROR Error in check_and_remove_duplicates function: No columns to parse from file
+2024-06-30 09:47:25,786 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 09:47:25,787 INFO 127.0.0.1 - - [30/Jun/2024 09:47:25] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 09:47:25,858 INFO 127.0.0.1 - - [30/Jun/2024 09:47:25] "GET / HTTP/1.1" 200 -
+2024-06-30 09:47:25,877 INFO 127.0.0.1 - - [30/Jun/2024 09:47:25] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:47:27,939 INFO 127.0.0.1 - - [30/Jun/2024 09:47:27] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 09:47:28,887 ERROR Error in check_and_remove_duplicates function: No columns to parse from file
+2024-06-30 09:47:28,990 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 09:47:28,990 INFO 127.0.0.1 - - [30/Jun/2024 09:47:28] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 09:47:29,037 INFO 127.0.0.1 - - [30/Jun/2024 09:47:29] "GET / HTTP/1.1" 200 -
+2024-06-30 09:47:29,072 INFO 127.0.0.1 - - [30/Jun/2024 09:47:29] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:48:08,755 INFO 127.0.0.1 - - [30/Jun/2024 09:48:08] "GET / HTTP/1.1" 200 -
+2024-06-30 09:48:08,773 INFO 127.0.0.1 - - [30/Jun/2024 09:48:08] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:48:08,810 INFO 127.0.0.1 - - [30/Jun/2024 09:48:08] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 09:48:12,306 INFO 127.0.0.1 - - [30/Jun/2024 09:48:12] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 09:48:12,375 INFO 127.0.0.1 - - [30/Jun/2024 09:48:12] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:11:26,476 INFO  * Detected change in '/Users/mbakos/Downloads/uni/rt2/ML_Final_RT/app4.py', reloading
+2024-06-30 10:11:26,657 INFO  * Restarting with stat
+2024-06-30 10:11:37,969 WARNING  * Debugger is active!
+2024-06-30 10:11:37,985 INFO  * Debugger PIN: 199-790-843
+2024-06-30 10:11:51,845 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.25:5000
+2024-06-30 10:11:51,845 INFO [33mPress CTRL+C to quit[0m
+2024-06-30 10:11:51,846 INFO  * Restarting with stat
+2024-06-30 10:11:54,261 WARNING  * Debugger is active!
+2024-06-30 10:11:54,281 INFO  * Debugger PIN: 199-790-843
+2024-06-30 10:12:04,365 INFO 127.0.0.1 - - [30/Jun/2024 10:12:04] "GET / HTTP/1.1" 200 -
+2024-06-30 10:12:04,394 INFO 127.0.0.1 - - [30/Jun/2024 10:12:04] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:12:04,513 INFO 127.0.0.1 - - [30/Jun/2024 10:12:04] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:12:07,533 INFO 127.0.0.1 - - [30/Jun/2024 10:12:07] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 10:12:12,728 INFO 127.0.0.1 - - [30/Jun/2024 10:12:12] "GET / HTTP/1.1" 200 -
+2024-06-30 10:12:12,762 INFO 127.0.0.1 - - [30/Jun/2024 10:12:12] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:12:14,846 INFO 127.0.0.1 - - [30/Jun/2024 10:12:14] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 10:12:15,901 ERROR Error in check_and_remove_duplicates function: No columns to parse from file
+2024-06-30 10:12:16,100 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:12:16,101 INFO 127.0.0.1 - - [30/Jun/2024 10:12:16] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 10:12:16,144 INFO 127.0.0.1 - - [30/Jun/2024 10:12:16] "GET / HTTP/1.1" 200 -
+2024-06-30 10:12:16,172 INFO 127.0.0.1 - - [30/Jun/2024 10:12:16] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:12:20,332 INFO 127.0.0.1 - - [30/Jun/2024 10:12:20] "[32mGET /removed_data HTTP/1.1[0m" 302 -
+2024-06-30 10:12:20,409 INFO 127.0.0.1 - - [30/Jun/2024 10:12:20] "GET / HTTP/1.1" 200 -
+2024-06-30 10:12:20,433 INFO 127.0.0.1 - - [30/Jun/2024 10:12:20] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:12:31,868 INFO 127.0.0.1 - - [30/Jun/2024 10:12:31] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:12:50,859 INFO 127.0.0.1 - - [30/Jun/2024 10:12:50] "POST /upload HTTP/1.1" 200 -
+2024-06-30 10:12:53,484 ERROR Error in check_and_remove_duplicates function: No columns to parse from file
+2024-06-30 10:12:53,686 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:12:53,687 INFO 127.0.0.1 - - [30/Jun/2024 10:12:53] "[32mPOST /save_predictions HTTP/1.1[0m" 302 -
+2024-06-30 10:12:53,691 INFO 127.0.0.1 - - [30/Jun/2024 10:12:53] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:12:56,707 INFO 127.0.0.1 - - [30/Jun/2024 10:12:56] "[32mGET /removed_data HTTP/1.1[0m" 302 -
+2024-06-30 10:12:56,798 INFO 127.0.0.1 - - [30/Jun/2024 10:12:56] "GET / HTTP/1.1" 200 -
+2024-06-30 10:12:56,821 INFO 127.0.0.1 - - [30/Jun/2024 10:12:56] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:13:00,057 INFO 127.0.0.1 - - [30/Jun/2024 10:13:00] "GET / HTTP/1.1" 200 -
+2024-06-30 10:13:00,083 INFO 127.0.0.1 - - [30/Jun/2024 10:13:00] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:13:02,665 INFO 127.0.0.1 - - [30/Jun/2024 10:13:02] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 10:13:03,637 ERROR Error in check_and_remove_duplicates function: No columns to parse from file
+2024-06-30 10:13:03,789 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:13:03,789 INFO 127.0.0.1 - - [30/Jun/2024 10:13:03] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 10:13:03,832 INFO 127.0.0.1 - - [30/Jun/2024 10:13:03] "GET / HTTP/1.1" 200 -
+2024-06-30 10:13:03,850 INFO 127.0.0.1 - - [30/Jun/2024 10:13:03] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:13:07,186 INFO 127.0.0.1 - - [30/Jun/2024 10:13:07] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:13:10,474 INFO 127.0.0.1 - - [30/Jun/2024 10:13:10] "[32mGET /removed_data HTTP/1.1[0m" 302 -
+2024-06-30 10:13:10,558 INFO 127.0.0.1 - - [30/Jun/2024 10:13:10] "GET / HTTP/1.1" 200 -
+2024-06-30 10:13:10,580 INFO 127.0.0.1 - - [30/Jun/2024 10:13:10] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:13:52,472 INFO 127.0.0.1 - - [30/Jun/2024 10:13:52] "GET /show_confusion_matrix HTTP/1.1" 200 -
+2024-06-30 10:13:58,455 INFO 127.0.0.1 - - [30/Jun/2024 10:13:58] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:14:05,721 INFO 127.0.0.1 - - [30/Jun/2024 10:14:05] "POST /upload HTTP/1.1" 200 -
+2024-06-30 10:14:08,536 ERROR Error in check_and_remove_duplicates function: No columns to parse from file
+2024-06-30 10:14:08,691 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:14:08,692 INFO 127.0.0.1 - - [30/Jun/2024 10:14:08] "[32mPOST /save_predictions HTTP/1.1[0m" 302 -
+2024-06-30 10:14:08,695 INFO 127.0.0.1 - - [30/Jun/2024 10:14:08] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:14:13,068 INFO 127.0.0.1 - - [30/Jun/2024 10:14:13] "GET / HTTP/1.1" 200 -
+2024-06-30 10:14:13,102 INFO 127.0.0.1 - - [30/Jun/2024 10:14:13] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:14:14,940 INFO 127.0.0.1 - - [30/Jun/2024 10:14:14] "GET / HTTP/1.1" 200 -
+2024-06-30 10:14:14,960 INFO 127.0.0.1 - - [30/Jun/2024 10:14:14] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:14:14,985 INFO 127.0.0.1 - - [30/Jun/2024 10:14:14] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:14:17,932 INFO 127.0.0.1 - - [30/Jun/2024 10:14:17] "[32mGET /removed_data HTTP/1.1[0m" 302 -
+2024-06-30 10:14:17,985 INFO 127.0.0.1 - - [30/Jun/2024 10:14:17] "GET / HTTP/1.1" 200 -
+2024-06-30 10:14:18,004 INFO 127.0.0.1 - - [30/Jun/2024 10:14:18] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:19:18,576 INFO  * Detected change in '/Users/mbakos/Downloads/uni/rt2/ML_Final_RT/app4.py', reloading
+2024-06-30 10:19:18,740 INFO  * Restarting with stat
+2024-06-30 10:19:21,687 WARNING  * Debugger is active!
+2024-06-30 10:19:21,714 INFO  * Debugger PIN: 199-790-843
+2024-06-30 10:19:43,962 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.25:5000
+2024-06-30 10:19:43,962 INFO [33mPress CTRL+C to quit[0m
+2024-06-30 10:19:43,965 INFO  * Restarting with stat
+2024-06-30 10:19:46,469 WARNING  * Debugger is active!
+2024-06-30 10:19:46,484 INFO  * Debugger PIN: 199-790-843
+2024-06-30 10:20:03,601 INFO 127.0.0.1 - - [30/Jun/2024 10:20:03] "GET / HTTP/1.1" 200 -
+2024-06-30 10:20:03,638 INFO 127.0.0.1 - - [30/Jun/2024 10:20:03] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:20:03,671 INFO 127.0.0.1 - - [30/Jun/2024 10:20:03] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:20:06,200 INFO 127.0.0.1 - - [30/Jun/2024 10:20:06] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 10:20:07,446 ERROR Error removing duplicates: No columns to parse from file
+2024-06-30 10:20:07,612 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:20:07,612 INFO 127.0.0.1 - - [30/Jun/2024 10:20:07] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 10:20:07,655 INFO 127.0.0.1 - - [30/Jun/2024 10:20:07] "GET / HTTP/1.1" 200 -
+2024-06-30 10:20:07,678 INFO 127.0.0.1 - - [30/Jun/2024 10:20:07] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:20:30,787 INFO 127.0.0.1 - - [30/Jun/2024 10:20:30] "[32mGET /removed_data HTTP/1.1[0m" 302 -
+2024-06-30 10:20:30,858 INFO 127.0.0.1 - - [30/Jun/2024 10:20:30] "GET / HTTP/1.1" 200 -
+2024-06-30 10:20:30,886 INFO 127.0.0.1 - - [30/Jun/2024 10:20:30] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:20:32,913 INFO 127.0.0.1 - - [30/Jun/2024 10:20:32] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:20:40,349 INFO 127.0.0.1 - - [30/Jun/2024 10:20:40] "POST /upload HTTP/1.1" 200 -
+2024-06-30 10:20:42,134 ERROR Error removing duplicates: No columns to parse from file
+2024-06-30 10:20:42,271 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:20:42,272 INFO 127.0.0.1 - - [30/Jun/2024 10:20:42] "[32mPOST /save_predictions HTTP/1.1[0m" 302 -
+2024-06-30 10:20:42,274 INFO 127.0.0.1 - - [30/Jun/2024 10:20:42] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:20:45,058 INFO 127.0.0.1 - - [30/Jun/2024 10:20:45] "GET / HTTP/1.1" 200 -
+2024-06-30 10:20:45,084 INFO 127.0.0.1 - - [30/Jun/2024 10:20:45] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:20:47,184 INFO 127.0.0.1 - - [30/Jun/2024 10:20:47] "GET / HTTP/1.1" 200 -
+2024-06-30 10:20:47,208 INFO 127.0.0.1 - - [30/Jun/2024 10:20:47] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:20:47,239 INFO 127.0.0.1 - - [30/Jun/2024 10:20:47] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:20:48,904 INFO 127.0.0.1 - - [30/Jun/2024 10:20:48] "[32mGET /removed_data HTTP/1.1[0m" 302 -
+2024-06-30 10:20:48,976 INFO 127.0.0.1 - - [30/Jun/2024 10:20:48] "GET / HTTP/1.1" 200 -
+2024-06-30 10:20:49,002 INFO 127.0.0.1 - - [30/Jun/2024 10:20:49] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:21:56,665 INFO 127.0.0.1 - - [30/Jun/2024 10:21:56] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 10:23:49,062 INFO  * Detected change in '/Users/mbakos/Downloads/uni/rt2/ML_Final_RT/app4.py', reloading
+2024-06-30 10:23:49,227 INFO  * Restarting with stat
+2024-06-30 10:23:52,075 WARNING  * Debugger is active!
+2024-06-30 10:23:52,089 INFO  * Debugger PIN: 199-790-843
+2024-06-30 10:23:57,593 INFO 127.0.0.1 - - [30/Jun/2024 10:23:57] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 10:23:57,700 INFO 127.0.0.1 - - [30/Jun/2024 10:23:57] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:24:00,454 INFO 127.0.0.1 - - [30/Jun/2024 10:24:00] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 10:24:01,780 INFO Duplicates saved to 'removed_data.csv'.
+2024-06-30 10:24:01,910 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:24:01,910 INFO 127.0.0.1 - - [30/Jun/2024 10:24:01] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 10:24:01,987 INFO 127.0.0.1 - - [30/Jun/2024 10:24:01] "GET / HTTP/1.1" 200 -
+2024-06-30 10:24:02,017 INFO 127.0.0.1 - - [30/Jun/2024 10:24:02] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:24:07,342 INFO 127.0.0.1 - - [30/Jun/2024 10:24:07] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 10:24:24,919 INFO 127.0.0.1 - - [30/Jun/2024 10:24:24] "GET / HTTP/1.1" 200 -
+2024-06-30 10:24:24,947 INFO 127.0.0.1 - - [30/Jun/2024 10:24:24] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:24:28,968 INFO 127.0.0.1 - - [30/Jun/2024 10:24:28] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:24:39,968 INFO 127.0.0.1 - - [30/Jun/2024 10:24:39] "POST /upload HTTP/1.1" 200 -
+2024-06-30 10:24:41,307 INFO No duplicates found.
+2024-06-30 10:24:41,489 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:24:41,489 INFO 127.0.0.1 - - [30/Jun/2024 10:24:41] "[32mPOST /save_predictions HTTP/1.1[0m" 302 -
+2024-06-30 10:24:41,494 INFO 127.0.0.1 - - [30/Jun/2024 10:24:41] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:24:47,038 INFO 127.0.0.1 - - [30/Jun/2024 10:24:47] "GET / HTTP/1.1" 200 -
+2024-06-30 10:24:47,062 INFO 127.0.0.1 - - [30/Jun/2024 10:24:47] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:24:49,213 INFO 127.0.0.1 - - [30/Jun/2024 10:24:49] "GET / HTTP/1.1" 200 -
+2024-06-30 10:24:49,236 INFO 127.0.0.1 - - [30/Jun/2024 10:24:49] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:24:49,261 INFO 127.0.0.1 - - [30/Jun/2024 10:24:49] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:24:50,609 INFO 127.0.0.1 - - [30/Jun/2024 10:24:50] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 10:24:57,301 INFO 127.0.0.1 - - [30/Jun/2024 10:24:57] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 10:24:57,361 INFO 127.0.0.1 - - [30/Jun/2024 10:24:57] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:25:06,301 INFO 127.0.0.1 - - [30/Jun/2024 10:25:06] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 10:25:22,198 INFO 127.0.0.1 - - [30/Jun/2024 10:25:22] "GET /prediction HTTP/1.1" 200 -
+2024-06-30 10:25:23,884 INFO 127.0.0.1 - - [30/Jun/2024 10:25:23] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:25:31,395 INFO 127.0.0.1 - - [30/Jun/2024 10:25:31] "POST /upload HTTP/1.1" 200 -
+2024-06-30 10:25:33,595 INFO No duplicates found.
+2024-06-30 10:25:33,764 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:25:33,764 INFO 127.0.0.1 - - [30/Jun/2024 10:25:33] "[32mPOST /save_predictions HTTP/1.1[0m" 302 -
+2024-06-30 10:25:33,770 INFO 127.0.0.1 - - [30/Jun/2024 10:25:33] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:25:37,431 INFO 127.0.0.1 - - [30/Jun/2024 10:25:37] "GET / HTTP/1.1" 200 -
+2024-06-30 10:25:37,463 INFO 127.0.0.1 - - [30/Jun/2024 10:25:37] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:25:39,279 INFO 127.0.0.1 - - [30/Jun/2024 10:25:39] "GET / HTTP/1.1" 200 -
+2024-06-30 10:25:39,303 INFO 127.0.0.1 - - [30/Jun/2024 10:25:39] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:25:39,332 INFO 127.0.0.1 - - [30/Jun/2024 10:25:39] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:25:42,084 INFO 127.0.0.1 - - [30/Jun/2024 10:25:42] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 10:25:43,669 INFO 127.0.0.1 - - [30/Jun/2024 10:25:43] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 10:25:44,663 INFO No duplicates found.
+2024-06-30 10:25:44,817 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:25:44,817 INFO 127.0.0.1 - - [30/Jun/2024 10:25:44] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 10:25:44,866 INFO 127.0.0.1 - - [30/Jun/2024 10:25:44] "GET / HTTP/1.1" 200 -
+2024-06-30 10:25:44,896 INFO 127.0.0.1 - - [30/Jun/2024 10:25:44] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:25:51,047 INFO 127.0.0.1 - - [30/Jun/2024 10:25:51] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 10:26:18,993 INFO 127.0.0.1 - - [30/Jun/2024 10:26:18] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:26:30,552 INFO 127.0.0.1 - - [30/Jun/2024 10:26:30] "POST /upload HTTP/1.1" 200 -
+2024-06-30 10:26:35,057 INFO No duplicates found.
+2024-06-30 10:26:35,194 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:26:35,195 INFO 127.0.0.1 - - [30/Jun/2024 10:26:35] "[32mPOST /save_predictions HTTP/1.1[0m" 302 -
+2024-06-30 10:26:35,198 INFO 127.0.0.1 - - [30/Jun/2024 10:26:35] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:26:39,666 INFO 127.0.0.1 - - [30/Jun/2024 10:26:39] "GET / HTTP/1.1" 200 -
+2024-06-30 10:26:39,691 INFO 127.0.0.1 - - [30/Jun/2024 10:26:39] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:26:41,137 INFO 127.0.0.1 - - [30/Jun/2024 10:26:41] "GET / HTTP/1.1" 200 -
+2024-06-30 10:26:41,162 INFO 127.0.0.1 - - [30/Jun/2024 10:26:41] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:26:41,188 INFO 127.0.0.1 - - [30/Jun/2024 10:26:41] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:26:43,626 INFO 127.0.0.1 - - [30/Jun/2024 10:26:43] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 10:26:55,689 INFO 127.0.0.1 - - [30/Jun/2024 10:26:55] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 10:27:03,997 INFO 127.0.0.1 - - [30/Jun/2024 10:27:03] "GET /add_data HTTP/1.1" 200 -
+2024-06-30 10:27:15,194 INFO Added new data to training set:       src_ip     dst_ip  src_port  dst_port protocol signature
+0  10.0.0.24  10.0.0.14        34      3453      TCP        NA
+2024-06-30 10:27:15,216 INFO No duplicates found.
+2024-06-30 10:27:15,377 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:27:15,377 INFO 127.0.0.1 - - [30/Jun/2024 10:27:15] "[32mPOST /add_data HTTP/1.1[0m" 302 -
+2024-06-30 10:27:15,381 INFO 127.0.0.1 - - [30/Jun/2024 10:27:15] "GET /add_data HTTP/1.1" 200 -
+2024-06-30 10:27:17,336 INFO 127.0.0.1 - - [30/Jun/2024 10:27:17] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 10:27:35,312 INFO 127.0.0.1 - - [30/Jun/2024 10:27:35] "GET /add_data HTTP/1.1" 200 -
+2024-06-30 10:27:51,465 INFO Added new data to training set:       src_ip     dst_ip  src_port  dst_port protocol signature
+0  10.0.0.24  10.0.0.14        34      3453      TCP        NA
+2024-06-30 10:27:51,493 INFO Duplicates saved to 'removed_data.csv'.
+2024-06-30 10:27:51,679 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:27:51,680 INFO 127.0.0.1 - - [30/Jun/2024 10:27:51] "[32mPOST /add_data HTTP/1.1[0m" 302 -
+2024-06-30 10:27:51,721 INFO 127.0.0.1 - - [30/Jun/2024 10:27:51] "GET /add_data HTTP/1.1" 200 -
+2024-06-30 10:27:57,922 INFO 127.0.0.1 - - [30/Jun/2024 10:27:57] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 10:28:09,231 INFO 127.0.0.1 - - [30/Jun/2024 10:28:09] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:28:19,073 INFO 127.0.0.1 - - [30/Jun/2024 10:28:19] "POST /upload HTTP/1.1" 200 -
+2024-06-30 10:28:29,951 INFO Added new data to training set:          src_ip        dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.12  192.168.1.48     10102        53      UDP                1
+2024-06-30 10:28:29,966 INFO Added new data to training set:          src_ip           dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.12  239.255.255.250     10102      1900      UDP                1
+2024-06-30 10:28:29,978 INFO Added new data to training set:          src_ip        dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.46  192.168.1.48     23224      1900      UDP                1
+2024-06-30 10:28:29,987 INFO Added new data to training set:          src_ip        dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.46  192.168.1.52     34926     57621      UDP                0
+2024-06-30 10:28:29,997 INFO Added new data to training set:          src_ip        dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.46  192.168.1.48     34323     10102      UDP                0
+2024-06-30 10:28:30,018 INFO No duplicates found.
+2024-06-30 10:28:30,164 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:28:30,165 INFO 127.0.0.1 - - [30/Jun/2024 10:28:30] "[32mPOST /save_predictions HTTP/1.1[0m" 302 -
+2024-06-30 10:28:30,167 INFO 127.0.0.1 - - [30/Jun/2024 10:28:30] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:28:35,089 INFO 127.0.0.1 - - [30/Jun/2024 10:28:35] "GET / HTTP/1.1" 200 -
+2024-06-30 10:28:35,113 INFO 127.0.0.1 - - [30/Jun/2024 10:28:35] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:28:37,327 INFO 127.0.0.1 - - [30/Jun/2024 10:28:37] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 10:28:46,570 INFO 127.0.0.1 - - [30/Jun/2024 10:28:46] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 10:28:47,689 INFO No duplicates found.
+2024-06-30 10:28:47,848 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:28:47,848 INFO 127.0.0.1 - - [30/Jun/2024 10:28:47] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 10:28:47,892 INFO 127.0.0.1 - - [30/Jun/2024 10:28:47] "GET / HTTP/1.1" 200 -
+2024-06-30 10:28:47,921 INFO 127.0.0.1 - - [30/Jun/2024 10:28:47] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:28:51,262 INFO 127.0.0.1 - - [30/Jun/2024 10:28:51] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 10:28:57,484 INFO 127.0.0.1 - - [30/Jun/2024 10:28:57] "GET / HTTP/1.1" 200 -
+2024-06-30 10:28:57,512 INFO 127.0.0.1 - - [30/Jun/2024 10:28:57] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:29:01,428 INFO 127.0.0.1 - - [30/Jun/2024 10:29:01] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:29:09,809 INFO 127.0.0.1 - - [30/Jun/2024 10:29:09] "POST /upload HTTP/1.1" 200 -
+2024-06-30 10:29:19,303 INFO Added new data to training set:          src_ip         dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.46  192.168.1.255     34323     57621      UDP                0
+2024-06-30 10:29:19,316 INFO Added new data to training set:          src_ip        dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.12  192.168.1.48     10102        53      UDP                1
+2024-06-30 10:29:19,328 INFO Added new data to training set:          src_ip           dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.12  239.255.255.250     10102      1900      UDP                1
+2024-06-30 10:29:19,343 INFO Added new data to training set:          src_ip        dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.46  192.168.1.48     23224      1900      UDP                1
+2024-06-30 10:29:19,351 INFO Added new data to training set:          src_ip        dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.46  192.168.1.52     34926     57621      UDP                0
+2024-06-30 10:29:19,362 INFO Added new data to training set:          src_ip        dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.46  192.168.1.48     34323     10102      UDP                0
+2024-06-30 10:29:19,378 INFO Duplicates saved to 'removed_data.csv'.
+2024-06-30 10:29:19,515 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:29:19,515 INFO 127.0.0.1 - - [30/Jun/2024 10:29:19] "[32mPOST /save_predictions HTTP/1.1[0m" 302 -
+2024-06-30 10:29:19,540 INFO 127.0.0.1 - - [30/Jun/2024 10:29:19] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:29:27,444 INFO 127.0.0.1 - - [30/Jun/2024 10:29:27] "GET / HTTP/1.1" 200 -
+2024-06-30 10:29:27,474 INFO 127.0.0.1 - - [30/Jun/2024 10:29:27] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:29:29,413 INFO 127.0.0.1 - - [30/Jun/2024 10:29:29] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 10:29:33,736 INFO 127.0.0.1 - - [30/Jun/2024 10:29:33] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 10:32:18,583 INFO  * Detected change in '/Users/mbakos/Downloads/uni/rt2/ML_Final_RT/app4.py', reloading
+2024-06-30 10:32:18,751 INFO  * Restarting with stat
+2024-06-30 10:32:28,356 WARNING  * Debugger is active!
+2024-06-30 10:32:28,370 INFO  * Debugger PIN: 199-790-843
+2024-06-30 10:33:02,892 INFO 127.0.0.1 - - [30/Jun/2024 10:33:02] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 10:33:02,983 INFO 127.0.0.1 - - [30/Jun/2024 10:33:02] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:33:05,011 INFO 127.0.0.1 - - [30/Jun/2024 10:33:05] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 10:33:05,059 INFO 127.0.0.1 - - [30/Jun/2024 10:33:05] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:33:08,016 INFO 127.0.0.1 - - [30/Jun/2024 10:33:08] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:33:19,237 INFO 127.0.0.1 - - [30/Jun/2024 10:33:19] "POST /upload HTTP/1.1" 200 -
+2024-06-30 10:33:27,301 INFO Added new data to training set:          src_ip         dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.46  192.168.1.255     34323     57621      UDP                0
+2024-06-30 10:33:27,319 INFO Added new data to training set:          src_ip        dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.12  192.168.1.48     10102        53      UDP                1
+2024-06-30 10:33:27,340 INFO Added new data to training set:          src_ip           dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.12  239.255.255.250     10102      1900      UDP                1
+2024-06-30 10:33:27,352 INFO Added new data to training set:          src_ip        dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.46  192.168.1.48     23224      1900      UDP                1
+2024-06-30 10:33:27,360 INFO Added new data to training set:          src_ip        dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.46  192.168.1.52     34926     57621      UDP                0
+2024-06-30 10:33:27,375 INFO Added new data to training set:          src_ip        dst_ip  src_port  dst_port protocol signature  label
+0  192.168.1.46  192.168.1.48     34323     10102      UDP                0
+2024-06-30 10:33:27,396 INFO Duplicates saved to 'removed_data.csv'.
+2024-06-30 10:33:27,536 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:33:27,536 INFO 127.0.0.1 - - [30/Jun/2024 10:33:27] "[32mPOST /save_predictions HTTP/1.1[0m" 302 -
+2024-06-30 10:33:27,539 INFO 127.0.0.1 - - [30/Jun/2024 10:33:27] "GET /upload HTTP/1.1" 200 -
+2024-06-30 10:33:32,396 INFO 127.0.0.1 - - [30/Jun/2024 10:33:32] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 10:35:22,391 INFO  * Detected change in '/Users/mbakos/Downloads/uni/rt2/ML_Final_RT/app4.py', reloading
+2024-06-30 10:35:22,553 INFO  * Restarting with stat
+2024-06-30 10:35:25,382 WARNING  * Debugger is active!
+2024-06-30 10:35:25,400 INFO  * Debugger PIN: 199-790-843
+2024-06-30 10:35:27,188 INFO 127.0.0.1 - - [30/Jun/2024 10:35:27] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 10:35:27,277 INFO 127.0.0.1 - - [30/Jun/2024 10:35:27] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:35:33,388 INFO 127.0.0.1 - - [30/Jun/2024 10:35:33] "GET / HTTP/1.1" 200 -
+2024-06-30 10:35:33,417 INFO 127.0.0.1 - - [30/Jun/2024 10:35:33] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:35:35,110 INFO 127.0.0.1 - - [30/Jun/2024 10:35:35] "GET / HTTP/1.1" 200 -
+2024-06-30 10:35:35,133 INFO 127.0.0.1 - - [30/Jun/2024 10:35:35] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:35:35,158 INFO 127.0.0.1 - - [30/Jun/2024 10:35:35] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:35:37,389 INFO 127.0.0.1 - - [30/Jun/2024 10:35:37] "GET /prediction HTTP/1.1" 200 -
+2024-06-30 10:35:48,034 INFO 127.0.0.1 - - [30/Jun/2024 10:35:48] "POST /prediction HTTP/1.1" 200 -
+2024-06-30 10:35:48,038 INFO LLM request data: {'src_ip': '10.0.0.2', 'dst_ip': '10.0.0.1', 'src_port': '234', 'dst_port': '23', 'protocol': 'TCP', 'signature': 'NA', 'sample_weight': '1.0', 'weight_src_ip': '1.0', 'weight_dst_ip': '1.0', 'weight_src_port': '1.0', 'weight_dst_port': '1.0', 'weight_protocol': '1.0', 'weight_signature': '1.0', 'prediction': 1, 'prediction_proba': [0.21, 0.79], 'decision_path_dense': [[1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0]]}
+2024-06-30 10:35:48,038 INFO 127.0.0.1 - - [30/Jun/2024 10:35:48] "POST /log_llm_request HTTP/1.1" 200 -
+2024-06-30 10:35:48,039 INFO Received data for recommendation: {'src_ip': '10.0.0.2', 'dst_ip': '10.0.0.1', 'src_port': '234', 'dst_port': '23', 'protocol': 'TCP', 'signature': 'NA', 'sample_weight': '1.0', 'weight_src_ip': '1.0', 'weight_dst_ip': '1.0', 'weight_src_port': '1.0', 'weight_dst_port': '1.0', 'weight_protocol': '1.0', 'weight_signature': '1.0', 'prediction': 1, 'prediction_proba': [0.21, 0.79], 'decision_path_dense': [[1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0]]}
+2024-06-30 10:35:48,056 INFO 127.0.0.1 - - [30/Jun/2024 10:35:48] "[35m[1mPOST /get_recommendations HTTP/1.1[0m" 500 -
+2024-06-30 10:35:53,822 INFO Added new data to training set:      src_ip    dst_ip  src_port  dst_port protocol signature  label
+0  10.0.0.2  10.0.0.1       234        23      TCP        NA      1
+2024-06-30 10:35:53,835 INFO No duplicates found.
+2024-06-30 10:35:53,958 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:35:53,959 INFO 127.0.0.1 - - [30/Jun/2024 10:35:53] "[32mPOST /save_prediction HTTP/1.1[0m" 302 -
+2024-06-30 10:35:53,961 INFO 127.0.0.1 - - [30/Jun/2024 10:35:53] "GET /prediction HTTP/1.1" 200 -
+2024-06-30 10:36:03,343 INFO 127.0.0.1 - - [30/Jun/2024 10:36:03] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 10:36:23,631 INFO 127.0.0.1 - - [30/Jun/2024 10:36:23] "GET /prediction HTTP/1.1" 200 -
+2024-06-30 10:36:32,602 INFO 127.0.0.1 - - [30/Jun/2024 10:36:32] "POST /prediction HTTP/1.1" 200 -
+2024-06-30 10:36:32,605 INFO LLM request data: {'src_ip': '10.0.0.2', 'dst_ip': '10.0.0.1', 'src_port': '234', 'dst_port': '23', 'protocol': 'TCP', 'signature': 'NA', 'sample_weight': '1.0', 'weight_src_ip': '1.0', 'weight_dst_ip': '1.0', 'weight_src_port': '1.0', 'weight_dst_port': '1.0', 'weight_protocol': '1.0', 'weight_signature': '1.0', 'prediction': 1, 'prediction_proba': [0.21, 0.79], 'decision_path_dense': [[1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0]]}
+2024-06-30 10:36:32,606 INFO Received data for recommendation: {'src_ip': '10.0.0.2', 'dst_ip': '10.0.0.1', 'src_port': '234', 'dst_port': '23', 'protocol': 'TCP', 'signature': 'NA', 'sample_weight': '1.0', 'weight_src_ip': '1.0', 'weight_dst_ip': '1.0', 'weight_src_port': '1.0', 'weight_dst_port': '1.0', 'weight_protocol': '1.0', 'weight_signature': '1.0', 'prediction': 1, 'prediction_proba': [0.21, 0.79], 'decision_path_dense': [[1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0]]}
+2024-06-30 10:36:32,606 INFO 127.0.0.1 - - [30/Jun/2024 10:36:32] "POST /log_llm_request HTTP/1.1" 200 -
+2024-06-30 10:36:32,609 INFO 127.0.0.1 - - [30/Jun/2024 10:36:32] "[35m[1mPOST /get_recommendations HTTP/1.1[0m" 500 -
+2024-06-30 10:36:39,335 INFO Added new data to training set:      src_ip    dst_ip  src_port  dst_port protocol signature  label
+0  10.0.0.2  10.0.0.1       234        23      TCP        NA      1
+2024-06-30 10:36:39,366 INFO Duplicates saved to 'removed_data.csv'.
+2024-06-30 10:36:39,536 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:36:39,537 INFO 127.0.0.1 - - [30/Jun/2024 10:36:39] "[32mPOST /save_prediction HTTP/1.1[0m" 302 -
+2024-06-30 10:36:39,573 INFO 127.0.0.1 - - [30/Jun/2024 10:36:39] "GET /prediction HTTP/1.1" 200 -
+2024-06-30 10:37:13,570 INFO  * Detected change in '/Users/mbakos/Downloads/uni/rt2/ML_Final_RT/app4.py', reloading
+2024-06-30 10:37:13,708 INFO  * Restarting with stat
+2024-06-30 10:37:16,599 WARNING  * Debugger is active!
+2024-06-30 10:37:16,627 INFO  * Debugger PIN: 199-790-843
+2024-06-30 10:37:16,911 INFO 127.0.0.1 - - [30/Jun/2024 10:37:16] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 10:37:18,836 INFO 127.0.0.1 - - [30/Jun/2024 10:37:18] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 10:37:18,924 INFO 127.0.0.1 - - [30/Jun/2024 10:37:18] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:38:09,701 INFO 127.0.0.1 - - [30/Jun/2024 10:38:09] "GET /show_confusion_matrix HTTP/1.1" 200 -
+2024-06-30 10:38:14,162 INFO 127.0.0.1 - - [30/Jun/2024 10:38:14] "GET /show_confusion_matrix HTTP/1.1" 200 -
+2024-06-30 10:38:14,211 INFO 127.0.0.1 - - [30/Jun/2024 10:38:14] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:38:17,024 INFO 127.0.0.1 - - [30/Jun/2024 10:38:17] "GET /debug_data HTTP/1.1" 200 -
+2024-06-30 10:38:18,498 INFO 127.0.0.1 - - [30/Jun/2024 10:38:18] "GET /debug_data HTTP/1.1" 200 -
+2024-06-30 10:38:18,542 INFO 127.0.0.1 - - [30/Jun/2024 10:38:18] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:38:29,414 INFO 127.0.0.1 - - [30/Jun/2024 10:38:29] "GET / HTTP/1.1" 200 -
+2024-06-30 10:38:29,439 INFO 127.0.0.1 - - [30/Jun/2024 10:38:29] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:38:31,384 INFO 127.0.0.1 - - [30/Jun/2024 10:38:31] "GET /debug_data HTTP/1.1" 200 -

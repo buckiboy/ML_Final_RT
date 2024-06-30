@@ -4,7 +4,6 @@ import os
 import pandas as pd
 import joblib
 import logging
-import requests
 from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
 from sklearn.ensemble import RandomForestClassifier
@@ -18,6 +17,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 from apscheduler.schedulers import SchedulerAlreadyRunningError, SchedulerNotRunningError
 import atexit
+from datetime import datetime
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -42,7 +42,6 @@ class User(UserMixin):
 
     def check_password(self, password):
         return check_password_hash(self.password, password)  # Use werkzeug
-
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -76,33 +75,71 @@ def convert_to_ip(df):
     df['dst_ip'] = df['dst_ip'].apply(lambda x: str(ipaddress.IPv4Address(x)))
     return df
 
+# Function to check and remove duplicates
+def check_and_remove_duplicates(df):
+    try:
+        logging.debug("Checking for duplicates in the DataFrame.")
+        
+        # Add a timestamp column to the duplicates
+        current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        df['timestamp'] = current_time
+
+        if os.path.exists('removed_data.csv') and os.path.getsize('removed_data.csv') > 0:
+            removed_data = pd.read_csv('removed_data.csv')
+        else:
+            removed_data = pd.DataFrame()
+
+        logging.debug(f"Initial removed_data shape: {removed_data.shape}")
+
+        duplicates = df[df.duplicated(subset=df.columns.difference(['timestamp']))]
+        df = df.drop_duplicates(subset=df.columns.difference(['timestamp']))
+
+        logging.debug(f"Found {duplicates.shape[0]} duplicates.")
+
+        if not duplicates.empty:
+            duplicates['removed_at'] = current_time
+            removed_data = pd.concat([removed_data, duplicates])
+            removed_data.to_csv('removed_data.csv', index=False)
+            logging.info("Duplicates saved to 'removed_data.csv'.")
+            return df.drop(columns=['timestamp']), True  # Indicating duplicates were found
+        else:
+            logging.info("No duplicates found.")
+            return df.drop(columns=['timestamp']), False  # Indicating no duplicates found
+    except Exception as e:
+        logging.error(f'Error removing duplicates: {e}')
+        return df.drop(columns=['timestamp']), False
+
+
 def train_and_save_model():
     try:
         if os.path.exists('trained_data.csv'):
-            # Load training data if it exists
             df = pd.read_csv('trained_data.csv')
         else:
             if os.path.exists('network_traffic.csv'):
-                # Load initial training data if it exists
                 df = pd.read_csv('network_traffic.csv')
             else:
                 logging.error('No training data available to train the model.')
                 return "No training data available"
+
+        df, duplicates_found = check_and_remove_duplicates(df)
+
+        if duplicates_found:
+            flash('Duplicates found and removed. Check Removed Data page for details.', 'warning')
 
         # Save class distribution
         class_distribution = df['label'].value_counts()
         class_distribution.to_csv('class_distribution.csv')
 
         original_df = df.copy()  # Keep a copy of the original data without one-hot encoding
-        
+
         df = preprocess_data(df)
         X = df.drop('label', axis=1)  # Features for training
         y = df['label']  # Labels for training
-        
+
         # Ensure no NaN values in input data
         X = X.fillna(0)
         y = y.fillna(0)
-        
+
         # Split data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
@@ -119,7 +156,7 @@ def train_and_save_model():
         # Save the trained model
         joblib.dump(model, 'rf_model.pkl')
         original_df.to_csv('trained_data.csv', index=False)  # Save the original data without one-hot encoding
-        
+
         # Make predictions on the test set
         y_pred = model.predict(X_test)
 
@@ -140,7 +177,7 @@ def train_and_save_model():
         cm_df = pd.DataFrame(cm, index=['Actual No Threat', 'Actual Threat'], columns=['Predicted No Threat', 'Predicted Threat'])
         # Save the confusion matrix to a CSV file
         cm_df.to_csv('confusion_matrix.csv')
-        
+
         # Calculate and save feature importances
         feature_importances = model.feature_importances_
         feature_names = X.columns
@@ -148,7 +185,7 @@ def train_and_save_model():
         fi_df = pd.DataFrame({'Feature': feature_names, 'Importance': feature_importances})
         # Save the feature importances to a CSV file
         fi_df.to_csv('feature_importances.csv', index=False)
-        
+
         logging.info('Model trained and saved with confusion matrix and feature importances.')
         return "Model trained and saved with confusion matrix and feature importances."
     except Exception as e:
@@ -440,19 +477,23 @@ def retrain():
         return redirect(url_for('index'))
     return render_template('retrain.html')
 
-
 @app.route('/removed_data')
 @login_required
 def removed_data():
-    # Check if the file is empty
-    if os.path.getsize('removed_data.csv') == 0:
-        flash('No removed data available.', 'danger')
+    try:
+        # Check if the file exists and is not empty
+        if os.path.exists('removed_data.csv') and os.path.getsize('removed_data.csv') > 0:
+            removed_data = pd.read_csv('removed_data.csv')
+            removed_data = convert_to_ip(removed_data)
+            return render_template('removed_data.html', removed_data=removed_data)
+        else:
+            flash('No removed data available.', 'danger')
+            return redirect(url_for('index'))
+    except Exception as e:
+        logging.error(f'Error loading removed data: {e}')
+        flash('Error loading removed data.', 'danger')
         return redirect(url_for('index'))
-    
-    # Load and display removed data
-    removed_data = pd.read_csv('removed_data.csv')
-    removed_data = convert_to_ip(removed_data)
-    return render_template('removed_data.html', tables=[removed_data.to_html(classes='table table-striped', index=False)], titles=[''])
+
 
 @app.route('/add_data', methods=['GET', 'POST'])
 @login_required
@@ -603,7 +644,7 @@ def monitor_csv_file():
         for prediction in predictions:
             prediction['src_ip'] = str(ipaddress.IPv4Address(prediction['original_src_ip']))
             prediction['dst_ip'] = str(ipaddress.IPv4Address(prediction['original_dst_ip']))
-            
+
 # Function to start monitoring
 @app.route('/start_monitoring')
 @login_required
@@ -684,6 +725,7 @@ def show_predictions():
         monitoring_active = False
 
     return render_template('predictions.html', predictions=filtered_predictions, interval=interval, monitoring_active=monitoring_active)
+
 @app.route('/get_recommendations', methods=['POST'])
 def get_recommendations():
     data = request.json
@@ -745,8 +787,7 @@ def view_llm_request():
         "stream": False
     }
 
-
-
     return render_template('view_llm_request.html', payload=gpt_payload)
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
