@@ -690,6 +690,78 @@ def set_interval():
         flash(f'Error setting interval: {e}', 'danger')
     return redirect(url_for('show_predictions'))
 
+# Function to calculate accuracy
+def calculate_accuracy():
+    try:
+        # Load the confusion matrix from CSV
+        if os.path.exists('confusion_matrix.csv'):
+            cm = pd.read_csv('confusion_matrix.csv', index_col=0)
+            # Extract TP, TN, FP, FN from the confusion matrix
+            TN = cm.at['Actual No Threat', 'Predicted No Threat']
+            FP = cm.at['Actual No Threat', 'Predicted Threat']
+            FN = cm.at['Actual Threat', 'Predicted No Threat']
+            TP = cm.at['Actual Threat', 'Predicted Threat']
+            # Calculate accuracy
+            accuracy = (TP + TN) / (TP + TN + FP + FN)
+            return round(accuracy * 100, 2)
+        else:
+            return None
+    except Exception as e:
+        logging.error(f'Error calculating accuracy: {e}')
+        return None
+
+from sklearn.metrics import precision_score, recall_score, f1_score
+
+# Function to calculate all metrics
+def calculate_metrics():
+    try:
+        if os.path.exists('confusion_matrix.csv'):
+            cm_df = pd.read_csv('confusion_matrix.csv', index_col=0)
+            tn, fp, fn, tp = cm_df.to_numpy().flatten()
+
+            # Calculate totals from trained data
+            if os.path.exists('trained_data.csv'):
+                trained_df = pd.read_csv('trained_data.csv')
+                total_events = len(trained_df)
+                total_threats = len(trained_df[trained_df['label'] == 1])
+                total_no_threats = len(trained_df[trained_df['label'] == 0])
+            else:
+                total_events = total_threats = total_no_threats = 0
+
+            accuracy = round((tp + tn) / (tp + tn + fp + fn) * 100, 2)
+            precision = round(tp / (tp + fp) * 100, 2) if (tp + fp) > 0 else 0
+            recall = round(tp / (tp + fn) * 100, 2) if (tp + fn) > 0 else 0
+            f1_score = round(2 * (precision * recall) / (precision + recall), 2) if (precision + recall) > 0 else 0
+
+            metrics = {
+                'total_events': total_events,
+                'total_threats': total_threats,
+                'total_no_threats': total_no_threats,
+                'accuracy': accuracy,
+                'precision': precision,
+                'recall': recall,
+                'f1_score': f1_score
+            }
+
+            return metrics
+        else:
+            logging.error('Confusion matrix file not found.')
+            return None
+    except Exception as e:
+        logging.error(f'Error calculating metrics: {e}')
+        return None
+
+@app.route('/calculate_accuracy')
+@login_required
+def calculate_accuracy_page():
+    metrics = calculate_metrics()
+    if metrics is not None:
+        return render_template('calculate_accuracy.html', metrics=metrics)
+    else:
+        flash('Error calculating metrics.', 'danger')
+        return redirect(url_for('index'))
+
+
 @app.route('/predictions')
 @login_required
 def show_predictions():

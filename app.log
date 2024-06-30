@@ -3107,3 +3107,121 @@ Recommended action:
 2024-06-30 10:38:29,414 INFO 127.0.0.1 - - [30/Jun/2024 10:38:29] "GET / HTTP/1.1" 200 -
 2024-06-30 10:38:29,439 INFO 127.0.0.1 - - [30/Jun/2024 10:38:29] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
 2024-06-30 10:38:31,384 INFO 127.0.0.1 - - [30/Jun/2024 10:38:31] "GET /debug_data HTTP/1.1" 200 -
+2024-06-30 10:52:11,662 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.25:5000
+2024-06-30 10:52:11,662 INFO [33mPress CTRL+C to quit[0m
+2024-06-30 10:52:11,668 INFO  * Restarting with stat
+2024-06-30 10:52:14,329 WARNING  * Debugger is active!
+2024-06-30 10:52:14,347 INFO  * Debugger PIN: 199-790-843
+2024-06-30 10:52:17,733 INFO 127.0.0.1 - - [30/Jun/2024 10:52:17] "GET / HTTP/1.1" 200 -
+2024-06-30 10:52:17,765 INFO 127.0.0.1 - - [30/Jun/2024 10:52:17] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:52:17,801 INFO 127.0.0.1 - - [30/Jun/2024 10:52:17] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:52:21,873 INFO 127.0.0.1 - - [30/Jun/2024 10:52:21] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 10:53:10,467 INFO 127.0.0.1 - - [30/Jun/2024 10:53:10] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 10:53:10,520 INFO 127.0.0.1 - - [30/Jun/2024 10:53:10] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:55:45,384 INFO 127.0.0.1 - - [30/Jun/2024 10:55:45] "GET / HTTP/1.1" 200 -
+2024-06-30 10:55:45,405 INFO 127.0.0.1 - - [30/Jun/2024 10:55:45] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:55:48,057 INFO 127.0.0.1 - - [30/Jun/2024 10:55:48] "GET / HTTP/1.1" 200 -
+2024-06-30 10:55:48,076 INFO 127.0.0.1 - - [30/Jun/2024 10:55:48] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:55:48,108 INFO 127.0.0.1 - - [30/Jun/2024 10:55:48] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 10:55:52,813 INFO 127.0.0.1 - - [30/Jun/2024 10:55:52] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 10:55:55,631 INFO 127.0.0.1 - - [30/Jun/2024 10:55:55] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 10:55:56,502 INFO Duplicates saved to 'removed_data.csv'.
+2024-06-30 10:55:56,684 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 10:55:56,684 INFO 127.0.0.1 - - [30/Jun/2024 10:55:56] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 10:55:56,728 INFO 127.0.0.1 - - [30/Jun/2024 10:55:56] "GET / HTTP/1.1" 200 -
+2024-06-30 10:55:56,783 INFO 127.0.0.1 - - [30/Jun/2024 10:55:56] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:55:58,487 INFO 127.0.0.1 - - [30/Jun/2024 10:55:58] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 10:56:10,544 INFO 127.0.0.1 - - [30/Jun/2024 10:56:10] "GET / HTTP/1.1" 200 -
+2024-06-30 10:56:10,587 INFO 127.0.0.1 - - [30/Jun/2024 10:56:10] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:56:34,745 INFO 127.0.0.1 - - [30/Jun/2024 10:56:34] "GET / HTTP/1.1" 200 -
+2024-06-30 10:56:34,764 INFO 127.0.0.1 - - [30/Jun/2024 10:56:34] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 10:56:34,794 INFO 127.0.0.1 - - [30/Jun/2024 10:56:34] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 11:48:04,148 INFO 127.0.0.1 - - [30/Jun/2024 11:48:04] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 14:29:20,068 INFO 127.0.0.1 - - [30/Jun/2024 14:29:20] "GET /show_confusion_matrix HTTP/1.1" 200 -
+2024-06-30 14:29:23,467 INFO 127.0.0.1 - - [30/Jun/2024 14:29:23] "GET /show_confusion_matrix HTTP/1.1" 200 -
+2024-06-30 14:29:23,529 INFO 127.0.0.1 - - [30/Jun/2024 14:29:23] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 14:29:35,832 INFO 127.0.0.1 - - [30/Jun/2024 14:29:35] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 14:29:36,930 INFO No duplicates found.
+2024-06-30 14:29:37,071 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 14:29:37,072 INFO 127.0.0.1 - - [30/Jun/2024 14:29:37] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 14:29:37,115 INFO 127.0.0.1 - - [30/Jun/2024 14:29:37] "GET / HTTP/1.1" 200 -
+2024-06-30 14:29:37,174 INFO 127.0.0.1 - - [30/Jun/2024 14:29:37] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 14:29:41,139 INFO 127.0.0.1 - - [30/Jun/2024 14:29:41] "GET /show_confusion_matrix HTTP/1.1" 200 -
+2024-06-30 14:38:17,132 INFO  * Detected change in '/Users/mbakos/Downloads/uni/rt2/ML_Final_RT/app4.py', reloading
+2024-06-30 14:38:17,284 INFO  * Restarting with stat
+2024-06-30 14:38:29,680 WARNING  * Debugger is active!
+2024-06-30 14:38:29,698 INFO  * Debugger PIN: 199-790-843
+2024-06-30 14:39:13,061 INFO 127.0.0.1 - - [30/Jun/2024 14:39:13] "[33mGET /calculate_accuracy.html HTTP/1.1[0m" 404 -
+2024-06-30 14:39:19,762 INFO 127.0.0.1 - - [30/Jun/2024 14:39:19] "GET /calculate_accuracy HTTP/1.1" 200 -
+2024-06-30 14:40:06,983 INFO 127.0.0.1 - - [30/Jun/2024 14:40:06] "GET /debug_data HTTP/1.1" 200 -
+2024-06-30 14:40:10,810 INFO 127.0.0.1 - - [30/Jun/2024 14:40:10] "GET /debug_data HTTP/1.1" 200 -
+2024-06-30 14:40:10,888 INFO 127.0.0.1 - - [30/Jun/2024 14:40:10] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 14:40:13,218 INFO 127.0.0.1 - - [30/Jun/2024 14:40:13] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 14:40:15,019 INFO 127.0.0.1 - - [30/Jun/2024 14:40:15] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 14:40:16,029 INFO No duplicates found.
+2024-06-30 14:40:16,190 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 14:40:16,191 INFO 127.0.0.1 - - [30/Jun/2024 14:40:16] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 14:40:16,279 INFO 127.0.0.1 - - [30/Jun/2024 14:40:16] "GET / HTTP/1.1" 200 -
+2024-06-30 14:40:16,302 INFO 127.0.0.1 - - [30/Jun/2024 14:40:16] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 14:40:17,823 INFO 127.0.0.1 - - [30/Jun/2024 14:40:17] "GET /debug_data HTTP/1.1" 200 -
+2024-06-30 14:43:47,635 INFO  * Detected change in '/Users/mbakos/Downloads/uni/rt2/ML_Final_RT/app4.py', reloading
+2024-06-30 14:43:47,768 INFO  * Restarting with stat
+2024-06-30 14:43:59,265 WARNING  * Debugger is active!
+2024-06-30 14:43:59,279 INFO  * Debugger PIN: 199-790-843
+2024-06-30 14:43:59,423 INFO 127.0.0.1 - - [30/Jun/2024 14:43:59] "GET /calculate_accuracy HTTP/1.1" 200 -
+2024-06-30 14:43:59,487 INFO 127.0.0.1 - - [30/Jun/2024 14:43:59] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 14:45:08,075 INFO 127.0.0.1 - - [30/Jun/2024 14:45:08] "GET /calculate_accuracy HTTP/1.1" 200 -
+2024-06-30 14:45:08,140 INFO 127.0.0.1 - - [30/Jun/2024 14:45:08] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 14:47:10,312 INFO 127.0.0.1 - - [30/Jun/2024 14:47:10] "GET /calculate_accuracy HTTP/1.1" 200 -
+2024-06-30 14:47:10,377 INFO 127.0.0.1 - - [30/Jun/2024 14:47:10] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 14:48:05,726 INFO 127.0.0.1 - - [30/Jun/2024 14:48:05] "GET /calculate_accuracy HTTP/1.1" 200 -
+2024-06-30 14:48:05,786 INFO 127.0.0.1 - - [30/Jun/2024 14:48:05] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 14:49:52,369 INFO  * Detected change in '/Users/mbakos/Downloads/uni/rt2/ML_Final_RT/app4.py', reloading
+2024-06-30 14:49:52,490 INFO  * Restarting with stat
+2024-06-30 14:49:55,033 WARNING  * Debugger is active!
+2024-06-30 14:49:55,056 INFO  * Debugger PIN: 199-790-843
+2024-06-30 14:49:55,496 INFO 127.0.0.1 - - [30/Jun/2024 14:49:55] "GET /calculate_accuracy HTTP/1.1" 200 -
+2024-06-30 14:49:55,564 INFO 127.0.0.1 - - [30/Jun/2024 14:49:55] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 14:50:11,197 INFO 127.0.0.1 - - [30/Jun/2024 14:50:11] "GET / HTTP/1.1" 200 -
+2024-06-30 14:50:11,222 INFO 127.0.0.1 - - [30/Jun/2024 14:50:11] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 14:50:13,166 INFO 127.0.0.1 - - [30/Jun/2024 14:50:13] "GET / HTTP/1.1" 200 -
+2024-06-30 14:50:13,184 INFO 127.0.0.1 - - [30/Jun/2024 14:50:13] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 14:50:13,211 INFO 127.0.0.1 - - [30/Jun/2024 14:50:13] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 14:52:29,715 INFO  * Detected change in '/Users/mbakos/Downloads/uni/rt2/ML_Final_RT/app4.py', reloading
+2024-06-30 14:52:29,852 INFO  * Restarting with stat
+2024-06-30 14:52:32,537 WARNING  * Debugger is active!
+2024-06-30 14:52:32,552 INFO  * Debugger PIN: 199-790-843
+2024-06-30 14:52:32,751 INFO 127.0.0.1 - - [30/Jun/2024 14:52:32] "GET / HTTP/1.1" 200 -
+2024-06-30 14:52:32,776 INFO 127.0.0.1 - - [30/Jun/2024 14:52:32] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 14:52:32,805 INFO 127.0.0.1 - - [30/Jun/2024 14:52:32] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 14:52:35,923 INFO 127.0.0.1 - - [30/Jun/2024 14:52:35] "GET /calculate_accuracy HTTP/1.1" 200 -
+2024-06-30 14:52:35,975 INFO 127.0.0.1 - - [30/Jun/2024 14:52:35] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 14:54:59,078 INFO  * Detected change in '/Users/mbakos/Downloads/uni/rt2/ML_Final_RT/app4.py', reloading
+2024-06-30 14:54:59,202 INFO  * Restarting with stat
+2024-06-30 14:55:01,903 WARNING  * Debugger is active!
+2024-06-30 14:55:01,919 INFO  * Debugger PIN: 199-790-843
+2024-06-30 14:55:08,013 INFO 127.0.0.1 - - [30/Jun/2024 14:55:08] "GET /calculate_accuracy HTTP/1.1" 200 -
+2024-06-30 14:55:08,106 INFO 127.0.0.1 - - [30/Jun/2024 14:55:08] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 14:55:52,316 INFO 127.0.0.1 - - [30/Jun/2024 14:55:52] "GET / HTTP/1.1" 200 -
+2024-06-30 14:55:52,348 INFO 127.0.0.1 - - [30/Jun/2024 14:55:52] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 14:55:58,829 INFO 127.0.0.1 - - [30/Jun/2024 14:55:58] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 15:00:15,045 INFO 127.0.0.1 - - [30/Jun/2024 15:00:15] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 15:00:15,976 INFO No duplicates found.
+2024-06-30 15:00:16,169 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 15:00:16,170 INFO 127.0.0.1 - - [30/Jun/2024 15:00:16] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 15:00:16,216 INFO 127.0.0.1 - - [30/Jun/2024 15:00:16] "GET / HTTP/1.1" 200 -
+2024-06-30 15:00:16,251 INFO 127.0.0.1 - - [30/Jun/2024 15:00:16] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 15:00:18,430 INFO 127.0.0.1 - - [30/Jun/2024 15:00:18] "GET /removed_data HTTP/1.1" 200 -
+2024-06-30 15:00:35,512 INFO 127.0.0.1 - - [30/Jun/2024 15:00:35] "GET / HTTP/1.1" 200 -
+2024-06-30 15:00:35,538 INFO 127.0.0.1 - - [30/Jun/2024 15:00:35] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 15:00:42,603 INFO 127.0.0.1 - - [30/Jun/2024 15:00:42] "GET /calculate_accuracy HTTP/1.1" 200 -
+2024-06-30 15:00:42,656 INFO 127.0.0.1 - - [30/Jun/2024 15:00:42] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 15:01:39,511 INFO 127.0.0.1 - - [30/Jun/2024 15:01:39] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 15:03:09,129 INFO 127.0.0.1 - - [30/Jun/2024 15:03:09] "GET / HTTP/1.1" 200 -
+2024-06-30 15:03:09,146 INFO 127.0.0.1 - - [30/Jun/2024 15:03:09] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 15:10:44,324 INFO 127.0.0.1 - - [30/Jun/2024 15:10:44] "GET / HTTP/1.1" 200 -
+2024-06-30 15:10:44,363 INFO 127.0.0.1 - - [30/Jun/2024 15:10:44] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 15:12:33,550 INFO 127.0.0.1 - - [30/Jun/2024 15:12:33] "GET /debug_data HTTP/1.1" 200 -

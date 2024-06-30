@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="mt-4">
+    <h2 class="text-center">Model Performance Metrics</h2>
+    <div class="card mt-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Metric</th>
+                            <th>Value</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Total Events</td>
+                            <td>{{ metrics.total_events }}</td>
+                            <td>Total number of events processed by the model.</td>
+                        </tr>
+                        <tr>
+                            <td>Total Threats</td>
+                            <td>{{ metrics.total_threats }}</td>
+                            <td>Number of events identified as threats.</td>
+                        </tr>
+                        <tr>
+                            <td>Total No Threats</td>
+                            <td>{{ metrics.total_no_threats }}</td>
+                            <td>Number of events identified as non-threats.</td>
+                        </tr>
+                        <tr>
+                            <td>Accuracy</td>
+                            <td class="{{ 'text-success' if metrics.accuracy > 75 else 'text-warning' if metrics.accuracy > 50 else 'text-danger' }}">{{ metrics.accuracy }}%</td>
+                            <td>Measures the overall correctness of the model. A higher accuracy is better.</td>
+                        </tr>
+                        <tr>
+                            <td>Precision</td>
+                            <td class="{{ 'text-success' if metrics.precision > 75 else 'text-warning' if metrics.precision > 50 else 'text-danger' }}">{{ metrics.precision }}%</td>
+                            <td>Indicates how many of the predicted positive cases are actually positive. A higher precision means fewer false positives.</td>
+                        </tr>
+                        <tr>
+                            <td>Recall</td>
+                            <td class="{{ 'text-success' if metrics.recall > 75 else 'text-warning' if metrics.recall > 50 else 'text-danger' }}">{{ metrics.recall }}%</td>
+                            <td>Measures how many of the actual positive cases were correctly predicted. A higher recall means fewer false negatives.</td>
+                        </tr>
+                        <tr>
+                            <td>F1 Score</td>
+                            <td class="{{ 'text-success' if metrics.f1_score > 75 else 'text-warning' if metrics.f1_score > 50 else 'text-danger' }}">{{ metrics.f1_score }}%</td>
+                            <td>The harmonic mean of precision and recall. A higher F1 score indicates a better balance between precision and recall.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a href="{{ url_for('index') }}" class="btn btn-primary mt-3">Back to Dashboard</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
