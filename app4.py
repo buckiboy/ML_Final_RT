@@ -16,9 +16,8 @@ matplotlib.use('Agg')  # Use a non-interactive backend
 import matplotlib.pyplot as plt
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
+from apscheduler.schedulers import SchedulerAlreadyRunningError, SchedulerNotRunningError
 import atexit
-import requests
-
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -34,8 +33,6 @@ logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s 
 users = {
     "1": UserMixin()
 }
-
-from hashlib import sha256
 
 class User(UserMixin):
     def __init__(self, id, username, password):
@@ -53,8 +50,8 @@ def load_user(user_id):
 
 # Add default user
 default_user_id = "1"
-default_user_username = "default_user"
-default_user_password = generate_password_hash("default_password", method='pbkdf2:sha256', salt_length=16)
+default_user_username = "admin"
+default_user_password = generate_password_hash("admin", method='pbkdf2:sha256', salt_length=16)
 users[default_user_id] = User(default_user_id, default_user_username, default_user_password)
 
 # Placeholder for storing predictions
@@ -131,16 +128,16 @@ def train_and_save_model():
         actual_vs_predicted.to_csv('actual_vs_predicted.csv', index=False)
 
         # Explicitly use sklearn.metrics.confusion_matrix
-        from sklearn.metrics import confusion_matrix as sk_confusion_matrix
-        logging.debug(f"Using confusion_matrix from sklearn.metrics: {sk_confusion_matrix}")
+        from sklearn.metrics import confusion_matrix  # Import confusion_matrix here
+        logging.debug(f"Using confusion_matrix from sklearn.metrics: {confusion_matrix}")
 
         # Calculate the confusion matrix
-        cm = sk_confusion_matrix(y_test, y_pred, labels=[0, 1])  # Specify labels explicitly
+        cm = confusion_matrix(y_test, y_pred, labels=[0, 1])  # Specify labels explicitly
         logging.debug("Confusion Matrix:")
         logging.debug(cm)
 
         # Convert the confusion matrix to a DataFrame for easy saving and display
-        cm_df = pd.DataFrame(cm, index=['Actual 0', 'Actual 1'], columns=['Predicted 0', 'Predicted 1'])
+        cm_df = pd.DataFrame(cm, index=['Actual No Threat', 'Actual Threat'], columns=['Predicted No Threat', 'Predicted Threat'])
         # Save the confusion matrix to a CSV file
         cm_df.to_csv('confusion_matrix.csv')
         
@@ -157,6 +154,7 @@ def train_and_save_model():
     except Exception as e:
         logging.error(f'Error in train_and_save_model: {e}')
         return str(e)
+
 
 @app.route('/debug_data')
 @login_required
@@ -200,8 +198,6 @@ if not os.path.exists('rf_model.pkl'):
 else:
     model = joblib.load('rf_model.pkl')
 
-from werkzeug.security import generate_password_hash, check_password_hash
-
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -230,6 +226,8 @@ def login():
 @login_required
 def logout():
     logout_user()
+    if scheduler.get_job('monitor_csv_file'):
+        scheduler.remove_job('monitor_csv_file')
     return redirect(url_for('login'))
 
 @app.route('/')
@@ -318,6 +316,7 @@ def prediction_form():
             logging.error(f'Error in prediction: {e}')
             return jsonify({'error': f'Error in prediction: {e}'})
     return render_template('prediction_form.html')
+
 @app.route('/log_llm_request', methods=['POST'])
 def log_llm_request():
     try:
@@ -544,6 +543,7 @@ def edit_label(index):
 
     df = convert_to_ip(df)  # Assuming convert_to_ip is defined elsewhere
     return render_template('edit_label.html', index=index, current_label=current_label)
+
 @app.route('/feature_importances')
 @login_required
 def feature_importances():
@@ -565,19 +565,27 @@ def feature_importances():
 @login_required
 def show_confusion_matrix():
     try:
+        # Check if the confusion matrix CSV file exists
         if os.path.exists('confusion_matrix.csv'):
-            data = pd.read_csv('confusion_matrix.csv')
-            print(f"Confusion Matrix Data:\n{data}")  # Debug statement to log the content of the CSV
+            # Read the confusion matrix CSV file into a DataFrame
+            data = pd.read_csv('confusion_matrix.csv', index_col=0)
             logging.debug(f"Confusion Matrix Data:\n{data}")  # Log the content of the CSV
-            return render_template('confusion_matrix.html', data=data)
+            # Convert DataFrame to a dictionary and render the HTML template
+            return render_template('confusion_matrix.html', data=data.to_dict())
         else:
+            # Flash a message if the confusion matrix file is not available
             flash('Confusion matrix not available.', 'danger')
             return redirect(url_for('index'))
     except Exception as e:
+        # Log any exceptions that occur during the process
         logging.error(f'Error loading confusion matrix: {e}')
         flash('Error loading confusion matrix.', 'danger')
         return redirect(url_for('index'))
 
+# Initialize the scheduler
+scheduler = BackgroundScheduler()
+
+# Define the monitor_csv_file function
 def monitor_csv_file():
     global predictions
     if model and os.path.exists('real_time_data.csv'):
@@ -595,43 +603,87 @@ def monitor_csv_file():
         for prediction in predictions:
             prediction['src_ip'] = str(ipaddress.IPv4Address(prediction['original_src_ip']))
             prediction['dst_ip'] = str(ipaddress.IPv4Address(prediction['original_dst_ip']))
+            
+# Function to start monitoring
+@app.route('/start_monitoring')
+@login_required
+def start_monitoring():
+    try:
+        # Check if the job is already present
+        if not scheduler.get_job('monitor_csv_file'):
+            interval = request.args.get('interval', default=10, type=int)  # Get interval from the form or set a default
+            scheduler.add_job(func=monitor_csv_file, trigger=IntervalTrigger(seconds=interval), id='monitor_csv_file')
+            flash('Started monitoring real-time data.', 'success')
+        else:
+            flash('Monitoring is already running.', 'warning')
+    except SchedulerAlreadyRunningError:
+        flash('Scheduler is already running.', 'warning')
+    return redirect(url_for('show_predictions'))
 
-# Configure the scheduler
-scheduler = BackgroundScheduler()
-scheduler.add_job(func=monitor_csv_file, trigger=IntervalTrigger(seconds=10), id='monitor_csv_file')
-scheduler.start()
+# Function to stop monitoring
+@app.route('/stop_monitoring')
+@login_required
+def stop_monitoring():
+    try:
+        # Check if the job is present before removing
+        if scheduler.get_job('monitor_csv_file'):
+            scheduler.remove_job('monitor_csv_file')
+            flash('Stopped monitoring real-time data.', 'success')
+        else:
+            flash('Monitoring is not currently running.', 'warning')
+    except Exception as e:
+        logging.error(f'Error stopping monitoring: {e}')
+        flash(f'Error stopping monitoring: {e}', 'danger')
+    return redirect(url_for('show_predictions'))
 
-# Shut down the scheduler when exiting the app
-atexit.register(lambda: scheduler.shutdown())
+# Function to set the interval
+@app.route('/set_interval', methods=['POST'])
+@login_required
+def set_interval():
+    try:
+        interval = float(request.form['interval'])  # Use float to handle decimal values
+        scheduler.reschedule_job('monitor_csv_file', trigger=IntervalTrigger(seconds=int(interval)))  # Convert to int for IntervalTrigger
+        flash(f'Interval updated to {interval} seconds.', 'success')
+    except ValueError as e:
+        logging.error(f'Error setting interval: {e}')
+        flash(f'Error setting interval: {e}', 'danger')
+    return redirect(url_for('show_predictions'))
 
 @app.route('/predictions')
 @login_required
 def show_predictions():
+    # Start the scheduler job to monitor the CSV file if it's not already running
+    if not scheduler.running:
+        try:
+            scheduler.start()
+        except SchedulerAlreadyRunningError:
+            pass
+
     threat_level = request.args.get('threat_level')
     start_time = request.args.get('start_time')
     end_time = request.args.get('end_time')
-    
+
     filtered_predictions = predictions
-    
+
     if threat_level:
         filtered_predictions = [pred for pred in filtered_predictions if pred['prediction'] == int(threat_level)]
-    
+
     if start_time:
         filtered_predictions = [pred for pred in filtered_predictions if pd.to_datetime(pred['timestamp']) >= pd.to_datetime(start_time)]
-    
+
     if end_time:
         filtered_predictions = [pred for pred in filtered_predictions if pd.to_datetime(pred['timestamp']) <= pd.to_datetime(end_time)]
-    
-    return render_template('predictions.html', predictions=filtered_predictions, interval=scheduler.get_job('monitor_csv_file').trigger.interval.total_seconds())
 
-@app.route('/set_interval', methods=['POST'])
-@login_required
-def set_interval():
-    interval = int(request.form['interval'])
-    scheduler.reschedule_job('monitor_csv_file', trigger=IntervalTrigger(seconds=interval))
-    flash(f'Interval updated to {interval} seconds.', 'success')
-    return redirect(url_for('show_predictions'))
+    # Check if the monitoring job exists before trying to access its trigger
+    monitoring_job = scheduler.get_job('monitor_csv_file')
+    if monitoring_job:
+        interval = monitoring_job.trigger.interval.total_seconds()
+        monitoring_active = True
+    else:
+        interval = 10  # Default interval
+        monitoring_active = False
 
+    return render_template('predictions.html', predictions=filtered_predictions, interval=interval, monitoring_active=monitoring_active)
 @app.route('/get_recommendations', methods=['POST'])
 def get_recommendations():
     data = request.json
@@ -692,6 +744,8 @@ def view_llm_request():
         "include_sources": False,
         "stream": False
     }
+
+
 
     return render_template('view_llm_request.html', payload=gpt_payload)
 if __name__ == "__main__":
