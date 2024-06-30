@@ -2573,3 +2573,113 @@ Recommended action:
 2024-06-16 12:57:08,905 INFO  * Debugger PIN: 601-622-125
 2024-06-16 12:57:09,988 INFO Scheduler has been shut down
 2024-06-16 12:57:10,239 INFO Scheduler has been shut down
+2024-06-30 09:19:17,710 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.25:5000
+2024-06-30 09:19:17,710 INFO [33mPress CTRL+C to quit[0m
+2024-06-30 09:19:17,713 INFO  * Restarting with stat
+2024-06-30 09:19:19,953 WARNING  * Debugger is active!
+2024-06-30 09:19:19,963 INFO  * Debugger PIN: 199-790-843
+2024-06-30 09:19:20,249 INFO Scheduler started
+2024-06-30 09:19:20,266 INFO 127.0.0.1 - - [30/Jun/2024 09:19:20] "GET /predictions HTTP/1.1" 200 -
+2024-06-30 09:19:20,468 INFO 127.0.0.1 - - [30/Jun/2024 09:19:20] "GET /static/favicon.png HTTP/1.1" 200 -
+2024-06-30 09:19:24,981 INFO Added job "monitor_csv_file" to job store "default"
+2024-06-30 09:19:24,982 INFO 127.0.0.1 - - [30/Jun/2024 09:19:24] "[32mGET /start_monitoring HTTP/1.1[0m" 302 -
+2024-06-30 09:19:24,988 INFO 127.0.0.1 - - [30/Jun/2024 09:19:24] "GET /predictions HTTP/1.1" 200 -
+2024-06-30 09:19:34,986 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:19:34 BST)" (scheduled at 2024-06-30 09:19:34.980643+01:00)
+2024-06-30 09:19:35,037 INFO 127.0.0.1 - - [30/Jun/2024 09:19:35] "GET /predictions HTTP/1.1" 200 -
+2024-06-30 09:19:35,042 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:19:44 BST)" executed successfully
+2024-06-30 09:19:35,093 INFO 127.0.0.1 - - [30/Jun/2024 09:19:35] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 09:19:44,985 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:19:54 BST)" (scheduled at 2024-06-30 09:19:44.980643+01:00)
+2024-06-30 09:19:44,998 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:19:54 BST)" executed successfully
+2024-06-30 09:19:45,082 INFO 127.0.0.1 - - [30/Jun/2024 09:19:45] "GET /predictions HTTP/1.1" 200 -
+2024-06-30 09:19:45,183 INFO 127.0.0.1 - - [30/Jun/2024 09:19:45] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 09:19:51,355 ERROR Error loading confusion matrix: 'dict object' has no attribute 'Predicted No Threat'
+2024-06-30 09:19:51,357 INFO 127.0.0.1 - - [30/Jun/2024 09:19:51] "[32mGET /show_confusion_matrix HTTP/1.1[0m" 302 -
+2024-06-30 09:19:51,513 INFO 127.0.0.1 - - [30/Jun/2024 09:19:51] "GET / HTTP/1.1" 200 -
+2024-06-30 09:19:51,538 INFO 127.0.0.1 - - [30/Jun/2024 09:19:51] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:19:53,466 ERROR Error loading confusion matrix: 'dict object' has no attribute 'Predicted No Threat'
+2024-06-30 09:19:53,468 INFO 127.0.0.1 - - [30/Jun/2024 09:19:53] "[32mGET /show_confusion_matrix HTTP/1.1[0m" 302 -
+2024-06-30 09:19:53,551 INFO 127.0.0.1 - - [30/Jun/2024 09:19:53] "GET / HTTP/1.1" 200 -
+2024-06-30 09:19:53,571 INFO 127.0.0.1 - - [30/Jun/2024 09:19:53] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:19:54,982 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:20:04 BST)" (scheduled at 2024-06-30 09:19:54.980643+01:00)
+2024-06-30 09:19:55,021 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:20:04 BST)" executed successfully
+2024-06-30 09:20:04,986 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:20:14 BST)" (scheduled at 2024-06-30 09:20:04.980643+01:00)
+2024-06-30 09:20:05,015 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:20:14 BST)" executed successfully
+2024-06-30 09:20:14,987 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:20:24 BST)" (scheduled at 2024-06-30 09:20:14.980643+01:00)
+2024-06-30 09:20:15,017 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:20:24 BST)" executed successfully
+2024-06-30 09:20:24,984 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:20:34 BST)" (scheduled at 2024-06-30 09:20:24.980643+01:00)
+2024-06-30 09:20:25,013 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:20:34 BST)" executed successfully
+2024-06-30 09:20:34,982 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:20:44 BST)" (scheduled at 2024-06-30 09:20:34.980643+01:00)
+2024-06-30 09:20:35,010 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:20:44 BST)" executed successfully
+2024-06-30 09:20:44,981 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:20:54 BST)" (scheduled at 2024-06-30 09:20:44.980643+01:00)
+2024-06-30 09:20:44,995 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:20:54 BST)" executed successfully
+2024-06-30 09:20:53,512 INFO 127.0.0.1 - - [30/Jun/2024 09:20:53] "GET /predictions HTTP/1.1" 200 -
+2024-06-30 09:20:54,687 INFO Removed job monitor_csv_file
+2024-06-30 09:20:54,693 INFO 127.0.0.1 - - [30/Jun/2024 09:20:54] "[32mGET /stop_monitoring HTTP/1.1[0m" 302 -
+2024-06-30 09:20:54,707 INFO 127.0.0.1 - - [30/Jun/2024 09:20:54] "GET /predictions HTTP/1.1" 200 -
+2024-06-30 09:21:00,250 INFO 127.0.0.1 - - [30/Jun/2024 09:21:00] "GET /feature_importances HTTP/1.1" 200 -
+2024-06-30 09:21:03,017 ERROR Error loading confusion matrix: 'dict object' has no attribute 'Predicted No Threat'
+2024-06-30 09:21:03,018 INFO 127.0.0.1 - - [30/Jun/2024 09:21:03] "[32mGET /show_confusion_matrix HTTP/1.1[0m" 302 -
+2024-06-30 09:21:03,076 INFO 127.0.0.1 - - [30/Jun/2024 09:21:03] "GET / HTTP/1.1" 200 -
+2024-06-30 09:21:03,095 INFO 127.0.0.1 - - [30/Jun/2024 09:21:03] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:23:45,614 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.25:5000
+2024-06-30 09:23:45,615 INFO [33mPress CTRL+C to quit[0m
+2024-06-30 09:23:45,616 INFO  * Restarting with stat
+2024-06-30 09:23:47,434 WARNING  * Debugger is active!
+2024-06-30 09:23:47,445 INFO  * Debugger PIN: 199-790-843
+2024-06-30 09:23:47,870 ERROR Error loading confusion matrix: 'dict object' has no attribute 'Predicted No Threat'
+2024-06-30 09:23:47,871 INFO 127.0.0.1 - - [30/Jun/2024 09:23:47] "[32mGET /show_confusion_matrix HTTP/1.1[0m" 302 -
+2024-06-30 09:23:47,934 INFO 127.0.0.1 - - [30/Jun/2024 09:23:47] "GET / HTTP/1.1" 200 -
+2024-06-30 09:23:47,953 INFO 127.0.0.1 - - [30/Jun/2024 09:23:47] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:23:47,984 INFO 127.0.0.1 - - [30/Jun/2024 09:23:47] "GET /static/favicon.png HTTP/1.1" 200 -
+2024-06-30 09:23:49,889 INFO 127.0.0.1 - - [30/Jun/2024 09:23:49] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 09:23:50,842 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 09:23:50,843 INFO 127.0.0.1 - - [30/Jun/2024 09:23:50] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 09:23:50,884 INFO 127.0.0.1 - - [30/Jun/2024 09:23:50] "GET / HTTP/1.1" 200 -
+2024-06-30 09:23:50,915 INFO 127.0.0.1 - - [30/Jun/2024 09:23:50] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:23:52,489 INFO 127.0.0.1 - - [30/Jun/2024 09:23:52] "GET /show_confusion_matrix HTTP/1.1" 200 -
+2024-06-30 09:23:58,193 INFO 127.0.0.1 - - [30/Jun/2024 09:23:58] "GET / HTTP/1.1" 200 -
+2024-06-30 09:23:58,224 INFO 127.0.0.1 - - [30/Jun/2024 09:23:58] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:24:20,199 INFO 127.0.0.1 - - [30/Jun/2024 09:24:20] "GET /show_confusion_matrix HTTP/1.1" 200 -
+2024-06-30 09:24:22,606 INFO 127.0.0.1 - - [30/Jun/2024 09:24:22] "GET /debug_data HTTP/1.1" 200 -
+2024-06-30 09:26:31,248 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.25:5000
+2024-06-30 09:26:31,248 INFO [33mPress CTRL+C to quit[0m
+2024-06-30 09:26:31,254 INFO  * Restarting with stat
+2024-06-30 09:26:33,152 WARNING  * Debugger is active!
+2024-06-30 09:26:33,167 INFO  * Debugger PIN: 199-790-843
+2024-06-30 09:26:33,413 INFO 127.0.0.1 - - [30/Jun/2024 09:26:33] "GET /debug_data HTTP/1.1" 200 -
+2024-06-30 09:26:33,639 INFO 127.0.0.1 - - [30/Jun/2024 09:26:33] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 09:26:35,906 INFO 127.0.0.1 - - [30/Jun/2024 09:26:35] "GET /show_confusion_matrix HTTP/1.1" 200 -
+2024-06-30 09:26:38,524 INFO 127.0.0.1 - - [30/Jun/2024 09:26:38] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 09:26:39,734 INFO 127.0.0.1 - - [30/Jun/2024 09:26:39] "GET /retrain HTTP/1.1" 200 -
+2024-06-30 09:26:40,871 INFO Model trained and saved with confusion matrix and feature importances.
+2024-06-30 09:26:40,872 INFO 127.0.0.1 - - [30/Jun/2024 09:26:40] "[32mPOST /retrain HTTP/1.1[0m" 302 -
+2024-06-30 09:26:40,962 INFO 127.0.0.1 - - [30/Jun/2024 09:26:40] "GET / HTTP/1.1" 200 -
+2024-06-30 09:26:40,983 INFO 127.0.0.1 - - [30/Jun/2024 09:26:40] "GET /static/threat_pie_chart.png HTTP/1.1" 200 -
+2024-06-30 09:26:42,282 INFO 127.0.0.1 - - [30/Jun/2024 09:26:42] "GET /show_confusion_matrix HTTP/1.1" 200 -
+2024-06-30 09:26:45,675 INFO 127.0.0.1 - - [30/Jun/2024 09:26:45] "GET /trained_data HTTP/1.1" 200 -
+2024-06-30 09:26:48,349 INFO 127.0.0.1 - - [30/Jun/2024 09:26:48] "GET /feature_importances HTTP/1.1" 200 -
+2024-06-30 09:27:00,270 INFO Scheduler started
+2024-06-30 09:27:00,309 INFO 127.0.0.1 - - [30/Jun/2024 09:27:00] "GET /predictions HTTP/1.1" 200 -
+2024-06-30 09:27:02,059 INFO Added job "monitor_csv_file" to job store "default"
+2024-06-30 09:27:02,061 INFO 127.0.0.1 - - [30/Jun/2024 09:27:02] "[32mGET /start_monitoring HTTP/1.1[0m" 302 -
+2024-06-30 09:27:02,066 INFO 127.0.0.1 - - [30/Jun/2024 09:27:02] "GET /predictions HTTP/1.1" 200 -
+2024-06-30 09:27:12,065 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:27:12 BST)" (scheduled at 2024-06-30 09:27:12.059172+01:00)
+2024-06-30 09:27:12,117 INFO 127.0.0.1 - - [30/Jun/2024 09:27:12] "GET /predictions HTTP/1.1" 200 -
+2024-06-30 09:27:12,123 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:27:22 BST)" executed successfully
+2024-06-30 09:27:12,180 INFO 127.0.0.1 - - [30/Jun/2024 09:27:12] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 09:27:22,059 INFO Running job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:27:32 BST)" (scheduled at 2024-06-30 09:27:22.059172+01:00)
+2024-06-30 09:27:22,071 INFO Job "monitor_csv_file (trigger: interval[0:00:10], next run at: 2024-06-30 09:27:32 BST)" executed successfully
+2024-06-30 09:27:22,155 INFO 127.0.0.1 - - [30/Jun/2024 09:27:22] "GET /predictions HTTP/1.1" 200 -
+2024-06-30 09:27:22,252 INFO 127.0.0.1 - - [30/Jun/2024 09:27:22] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2024-06-30 09:27:24,858 INFO Removed job monitor_csv_file
+2024-06-30 09:27:24,860 INFO 127.0.0.1 - - [30/Jun/2024 09:27:24] "[32mGET /stop_monitoring HTTP/1.1[0m" 302 -
+2024-06-30 09:27:24,869 INFO 127.0.0.1 - - [30/Jun/2024 09:27:24] "GET /predictions HTTP/1.1" 200 -
