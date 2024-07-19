@@ -11,6 +11,11 @@
 
     {% if tables %}
     <form method="POST" action="{{ url_for('save_predictions') }}" class="mt-4">
+        <div class="form-group">
+            <button type="button" class="btn btn-secondary" id="select_all_threat">Select All as Threat</button>
+            <button type="button" class="btn btn-secondary" id="select_all_non_threat">Select All as Non-Threat</button>
+            <button type="button" class="btn btn-secondary" id="add_all_to_training">Add All to Training</button>
+        </div>
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
@@ -43,12 +48,12 @@
                             {% endif %}
                         </td>
                         <td>
-                            <select name="prediction_{{ loop.index0 }}" class="form-control">
+                            <select name="prediction_{{ loop.index0 }}" class="form-control prediction-select">
                                 <option value="1" {% if row[1].prediction == 1 %}selected{% endif %}>Threat</option>
                                 <option value="0" {% if row[1].prediction == 0 %}selected{% endif %}>Non-Threat</option>
                             </select>
                         </td>
-                        <td><input type="checkbox" name="add_to_training_{{ loop.index0 }}" value="1" class="form-check-input"></td>
+                        <td><input type="checkbox" name="add_to_training_{{ loop.index0 }}" value="1" class="form-check-input add-to-training"></td>
                         <input type="hidden" name="src_ip_{{ loop.index0 }}" value="{{ row[1].src_ip }}">
                         <input type="hidden" name="dst_ip_{{ loop.index0 }}" value="{{ row[1].dst_ip }}">
                         <input type="hidden" name="src_port_{{ loop.index0 }}" value="{{ row[1].src_port }}">
@@ -65,4 +70,24 @@
     </form>
     {% endif %}
 </div>
+
+<script>
+document.getElementById('select_all_threat').addEventListener('click', function() {
+    document.querySelectorAll('.prediction-select').forEach(function(select) {
+        select.value = '1';
+    });
+});
+
+document.getElementById('select_all_non_threat').addEventListener('click', function() {
+    document.querySelectorAll('.prediction-select').forEach(function(select) {
+        select.value = '0';
+    });
+});
+
+document.getElementById('add_all_to_training').addEventListener('click', function() {
+    document.querySelectorAll('.add-to-training').forEach(function(checkbox) {
+        checkbox.checked = true;
+    });
+});
+</script>
 {% endblock %}

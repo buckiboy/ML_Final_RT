@@ -1,0 +1,23 @@
+Feature,Importance
+src_ip,0.0048228438797355815
+dst_ip,0.07567347230040834
+src_port,0.20355555011197093
+dst_port,0.3902073596181289
+protocol_TCP,0.022111924311647286
+protocol_UDP,0.02162184357911952
+protocol_nan,0.0
+signature_Brute Force Attempt,0.006704562212640217
+signature_DNS Amplification,0.00785379476926299
+signature_INDICATOR-SCAN UPnP service discover attempt,0.03263057969598864
+signature_Normal Traffic,0.12321245090163958
+signature_POLICY-OTHER Microsoft Windows Terminal server request attempt,0.003697330060100958
+signature_PROTOCOL-SNMP AgentX/tcp request,0.0
+signature_PROTOCOL-SNMP request udp,0.048866742600058105
+signature_PROTOCOL-SNMP trap tcp,0.0018358206725145858
+signature_RDP Attack,0.0021948886364681628
+signature_SERVER-MAIL Multiple IMAP servers APPEND command buffer overflow attempt,0.0019117423579440534
+signature_SERVER-OTHER CCProxy telnet ping buffer overflow attempt,0.005993078249314949
+signature_SERVER-OTHER Novell eDirectory LDAP server buffer overflow attempt,0.0
+signature_Telnet Connection,0.00186197185396876
+signature_Telnet connection,0.0
+signature_nan,0.04524404418908853

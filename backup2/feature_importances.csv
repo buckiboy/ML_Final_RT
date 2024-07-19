@@ -1,0 +1,25 @@
+Feature,Importance
+src_ip,0.12305374426593528
+dst_ip,0.08094373609734422
+src_port,0.12694865265189356
+dst_port,0.1190348577322446
+protocol_TCP,0.11867628259344175
+protocol_UDP,0.09074292332104818
+protocol_nan,0.0
+signature_INDICATOR-SHELLCODE x86 inc ebx NOOP,0.0
+signature_POLICY-OTHER Microsoft Windows Terminal server RDP attempt,0.0
+signature_POLICY-OTHER Microsoft Windows Terminal server request attempt,0.0003474388024472909
+signature_POLICY-OTHER MongoDB query attempt,1.0131589078952176e-05
+signature_POLICY-OTHER TCP FIN packet and URG set attempt,0.00019543338253965548
+signature_POLICY-OTHER TCP SYN packet and URG set attempt,0.00026007095652668424
+signature_POLICY-OTHER TCP packet with urgent flag attempt,0.00015667029555918797
+signature_PROTOCOL-SNMP AgentX/tcp request,0.001291626409294383
+signature_PROTOCOL-SNMP request tcp,0.001003596291317277
+signature_PROTOCOL-SNMP request udp,0.0
+signature_PROTOCOL-SNMP trap tcp,0.0009804703160726307
+signature_PROTOCOL-SNMP trap udp,0.014612344298448899
+signature_SERVER-MAIL Multiple IMAP servers APPEND command buffer overflow attempt,1.4057579847054179e-05
+signature_SERVER-OTHER Bay/Nortel Nautica Marlin,0.012381345372025197
+signature_SERVER-OTHER CCProxy telnet ping buffer overflow attempt,0.0005739623491385826
+signature_SERVER-OTHER Novell eDirectory LDAP server buffer overflow attempt,0.00021304375019544903
+signature_nan,0.3085596119456011

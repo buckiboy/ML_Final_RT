@@ -1,0 +1,2 @@
+src_ip,dst_ip,src_port,dst_port,protocol,signature,label
+0.0.0.0,0.0.0.0,0,0,UDP,nan,0.0

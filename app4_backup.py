@@ -18,8 +18,6 @@ from apscheduler.triggers.interval import IntervalTrigger
 from apscheduler.schedulers import SchedulerAlreadyRunningError, SchedulerNotRunningError
 import atexit
 from datetime import datetime
-from sklearn.utils.class_weight import compute_class_weight
-import requests
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -55,6 +53,10 @@ default_user_username = "admin"
 default_user_password = generate_password_hash("admin", method='pbkdf2:sha256', salt_length=16)
 users[default_user_id] = User(default_user_id, default_user_username, default_user_password)
 
+
+
+
+
 # Placeholder for storing predictions
 predictions = []
 
@@ -78,7 +80,6 @@ def convert_to_ip(df):
     return df
 
 # Function to check and remove duplicates
-# Function to check and remove duplicates
 def check_and_remove_duplicates(df):
     try:
         logging.debug("Checking for duplicates in the DataFrame.")
@@ -100,7 +101,6 @@ def check_and_remove_duplicates(df):
         logging.debug(f"Found {duplicates.shape[0]} duplicates.")
 
         if not duplicates.empty:
-            duplicates = duplicates.copy()
             duplicates['removed_at'] = current_time
             removed_data = pd.concat([removed_data, duplicates])
             removed_data.to_csv('removed_data.csv', index=False)
@@ -133,7 +133,6 @@ def train_and_save_model():
         # Save class distribution
         class_distribution = df['label'].value_counts()
         class_distribution.to_csv('class_distribution.csv')
-        logging.info(f'Class distribution: {class_distribution.to_dict()}')
 
         original_df = df.copy()  # Keep a copy of the original data without one-hot encoding
 
@@ -145,22 +144,14 @@ def train_and_save_model():
         X = X.fillna(0)
         y = y.fillna(0)
 
-        # Check if dataset is too small
-        if len(df) < 5:  # Adjust the number according to your requirement
-            logging.warning('Not enough data to split. Using entire dataset for training.')
-            X_train, y_train = X, y
-            X_test, y_test = X, y
-        else:
-            # Split data into training and testing sets
-            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        # Split data into training and testing sets
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
         # Save train and test class distribution
         train_class_distribution = y_train.value_counts()
         test_class_distribution = y_test.value_counts()
         train_class_distribution.to_csv('train_class_distribution.csv')
         test_class_distribution.to_csv('test_class_distribution.csv')
-        logging.info(f'Train class distribution: {train_class_distribution.to_dict()}')
-        logging.info(f'Test class distribution: {test_class_distribution.to_dict()}')
 
         # Train the RandomForest model
         model = RandomForestClassifier(n_estimators=100, random_state=42)
@@ -176,7 +167,6 @@ def train_and_save_model():
         # Save actual vs. predicted values
         actual_vs_predicted = pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
         actual_vs_predicted.to_csv('actual_vs_predicted.csv', index=False)
-        logging.info(f'Actual vs Predicted: {actual_vs_predicted.head()}')
 
         # Explicitly use sklearn.metrics.confusion_matrix
         from sklearn.metrics import confusion_matrix  # Import confusion_matrix here
@@ -191,7 +181,6 @@ def train_and_save_model():
         cm_df = pd.DataFrame(cm, index=['Actual No Threat', 'Actual Threat'], columns=['Predicted No Threat', 'Predicted Threat'])
         # Save the confusion matrix to a CSV file
         cm_df.to_csv('confusion_matrix.csv')
-        logging.info(f'Confusion Matrix:\n{cm_df}')
 
         # Calculate and save feature importances
         feature_importances = model.feature_importances_
@@ -200,13 +189,13 @@ def train_and_save_model():
         fi_df = pd.DataFrame({'Feature': feature_names, 'Importance': feature_importances})
         # Save the feature importances to a CSV file
         fi_df.to_csv('feature_importances.csv', index=False)
-        logging.info(f'Feature Importances:\n{fi_df}')
 
         logging.info('Model trained and saved with confusion matrix and feature importances.')
         return "Model trained and saved with confusion matrix and feature importances."
     except Exception as e:
         logging.error(f'Error in train_and_save_model: {e}')
         return str(e)
+
 
 @app.route('/debug_data')
 @login_required
@@ -458,11 +447,6 @@ def view_last_batch():
     try:
         if os.path.exists('last_batch_predictions.csv'):
             df = pd.read_csv('last_batch_predictions.csv')
-
-            # Strip any whitespace characters from the column names and data
-            df.columns = df.columns.str.strip()
-            df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
-
             total_events = len(df)
             total_threats = len(df[df['prediction'] == 1])
             total_non_threats = len(df[df['prediction'] == 0])
@@ -485,6 +469,7 @@ def view_last_batch():
         logging.error(f'Error loading last batch predictions: {e}')
         flash(f'Error loading last batch predictions: {e}', 'danger')
         return redirect(url_for('upload_file'))
+
 
 @app.route('/save_predictions', methods=['POST'])
 @login_required
@@ -561,6 +546,7 @@ def removed_data():
         logging.error(f'Error loading removed data: {e}')
         flash('Error loading removed data.', 'danger')
         return redirect(url_for('index'))
+
 
 @app.route('/add_data', methods=['GET', 'POST'])
 @login_required
@@ -703,10 +689,7 @@ def monitor_csv_file():
             df_preprocessed = df_preprocessed.reindex(columns=model.feature_names_in_, fill_value=0)
         if hasattr(model, 'estimators_'):
             df['prediction'] = model.predict(df_preprocessed)
-            if model.n_classes_ > 1:
-                df['prediction_proba'] = model.predict_proba(df_preprocessed)[:, 1]  # Assuming binary classification
-            else:
-                df['prediction_proba'] = model.predict_proba(df_preprocessed)[:, 0]
+            df['prediction_proba'] = model.predict_proba(df_preprocessed)[:, 1]  # Assuming binary classification
         else:
             logging.error('Model is not trained yet. Please train the model first.')
             return
@@ -807,7 +790,7 @@ def calculate_metrics():
             accuracy = round((tp + tn) / (tp + tn + fp + fn) * 100, 2)
             precision = round(tp / (tp + fp) * 100, 2) if (tp + fp) > 0 else 0
             recall = round(tp / (tp + fn) * 100, 2) if (tp + fn) > 0 else 0
-            f1 = round(2 * (precision * recall) / (precision + recall), 2) if (precision + recall) > 0 else 0
+            f1_score = round(2 * (precision * recall) / (precision + recall), 2) if (precision + recall) > 0 else 0
 
             metrics = {
                 'total_events': total_events,
@@ -816,7 +799,7 @@ def calculate_metrics():
                 'accuracy': accuracy,
                 'precision': precision,
                 'recall': recall,
-                'f1_score': f1
+                'f1_score': f1_score
             }
 
             return metrics
@@ -836,6 +819,7 @@ def calculate_accuracy_page():
     else:
         flash('Error calculating metrics.', 'danger')
         return redirect(url_for('index'))
+
 
 @app.route('/predictions')
 @login_required
@@ -888,7 +872,7 @@ def get_recommendations():
                 f"src_port: {prediction['src_port']}, "
                 f"dst_port: {prediction['dst_port']}, "
                 f"protocol: {prediction['protocol']}, "
-                "provide recommended action or advice and classify the event as a threat or non-threat"
+                "provide recommended action or advice"
             )
         }],
         "use_context": True,

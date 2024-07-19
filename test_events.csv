@@ -1,0 +1,39 @@
+﻿Abbreviation,Meaning,First Found (Page)
+AI,Artificial Intelligence,1
+XOR,eXclusive OR,3
+SIM,Security Information Management,4
+SEM,Security Event Management,4
+SIEM,Security Information and Event Management,4
+CIM,Common Informational Model,5
+SOC,Security Operations Centre,5
+UEBA,User and Entity Behaviour Analytics,6
+LLM,Large Language Model,7
+ML,Machine Learning,8
+GUI,Graphical User Interface,9
+CPU,Central Processing Unit,9
+GPU,Graphics Processing Unit,10
+CUDA,Compute Unified Device Architecture,10
+CSV,Comma Separated Values,11
+RAG,Retrieval-Augmented Generation,12
+TP,True Positive,13
+TN,True Negative,13
+FP,False Positive,14
+FN,False Negative,14
+IOC,Indicator Of Compromise,15
+SMB,Server Message Block,16
+ARP,Address Resolution Protocol,17
+SSL,Secure Sockets Layer,17
+TLS,Transport Layer Security,18
+API,Application Programming Interface,19
+IDS,Intrusion Detection System,20
+IP,Internet Protocol,21
+TFTP,Trivial File Transfer Protocol,22
+UPnP,Universal Plug and Play,23
+SSDP,Simple Service Discovery Protocol,24
+HTTPS,HyperText Transfer Protocol Secure,25
+TCP,Transmission Control Protocol,26
+UDP,User Datagram Protocol,27
+RT,Real-Time,28
+VM,Virtual Machine,29
+NLP,Natural Language Processing,30
+MIT,Massachusetts Institute of Technology,31

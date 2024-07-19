@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="mt-4">
+    <h2>Last Batch Predictions</h2>
+    
+    <h3>Summary</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>Description</th>
+            <th>Values</th>
+        </tr>
+        <tr>
+            <td>Total Events</td>
+            <td>{{ summary.total_events }}</td>
+        </tr>
+        <tr>
+            <td>Total Threats</td>
+            <td>{{ summary.total_threats }}</td>
+        </tr>
+        <tr>
+            <td>Total Non-Threats</td>
+            <td>{{ summary.total_non_threats }}</td>
+        </tr>
+        <tr>
+            <td>Ratio of Threats (%)</td>
+            <td>{{ summary.ratio_threats }}</td>
+        </tr>
+        <tr>
+            <td>Ratio of Non-Threats (%)</td>
+            <td>{{ summary.ratio_non_threats }}</td>
+        </tr>
+    </table>
+
+    <h3>Data</h3>
+    <div class="table-responsive">
+        {{ tables[0]|safe }}
+    </div>
+</div>
+{% endblock %}
